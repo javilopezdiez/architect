@@ -5,12 +5,12 @@
 ##### VARIABLES #####
 USER=loncelot
 HOSTNAME=architect
-DISK="/dev/sda"
+DISK="/dev/vda"
 LAYOUT="es"
 LOCATION="Europe/Madrid"
 PART_BOOT="500M"
-PART_SWAP="12G"
-PART_ROOT="50G"
+PART_SWAP="3G"
+PART_ROOT="15G"
 PART_HOME="" # If empty, remaining space
 
 ##### ROOT #####
