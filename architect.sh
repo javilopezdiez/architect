@@ -88,7 +88,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 
 # Grub configuration
-grub-install --target=i386-pc /dev/sda
+grub-install --target=i386-pc $DISK
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Root config
