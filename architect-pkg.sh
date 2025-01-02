@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DESKTOP_ENV_PKGS=(
-        'xorg'                           #
+        # 'xorg'                           #
         'xfce4'                          #
         'xfce4-goodies'                  #
         'lightdm'                        # Base Login Manager
