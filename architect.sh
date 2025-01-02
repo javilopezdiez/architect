@@ -1,6 +1,6 @@
 #/!bin/bash
 # Command for execution
-# sudo bash <(curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh)
+# sudo bash <(curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh) 2> architect.log
 
 ##### VARIABLES #####
 USER=loncelot
@@ -58,6 +58,12 @@ echo $SWAP_END"MiB "$ROOT_END"MiB"
 echo $ROOT_END"MiB "$HOME_END
 
 # Formatting Drive
+echo "Unmounting partitions on $DISK..."
+umount -R "${DISK}"* \
+    || echo "No partitions to unmount."
+echo "Wiping filesystem signatures and metadata on $DISK..."
+wipefs -a "$DISK" \
+    || { echo "Error wiping $DISK"; exit 1; }
 echo "Creating GPT partition table on $DISK..."
 parted -s "$DISK" mklabel gpt \
     || { echo "Error creating partition table"; exit 1; }
@@ -128,7 +134,7 @@ echo "127.0.0.1 localhost" > /etc/hosts
 echo "Configuring localization..."
 echo "KEYMAP=es" > /etc/vconsole.conf
 localectl set-keymap es
-echo -e "LANG=en_US.UTF-8\nLC_NUMERIC=es_ES.UTF-8\nLC_TIME=es_ES.UTF-8\nLC_MONETARY=es_ES.UTF-8\nLC_PAPER=es_ES.UTF-8\nLC_NAME=es_ES.UTF-8\nLC_ADDRESS=es_ES.UTF-8\nLC_TELEPHONE=es_ES.UTF-8\nLC_MEASUREMENT=es_ES.UTF-8\nLC_IDENTIFICATION=es_ES.UTF-8" | sudo tee /etc/locale.conf > /dev/null
+echo -e "LANG=en_US.UTF-8\nLC_NUMERIC=es_ES.UTF-8\nLC_TIME=es_ES.UTF-8\nLC_MONETARY=es_ES.UTF-8\nLC_PAPER=es_ES.UTF-8\nLC_NAME=es_ES.UTF-8\nLC_ADDRESS=es_ES.UTF-8\nLC_TELEPHONE=es_ES.UTF-8\nLC_MEASUREMENT=es_ES.UTF-8\nLC_IDENTIFICATION=es_ES.UTF-8" > /etc/locale.conf
 sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sed -i 's/^#en_US ISO-8859-1/en_US ISO-8859-1/' /etc/locale.gen
 sed -i 's/^#es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/' /etc/locale.gen
