@@ -37,11 +37,11 @@ timedatectl set-timezone "$LOCATION"
 # Partitioning
 # Calculation
 # BOOT - SWAP - ROOT - HOME
-BOOT_END="$(( $(numfmt --from=iec "1M") + $(numfmt --from=iec "$PART_HOME") ))"
+BOOT_END="$(( $(numfmt --from=iec 1M) + $(numfmt --from=iec "$PART_BOOT") ))"
 SWAP_END="$(( $BOOT_END + $(numfmt --from=iec "$PART_SWAP") ))"
 ROOT_END="$(( $SWAP_END + $(numfmt --from=iec "$PART_ROOT") ))"
 if [[ -n "$PART_HOME" ]]; then
-    HOME_END="$(( $ROOT_END + $(numfmt --from=iec "$PART_HOME") ))"
+    HOME_END="$(( $ROOT_END + $(numfmt --from=iec "$PART_HOME") ))MiB"
 else
     PART_HOME="Remaining space"
     HOME_END=100%
@@ -53,9 +53,9 @@ parted -s "$DISK" mklabel gpt \
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
 echo "1MiB "$BOOT_END"MiB"
-echo "$BOOT_END"MiB" "$SWAP_END"MiB"
-echo "$SWAP_END"MiB" "$ROOT_END"MiB"
-echo "$ROOT_END"MiB" "$HOME_END"MiB"
+echo $BOOT_END"MiB "$SWAP_END"MiB"
+echo $SWAP_END"MiB "$ROOT_END"MiB"
+echo $ROOT_END"MiB "$HOME_END
 parted -s "$DISK" mkpart primary ext4 1MiB "$BOOT_END"MiB \
     || { echo "Error creating boot partition"; exit 1; }
 # Swap
@@ -68,7 +68,7 @@ parted -s "$DISK" mkpart primary ext4 "$SWAP_END"MiB "$ROOT_END"MiB \
     || { echo "Error creating root partition"; exit 1; }
 # Home
 echo "Allocating $PART_HOME to root partition..."
-parted -s "$DISK" mkpart primary ext4 "$ROOT_END"MiB "$HOME_END"MiB \
+parted -s "$DISK" mkpart primary ext4 "$ROOT_END"MiB $HOME_END \
     || { echo "Error creating home partition"; exit 1; }
 # Formatting
 echo "Formatting partitions..."
