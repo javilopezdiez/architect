@@ -20,20 +20,15 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+
 echo "SETUP STARTED..."
 # Grub configuration
 grub-install --target=i386-pc --efi-directory=/boot $DISK
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# Root config
-# echo "Insert root passwd"
-# passwd
-
 # User config
 echo "Adding user $USER..."
 useradd -m -g wheel $USER
-echo "Insert your passwd"
-# passwd $USER
 sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 
 # Host config
@@ -72,3 +67,18 @@ sudo pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter --noconfirm
 sudo systemctl enable lightdm
 
 echo "SETUP COMPLETED..."
+
+# Password config
+echo "Please, Insert root passwd"
+passwd
+echo "Please, Insert your passwd"
+passwd $USER
+# Sys reboot
+echo "Do you want to reboot the system? (y/n)"
+read -r choice
+if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+    echo "Rebooting the system..."
+    sudo reboot
+else
+    echo "Reboot cancelled."
+fi
