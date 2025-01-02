@@ -8,7 +8,7 @@ HOSTNAME=architect
 DISK="/dev/vda"
 LAYOUT="es"
 LOCATION="Europe/Madrid"
-PART_BOOT="500M"
+PART_BOOT="500MiB"
 PART_SWAP="3G"
 PART_ROOT="15G"
 PART_HOME="" # If empty, remaining space
@@ -34,6 +34,19 @@ echo "Setting clock and timezone to $LOCATION..."
 timedatectl set-ntp true
 timedatectl set-timezone "$LOCATION"
 
+# Partitioning
+# Calculation
+# BOOT - SWAP - ROOT - HOME
+PART_BOOT=1MiB+$PART_BOOT
+ROOT_START="$(( $(numfmt --from=iec "$PART_BOOT") + $(numfmt --from=iec "$PART_SWAP") ))MiB"
+ROOT_END="$(( $(numfmt --from=iec "$ROOT_START") + $(numfmt --from=iec "$PART_ROOT") ))MiB"
+if [[ -n "$PART_HOME" ]]; then
+    HOME_END="$(( $(numfmt --from=iec "$ROOT_END") + $(numfmt --from=iec "$PART_HOME") ))MiB"
+else
+    PART_HOME="Remaining space"
+    HOME_END=100%
+fi
+# Formatting Drive
 echo "Creating GPT partition table on $DISK..."
 parted -s "$DISK" mklabel gpt \
     || { echo "Error creating partition table"; exit 1; }
@@ -41,33 +54,26 @@ parted -s "$DISK" mklabel gpt \
 echo "Creating boot partition of size $PART_BOOT..."
 parted -s "$DISK" mkpart primary ext4 1MiB "$PART_BOOT" \
     || { echo "Error creating boot partition"; exit 1; }
-mkfs.ext4 ${DISK}1
 # Swap
 echo "Creating swap partition of size $PART_SWAP..."
 parted -s "$DISK" mkpart primary linux-swap "$PART_BOOT" \
     "$(( $(numfmt --from=iec "$PART_BOOT") + $(numfmt --from=iec "$PART_SWAP") ))MiB" \
     || { echo "Error creating swap partition"; exit 1; }
-mkswap ${DISK}2
-swapon ${DISK}2
 # Root
 echo "Creating root partition of size $PART_ROOT..."
-ROOT_START="$(( $(numfmt --from=iec "$PART_BOOT") + $(numfmt --from=iec "$PART_SWAP") ))MiB"
-ROOT_END="$(( $(numfmt --from=iec "$ROOT_START") + $(numfmt --from=iec "$PART_ROOT") ))MiB"
 parted -s "$DISK" mkpart primary ext4 "$ROOT_START" "$ROOT_END" \
     || { echo "Error creating root partition"; exit 1; }
-mkfs.ext4 ${DISK}3
 # Home
-if [[ -n "$PART_HOME" ]]; then
-    HOME_END="$(( $(numfmt --from=iec "$ROOT_END") + $(numfmt --from=iec "$PART_HOME") ))MiB"
-else
-    PART_HOME="Remaining space"
-    HOME_END=100%
-fi
 echo "Allocating $PART_HOME to root partition..."
 parted -s "$DISK" mkpart primary ext4 "$ROOT_END" "$HOME_END" \
     || { echo "Error creating home partition"; exit 1; }
+# Formatting
+echo "Formatting partitions..."
+mkfs.ext4 ${DISK}1
+mkswap ${DISK}2
+swapon ${DISK}2
+mkfs.ext4 ${DISK}3
 mkfs.ext4 ${DISK}4
-
 # Mounting partitions
 echo "Mounting partitions..."
 mount ${DISK}3 /mnt
@@ -75,7 +81,8 @@ mkdir /mnt/boot
 mount ${DISK}1 /mnt/boot
 mkdir /mnt/home
 mount ${DISK}4 /mnt/home
-
+# ECHO
+lsblk $DISK
 # Installing base system
 echo "Installing base system..."
 pacstrap /mnt linux linux-firmware base base-devel grub networkmanager
