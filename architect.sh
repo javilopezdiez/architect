@@ -66,8 +66,8 @@ wipefs -a -f "$DISK"* \
 echo "Creating GPT partition table on $DISK..."
 sgdisk --zap-all "$DISK" \
     || { echo "Error creating partition table"; exit 1; }
-# parted -s "$DISK" mklabel gpt \
-#     || { echo "Error creating partition table"; exit 1; }
+parted -s "$DISK" mklabel gpt \
+    || { echo "Error creating partition table"; exit 1; }
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
 parted -s "$DISK" mkpart primary ext4 1MiB "$BOOT_END"MiB \
