@@ -8,6 +8,7 @@ HOSTNAME=architect
 DISK="/dev/vda"
 LAYOUT="es"
 LOCATION="Europe/Madrid"
+KEYMAP="es"
 PART_BOOT="500M"
 PART_SWAP="3G"
 PART_ROOT="15G"
@@ -43,17 +44,20 @@ echo "127.0.0.1 localhost" > /etc/hosts
 # Localization config
 echo "Configuring localization..."
 echo "KEYMAP=es" > /etc/vconsole.conf
-localectl set-keymap es
-echo -e "LANG=en_US.UTF-8\nLC_NUMERIC=es_ES.UTF-8\nLC_TIME=es_ES.UTF-8\nLC_MONETARY=es_ES.UTF-8\nLC_PAPER=es_ES.UTF-8\nLC_NAME=es_ES.UTF-8\nLC_ADDRESS=es_ES.UTF-8\nLC_TELEPHONE=es_ES.UTF-8\nLC_MEASUREMENT=es_ES.UTF-8\nLC_IDENTIFICATION=es_ES.UTF-8" > /etc/locale.conf
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+# echo -e "LANG=en_US.UTF-8\nLC_NUMERIC=es_ES.UTF-8\nLC_TIME=es_ES.UTF-8\nLC_MONETARY=es_ES.UTF-8\nLC_PAPER=es_ES.UTF-8\nLC_NAME=es_ES.UTF-8\nLC_ADDRESS=es_ES.UTF-8\nLC_TELEPHONE=es_ES.UTF-8\nLC_MEASUREMENT=es_ES.UTF-8\nLC_IDENTIFICATION=es_ES.UTF-8" > /etc/locale.conf
 sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 sed -i 's/^#en_US ISO-8859-1/en_US ISO-8859-1/' /etc/locale.gen
 sed -i 's/^#es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/' /etc/locale.gen
 sed -i 's/^#es_ES ISO-8859-1/es_ES ISO-8859-1/' /etc/locale.gen
 locale-gen
-ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
+ln -sf /usr/share/zoneinfo/${LOCATION} /etc/localtime
+localectl --no-ask-password set-keymap ${KEYMAP}
 
+#Add parallel downloading
+sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 # Package manager update
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm --needed
 
 # AUR helper install
 echo "Installing yay AUR helper..."
