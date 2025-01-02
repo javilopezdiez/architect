@@ -64,8 +64,8 @@ echo "Wiping filesystem signatures and metadata on $DISK..."
 wipefs -a -f "$DISK"* \
     || { echo "Error wiping $DISK"; exit 1; }
 echo "Creating GPT partition table on $DISK..."
-sgdisk --zap-all "$DISK" \
-    || { echo "Error creating partition table"; exit 1; }
+# sgdisk --zap-all "$DISK" \
+#     || { echo "Error creating partition table"; exit 1; }
 parted -s "$DISK" mklabel gpt \
     || { echo "Error creating partition table"; exit 1; }
 # Boot
