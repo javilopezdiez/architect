@@ -41,7 +41,7 @@ BOOT_SIZE=$(numfmt --from=iec "$PART_BOOT" | awk '{print $1/1024/1024}')
 SWAP_SIZE=$(numfmt --from=iec "$PART_SWAP" | awk '{print $1/1024/1024}')
 ROOT_SIZE=$(numfmt --from=iec "$PART_ROOT" | awk '{print $1/1024/1024}')
 # rounded to the nearest integer/whole number
-BOOT_END=$(printf "%.0f" $((1 + BOOT_SIZE)))
+BOOT_END=$(printf "%.0f" $((3 + BOOT_SIZE)))
 SWAP_END=$(printf "%.0f" $((BOOT_END + SWAP_SIZE)))
 ROOT_END=$(printf "%.0f" $((SWAP_END + ROOT_SIZE)))
 if [[ -n "$PART_HOME" ]]; then
