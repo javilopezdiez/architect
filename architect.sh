@@ -97,11 +97,13 @@ mkdir /mnt/boot
 mount ${DISK}1 /mnt/boot
 mkdir /mnt/home
 mount ${DISK}4 /mnt/home
-# ECHO
 lsblk $DISK
+# Updating keyrings to latest to prevent packages failing to install
+echo "Updating keyrings"
+pacman -Sy --needed archlinux-keyring
 # Installing base system
 echo "Installing base system..."
-pacstrap /mnt linux linux-firmware base base-devel grub networkmanager
+pacstrap /mnt linux linux-firmware base base-devel grub networkmanager --noconfirm
 
 # Saving mounting config
 echo "Generating fstab..."
