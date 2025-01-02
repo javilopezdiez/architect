@@ -34,28 +34,35 @@ echo "Setting clock and timezone to $LOCATION..."
 timedatectl set-ntp true
 timedatectl set-timezone "$LOCATION"
 
-# Partitioning
+# Partitioning BOOT - SWAP - ROOT - HOME
 # Calculation
-# BOOT - SWAP - ROOT - HOME
-BOOT_END="$(( $(numfmt --from=iec 1M) + $(numfmt --from=iec "$PART_BOOT") ))"
-SWAP_END="$(( $BOOT_END + $(numfmt --from=iec "$PART_SWAP") ))"
-ROOT_END="$(( $SWAP_END + $(numfmt --from=iec "$PART_ROOT") ))"
+# M or G to-> bytes to-> megabytes
+BOOT_SIZE=$(numfmt --from=iec "$PART_BOOT" | awk '{print $1/1024/1024}')
+SWAP_SIZE=$(numfmt --from=iec "$PART_SWAP" | awk '{print $1/1024/1024}')
+ROOT_SIZE=$(numfmt --from=iec "$PART_ROOT" | awk '{print $1/1024/1024}')
+# rounded to the nearest integer/whole number
+BOOT_END=$(printf "%.0f" $((1 + BOOT_SIZE)))
+SWAP_END=$(printf "%.0f" $((BOOT_END + SWAP_SIZE)))
+ROOT_END=$(printf "%.0f" $((SWAP_END + ROOT_SIZE)))
 if [[ -n "$PART_HOME" ]]; then
-    HOME_END="$(( $ROOT_END + $(numfmt --from=iec "$PART_HOME") ))MiB"
+    HOME_SIZE=$(numfmt --from=iec "$PART_HOME" | awk '{print $1/1024/1024}')
+    HOME_END=$(printf "%.0f" $((ROOT_END + HOME_SIZE)))"MiB"
 else
     PART_HOME="Remaining space"
     HOME_END=100%
 fi
+echo "Partition measures are..."
+echo "1MiB "$BOOT_END"MiB"
+echo $BOOT_END"MiB "$SWAP_END"MiB"
+echo $SWAP_END"MiB "$ROOT_END"MiB"
+echo $ROOT_END"MiB "$HOME_END
+
 # Formatting Drive
 echo "Creating GPT partition table on $DISK..."
 parted -s "$DISK" mklabel gpt \
     || { echo "Error creating partition table"; exit 1; }
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
-echo "1MiB "$BOOT_END"MiB"
-echo $BOOT_END"MiB "$SWAP_END"MiB"
-echo $SWAP_END"MiB "$ROOT_END"MiB"
-echo $ROOT_END"MiB "$HOME_END
 parted -s "$DISK" mkpart primary ext4 1MiB "$BOOT_END"MiB \
     || { echo "Error creating boot partition"; exit 1; }
 # Swap
