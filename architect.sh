@@ -86,11 +86,11 @@ parted -s "$DISK" mkpart primary ext4 "$ROOT_END"MiB $HOME_END \
     || { echo "Error creating home partition"; exit 1; }
 # Formatting
 echo "Formatting partitions..."
-mkfs.ext4 -F ${DISK}1
-mkswap ${DISK}2
-swapon ${DISK}2
-mkfs.ext4 -F ${DISK}3
+mkfs.ext4 -F ${DISK}2
+mkswap ${DISK}3
+swapon ${DISK}3
 mkfs.ext4 -F ${DISK}4
+mkfs.ext4 -F ${DISK}5
 # Mounting partitions
 echo "Mounting partitions..."
 mount ${DISK}4 /mnt
