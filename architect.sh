@@ -65,7 +65,7 @@ echo "Disabling swap if any on $DISK..."
 swapoff "${DISK}"* 2>/dev/null \
     || echo "No swap to disable on $DISK."
 echo "Wiping filesystem signatures and metadata on $DISK..."
-wipefs -a "$DISK" \
+wipefs -a "$DISK"* \
     || { echo "Error wiping $DISK"; exit 1; }
 echo "Creating GPT partition table on $DISK..."
 parted -s "$DISK" mklabel gpt \
