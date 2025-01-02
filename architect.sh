@@ -26,6 +26,7 @@ if [[ $1 == "--clean" ]]; then
     swapoff -a
     wipefs -a -f "$DISK"*
     sgdisk --zap-all "$DISK"
+    partprobe "$DISK"
     exit 0
 fi
 
