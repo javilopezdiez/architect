@@ -66,8 +66,6 @@ echo "Installing xfce Desktop environment..."
 sudo pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter --noconfirm
 sudo systemctl enable lightdm
 
-echo "SETUP COMPLETED..."
-
 # Password config
 echo "Please, Insert root passwd"
 passwd
@@ -82,3 +80,5 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
 else
     echo "Reboot cancelled."
 fi
+
+echo "SETUP COMPLETED..."
