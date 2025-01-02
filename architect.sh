@@ -93,11 +93,11 @@ mkfs.ext4 -F ${DISK}3
 mkfs.ext4 -F ${DISK}4
 # Mounting partitions
 echo "Mounting partitions..."
-mount ${DISK}3 /mnt
+mount ${DISK}4 /mnt
 mkdir /mnt/boot
-mount ${DISK}1 /mnt/boot
+mount ${DISK}2 /mnt/boot
 mkdir /mnt/home
-mount ${DISK}4 /mnt/home
+mount ${DISK}5 /mnt/home
 lsblk $DISK
 
 ##### ROOT #####
