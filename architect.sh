@@ -55,8 +55,8 @@ fi
 # Formatting Drive
 echo "Unmounting partitions on $DISK..."
 
-umount -R -F "${DISK}"* \
-    || umount -R -F /mnt \
+umount -R -f "${DISK}"* \
+    || umount -R -f /mnt \
     || echo "No partitions to unmount."
 echo "Disabling swap if any on $DISK..."
 swapoff "${DISK}"* 2>/dev/null \
