@@ -22,7 +22,7 @@ fi
 echo "INSTALL STARTED..."
 ##### DEPENDENCIES #####
 echo "Installing numfmt for partitioning..."
-pacman -Sy --noconfirm --needed numfmt
+pacman -Sy --needed numfmt --noconfirm
 
 ##### CONFIGURATION #####
 # keyboard config
