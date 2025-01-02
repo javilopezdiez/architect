@@ -34,7 +34,7 @@ wget https://es.mirrors.cicku.me/archlinux/iso/2024.12.01/archlinux-2024.12.01-x
 ```bash
     loadkeys es
     setfont ter-v22b
-    curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh && sudo bash architect.sh > architect.log
+    curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh && sudo bash architect.sh |& tee architect.log
 ```
 
 

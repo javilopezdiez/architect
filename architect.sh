@@ -1,6 +1,6 @@
 #/!bin/bash
 # Command for execution
-# curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh && sudo bash architect.sh > architect.log
+# curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh && sudo bash architect.sh |& tee architect.log
 
 ##### VARIABLES #####
 USER=loncelot
@@ -54,7 +54,6 @@ fi
 
 # Formatting Drive
 echo "Unmounting partitions on $DISK..."
-
 umount -R -f "${DISK}"* \
     || umount -R -f /mnt \
     || echo "No partitions to unmount."
@@ -65,8 +64,10 @@ echo "Wiping filesystem signatures and metadata on $DISK..."
 wipefs -a -f "$DISK"* \
     || { echo "Error wiping $DISK"; exit 1; }
 echo "Creating GPT partition table on $DISK..."
-parted -s "$DISK" mklabel gpt \
+sgdisk --zap-all "$DISK" \
     || { echo "Error creating partition table"; exit 1; }
+# parted -s "$DISK" mklabel gpt \
+#     || { echo "Error creating partition table"; exit 1; }
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
 parted -s "$DISK" mkpart primary ext4 1MiB "$BOOT_END"MiB \
