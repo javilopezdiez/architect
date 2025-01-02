@@ -8,7 +8,7 @@ HOSTNAME=architect
 DISK="/dev/vda"
 LAYOUT="es"
 LOCATION="Europe/Madrid"
-PART_BOOT="500MiB"
+PART_BOOT="500M"
 PART_SWAP="3G"
 PART_ROOT="15G"
 PART_HOME="" # If empty, remaining space
@@ -37,11 +37,11 @@ timedatectl set-timezone "$LOCATION"
 # Partitioning
 # Calculation
 # BOOT - SWAP - ROOT - HOME
-PART_BOOT=1MiB+$PART_BOOT
-ROOT_START="$(( $(numfmt --from=iec "$PART_BOOT") + $(numfmt --from=iec "$PART_SWAP") ))MiB"
-ROOT_END="$(( $(numfmt --from=iec "$ROOT_START") + $(numfmt --from=iec "$PART_ROOT") ))MiB"
+BOOT_END="$(( $(numfmt --from=iec "1M") + $(numfmt --from=iec "$PART_HOME") ))"
+SWAP_END="$(( $BOOT_END + $(numfmt --from=iec "$PART_SWAP") ))"
+ROOT_END="$(( $SWAP_END + $(numfmt --from=iec "$PART_ROOT") ))"
 if [[ -n "$PART_HOME" ]]; then
-    HOME_END="$(( $(numfmt --from=iec "$ROOT_END") + $(numfmt --from=iec "$PART_HOME") ))MiB"
+    HOME_END="$(( $ROOT_END + $(numfmt --from=iec "$PART_HOME") ))"
 else
     PART_HOME="Remaining space"
     HOME_END=100%
@@ -52,20 +52,19 @@ parted -s "$DISK" mklabel gpt \
     || { echo "Error creating partition table"; exit 1; }
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
-parted -s "$DISK" mkpart primary ext4 1MiB "$PART_BOOT" \
+parted -s "$DISK" mkpart primary ext4 1MiB "$BOOT_END"MiB \
     || { echo "Error creating boot partition"; exit 1; }
 # Swap
 echo "Creating swap partition of size $PART_SWAP..."
-parted -s "$DISK" mkpart primary linux-swap "$PART_BOOT" \
-    "$(( $(numfmt --from=iec "$PART_BOOT") + $(numfmt --from=iec "$PART_SWAP") ))MiB" \
+parted -s "$DISK" mkpart primary linux-swap "$BOOT_END"MiB "$SWAP_END""MiB" \
     || { echo "Error creating swap partition"; exit 1; }
 # Root
 echo "Creating root partition of size $PART_ROOT..."
-parted -s "$DISK" mkpart primary ext4 "$ROOT_START" "$ROOT_END" \
+parted -s "$DISK" mkpart primary ext4 "$SWAP_END"MiB "$ROOT_END"MiB \
     || { echo "Error creating root partition"; exit 1; }
 # Home
 echo "Allocating $PART_HOME to root partition..."
-parted -s "$DISK" mkpart primary ext4 "$ROOT_END" "$HOME_END" \
+parted -s "$DISK" mkpart primary ext4 "$ROOT_END"MiB "$HOME_END"MiB \
     || { echo "Error creating home partition"; exit 1; }
 # Formatting
 echo "Formatting partitions..."
