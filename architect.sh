@@ -19,17 +19,6 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-##### CLEANING #####
-if [[ $1 == "--clean" ]]; then
-    echo "Cleaning up..."
-    umount -R /mnt 2>/dev/null
-    swapoff -a
-    wipefs -a -f "$DISK"*
-    sgdisk --zap-all "$DISK"
-    partprobe "$DISK"
-    exit 0
-fi
-
 echo "INSTALL STARTED..."
 ##### DEPENDENCIES #####
 echo "Installing numfmt for partitioning..."
@@ -65,19 +54,13 @@ fi
 
 # Formatting Drive
 echo "Unmounting partitions on $DISK..."
-umount -R -f "${DISK}"* \
-    || umount -R -f /mnt \
-    || echo "No partitions to unmount."
+umount -A --recursive /mnt
 echo "Disabling swap if any on $DISK..."
 swapoff "${DISK}"* 2>/dev/null \
     || echo "No swap to disable on $DISK."
 echo "Wiping filesystem signatures and metadata on $DISK..."
-wipefs -a -f "$DISK"* \
-    || { echo "Error wiping $DISK"; exit 1; }
-echo "Creating GPT partition table on $DISK..."
-# sgdisk --zap-all "$DISK" \
-#     || { echo "Error creating partition table"; exit 1; }
-parted -s "$DISK" mklabel gpt \
+sgdisk -Z ${DISK}
+sgdisk -a 2048 -o ${DISK} \
     || { echo "Error creating partition table"; exit 1; }
 # BIOS boot
 echo "Creating BIOS boot partition..."
