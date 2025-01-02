@@ -102,7 +102,7 @@ lsblk $DISK
 ##### ROOT #####
 # Updating keyrings to latest to prevent packages failing to install
 echo "Updating keyrings"
-pacman -Sy --needed archlinux-keyring
+pacman -Sy --needed archlinux-keyring --noconfirm
 # Installing base system
 echo "Installing base system..."
 pacstrap /mnt linux linux-firmware base base-devel grub networkmanager --noconfirm
