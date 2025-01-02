@@ -68,9 +68,15 @@ echo "Creating GPT partition table on $DISK..."
 #     || { echo "Error creating partition table"; exit 1; }
 parted -s "$DISK" mklabel gpt \
     || { echo "Error creating partition table"; exit 1; }
+# BIOS boot
+echo "Creating BIOS boot partition..."
+parted -s "$DISK" mkpart primary 1MiB 3MiB \
+    || { echo "Error creating BIOS boot partition"; exit 1; }
+parted -s "$DISK" set 1 bios_grub on \
+    || { echo "Error setting BIOS boot flag"; exit 1; }
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
-parted -s "$DISK" mkpart primary ext4 1MiB "$BOOT_END"MiB \
+parted -s "$DISK" mkpart primary ext4 3MiB "$BOOT_END"MiB \
     || { echo "Error creating boot partition"; exit 1; }
 # Swap
 echo "Creating swap partition of size $PART_SWAP..."

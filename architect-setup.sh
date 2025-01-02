@@ -22,7 +22,7 @@ fi
 
 echo "SETUP STARTED..."
 # Grub configuration
-grub-install --target=i386-pc $DISK
+grub-install --target=i386-pc --efi-directory=/boot $DISK
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Root config
