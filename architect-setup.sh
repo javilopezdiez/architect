@@ -63,22 +63,25 @@ rm -rf /tmp/yay
 
 # Desktop environment isntall
 echo "Installing xfce Desktop environment..."
-sudo pacman -S xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter --noconfirm
+
+sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
+
 sudo systemctl enable lightdm
 
 # Password config
-echo "Please, Insert root passwd"
-passwd
-echo "Please, Insert your passwd"
-passwd $USER
+# echo "Please, Insert root passwd"
+# passwd
+# echo "Please, Insert your passwd"
+# passwd $USER
+
 # Sys reboot
-echo "Do you want to reboot the system? (y/n)"
-read -r choice
-if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
-    echo "Rebooting the system..."
-    sudo reboot
-else
-    echo "Reboot cancelled."
-fi
+# echo "Do you want to reboot the system? (y/n)"
+# read -r choice
+# if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+#     echo "Rebooting the system..."
+#     sudo reboot
+# else
+#     echo "Reboot cancelled."
+# fi
 
 echo "SETUP COMPLETED..."
