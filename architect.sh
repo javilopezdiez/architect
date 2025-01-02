@@ -54,14 +54,13 @@ fi
 
 # Formatting Drive
 echo "Unmounting partitions on $DISK..."
+
 umount -R "${DISK}"* \
+    || umount -R /mnt \
     || echo "No partitions to unmount."
 echo "Disabling swap if any on $DISK..."
 swapoff "${DISK}"* 2>/dev/null \
     || echo "No swap to disable on $DISK."
-echo "Killing processes on $DISK..."
-lsof +D "${DISK}"* | awk '{print $2}' | tail -n +2 | while read -r pid; do
-    kill -9 "$pid" && echo "Killed process $pid using $DISK"
 echo "Wiping filesystem signatures and metadata on $DISK..."
 wipefs -a "$DISK"* \
     || { echo "Error wiping $DISK"; exit 1; }
