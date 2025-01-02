@@ -61,6 +61,9 @@ echo $ROOT_END"MiB "$HOME_END
 echo "Unmounting partitions on $DISK..."
 umount -R "${DISK}"* \
     || echo "No partitions to unmount."
+echo "Disabling swap if any on $DISK..."
+swapoff "${DISK}"* 2>/dev/null \
+    || echo "No swap to disable on $DISK."
 echo "Wiping filesystem signatures and metadata on $DISK..."
 wipefs -a "$DISK" \
     || { echo "Error wiping $DISK"; exit 1; }
