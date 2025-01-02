@@ -19,6 +19,16 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+##### CLEANING #####
+if [[ $1 == "--clean" ]]; then
+    echo "Cleaning up..."
+    umount -R /mnt 2>/dev/null
+    swapoff -a
+    wipefs -a -f "$DISK"*
+    sgdisk --zap-all "$DISK"
+    exit 0
+fi
+
 echo "INSTALL STARTED..."
 ##### DEPENDENCIES #####
 echo "Installing numfmt for partitioning..."
