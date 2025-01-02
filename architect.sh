@@ -55,14 +55,14 @@ fi
 # Formatting Drive
 echo "Unmounting partitions on $DISK..."
 
-umount -R "${DISK}"* \
-    || umount -R /mnt \
+umount -R -F "${DISK}"* \
+    || umount -R -F /mnt \
     || echo "No partitions to unmount."
 echo "Disabling swap if any on $DISK..."
 swapoff "${DISK}"* 2>/dev/null \
     || echo "No swap to disable on $DISK."
 echo "Wiping filesystem signatures and metadata on $DISK..."
-wipefs -a "$DISK"* \
+wipefs -a -f "$DISK"* \
     || { echo "Error wiping $DISK"; exit 1; }
 echo "Creating GPT partition table on $DISK..."
 parted -s "$DISK" mklabel gpt \

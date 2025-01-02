@@ -13,7 +13,8 @@ wget https://es.mirrors.cicku.me/archlinux/iso/2024.12.01/archlinux-2024.12.01-x
 # VM
 ```bash
     # VM manager + QEMU
-        yay -S virt-manager qemu
+        yay -S virt-manager qemu spice-vdagent
+
         sudo systemctl status libvirtd.service
         sudo systemctl start libvirtd.service
     # Startig by default VM interaction form terminal
@@ -31,7 +32,8 @@ wget https://es.mirrors.cicku.me/archlinux/iso/2024.12.01/archlinux-2024.12.01-x
 
 # INSTALLATION
 ```bash
-curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh && sudo bash architect.sh > architect.log
+    loadkeys es
+    curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh && sudo bash architect.sh > architect.log
 ```
 
 
