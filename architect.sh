@@ -52,6 +52,10 @@ parted -s "$DISK" mklabel gpt \
     || { echo "Error creating partition table"; exit 1; }
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
+echo "1MiB "$BOOT_END"MiB"
+echo "$BOOT_END"MiB" "$SWAP_END"MiB"
+echo "$SWAP_END"MiB" "$ROOT_END"MiB"
+echo "$ROOT_END"MiB" "$HOME_END"MiB"
 parted -s "$DISK" mkpart primary ext4 1MiB "$BOOT_END"MiB \
     || { echo "Error creating boot partition"; exit 1; }
 # Swap
