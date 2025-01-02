@@ -8,6 +8,7 @@ HOSTNAME=architect
 DISK="/dev/vda"
 LAYOUT="es"
 LOCATION="Europe/Madrid"
+KEYMAP="es"
 PART_BOOT="500M"
 PART_SWAP="3G"
 PART_ROOT="15G"
