@@ -51,6 +51,7 @@ localectl --no-ask-password set-keymap ${KEYMAP}
 sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 
 # sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
+echo "Downloading post-installer to /home/$USER/.architect-pkg.sh..."
 curl -L -o /home/$USER/.architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
 
 echo "SETUP COMPLETED..."
