@@ -53,24 +53,18 @@ sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 # Package manager update
 sudo pacman -Syu --noconfirm --needed
 
-# AUR helper install
-echo "Installing yay AUR helper..."
-mkdir /tmp/yay && cd /tmp/yay
-curl -OJ 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay'  
-makepkg -si --noconfirm
-rm -rf /tmp/yay
-
 # Desktop environment isntall
 echo "Installing xfce Desktop environment..."
 
-sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
+# sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
+curl -L -o /home/$USER/.architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
 
 # Service enabling
 sudo systemctl enable lightdm
 sudo systemctl enable NetworkManager
 
 # ~/.config
-cp /etc/X11/xinit/xinitrc ~/.xinitrc
+# cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
 echo "SETUP COMPLETED..."
 
@@ -91,3 +85,4 @@ echo "SETUP COMPLETED..."
 # fi
 
 echo "Dont forget to set passwd for root and $USER..."
+echo "Afterwars, run architect-pkg.sh"

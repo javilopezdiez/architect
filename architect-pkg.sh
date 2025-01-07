@@ -220,13 +220,20 @@ for PKG in "${BASE_PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 
-# echo -e "\nInstalling Base System PACMAN\n"
+# echo -e "\nInstalling PACMAN packages\n"
 # for PKG in "${PACMAN_PKGS[@]}"; do
 #     echo "INSTALLING PACMAN PKG: ${PKG}"
 #     sudo pacman -S "$PKG" --noconfirm --needed
 # done
 
 # --- YAY
+# AUR helper install
+echo "Installing yay AUR helper..."
+mkdir /tmp/yay && cd /tmp/yay
+curl -OJ 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay'  
+makepkg -si --noconfirm
+rm -rf /tmp/yay
+
 # echo -e "\nUpdating YAY\n"
 # sudo yay -Syu
 # echo -e "\nInstalling Base System YAY\n"
