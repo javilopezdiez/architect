@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-DESKTOP_ENV_PKGS=(
-        # 'xorg'                           #
-        'xfce4'                          #
-        'xfce4-goodies'                  #
-        'lightdm'                        # Base Login Manager
-        'lightdm-gtk-greeter'            #
+BASE_PKGS=(
+        'nano'                           # Pico editor clone with enhancements
+        'htop'                           # Process viewer
+
+        'xfce4'                          # xfce Group for lightweight and modular desktop environment based on GTK, xfce
+        'nm-connection-editor'           # NetworkManager GUI connection editor and widgets
+
+        'lightdm'                        # Lightweight display manager
+        'lightdm-gtk-greeter'            # 
+
+        # 'extra/network-manager-applet'   # Applet for managing network connection
+
 )
 
 PACMAN_PKGS=(
@@ -208,8 +214,8 @@ echo -e "\nUpdating PACMAN\n"
 # 	--overwrite /usr/lib/locale/\*/\* \
 # 	--noconfirm
 
-echo -e "\nInstalling Desktop Environment\n"
-for PKG in "${DESKTOP_ENV_PKGS[@]}"; do
+echo -e "\nInstalling Base packages\n"
+for PKG in "${BASE_PKGS[@]}"; do
     echo "INSTALLING PACMAN PKG: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
 done

@@ -6,7 +6,6 @@
 USER=loncelot
 HOSTNAME=architect
 DISK="/dev/vda"
-LAYOUT="es"
 LOCATION="Europe/Madrid"
 KEYMAP="es"
 PART_BOOT="500M"
@@ -27,8 +26,8 @@ pacman -Sy --needed numfmt --noconfirm
 
 ##### CONFIGURATION #####
 # keyboard config
-echo "Setting keyboard layout to $LAYOUT..."
-loadkeys $LAYOUT
+echo "Setting keyboard layout to $KEYMAP..."
+loadkeys $KEYMAP
 
 # Setting clock
 echo "Setting clock and timezone to $LOCATION..."

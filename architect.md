@@ -27,6 +27,13 @@ wget https://es.mirrors.cicku.me/archlinux/iso/2024.12.01/archlinux-2024.12.01-x
         # sudo usermod -aG kvm $USER && \
         # sudo usermod -aG input $USER && \
         # sudo usermod -aG disk $USER
+    # Shared filesystem
+        # Host 
+            # View > Details > Memory > Enable shared memory
+            # Add hardware
+                Filesystem shared
+        # Guest
+            sudo mount -t virtiofs share /home/foo/share
 ```
 
 # INSTALLATION
@@ -120,5 +127,3 @@ wget https://es.mirrors.cicku.me/archlinux/iso/2024.12.01/archlinux-2024.12.01-x
 
 
 ```
-
-

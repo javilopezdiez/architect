@@ -6,7 +6,6 @@
 USER=loncelot
 HOSTNAME=architect
 DISK="/dev/vda"
-LAYOUT="es"
 LOCATION="Europe/Madrid"
 KEYMAP="es"
 PART_BOOT="500M"
@@ -66,7 +65,11 @@ echo "Installing xfce Desktop environment..."
 
 sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
 
+# Service enabling
 sudo systemctl enable lightdm
+sudo systemctl enable NetworkManager
+
+echo "SETUP COMPLETED..."
 
 # Password config
 # echo "Please, Insert root passwd"
@@ -84,4 +87,4 @@ sudo systemctl enable lightdm
 #     echo "Reboot cancelled."
 # fi
 
-echo "SETUP COMPLETED..."
+echo "Dont forget to set passwd for root and $USER..."
