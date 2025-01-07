@@ -59,13 +59,6 @@ echo "Installing xfce Desktop environment..."
 # sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
 curl -L -o /home/$USER/.architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
 
-# Service enabling
-sudo systemctl enable lightdm
-sudo systemctl enable NetworkManager
-
-# ~/.config
-# cp /etc/X11/xinit/xinitrc ~/.xinitrc
-
 echo "SETUP COMPLETED..."
 
 # Password config

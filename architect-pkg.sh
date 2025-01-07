@@ -276,4 +276,12 @@ rm -rf /tmp/yay
         # wget -O ~/.config/kitty/scroll_mark.py https://raw.githubusercontent.com/trygveaa/kitty-kitten-search/master/scroll_mark.py
         # wget -O ~/.config/kitty/search.py https://raw.githubusercontent.com/trygveaa/kitty-kitten-search/master/search.py
 
+
+# Service enabling
+sudo systemctl enable lightdm
+sudo systemctl enable NetworkManager
+
+# ~/.config
+# cp /etc/X11/xinit/xinitrc ~/.xinitrc
+
 echo -e "\nDone!\n"
