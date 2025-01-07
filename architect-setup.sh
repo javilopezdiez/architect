@@ -26,7 +26,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # User config
 echo "Adding user $USER..."
-useradd -m -g wheel $USER
+useradd -m -G wheel-s /bin/zsh $USERNAME 
+echo "$USER:$PASSWORD" | chpasswd
+echo "$USER password set"
 sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 
 # Host config
@@ -50,9 +52,10 @@ localectl --no-ask-password set-keymap ${KEYMAP}
 #Add parallel downloading
 sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 
-# sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
-echo "Downloading post-installer to /home/$USER/.architect-pkg.sh..."
-curl -L -o /home/$USER/.architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
+sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
+# echo "Downloading post-installer to /home/$USER/architect-pkg.sh..."
+curl -L -o /home/$USER/architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
+( arch-chroot /mnt /usr/bin/runuser -u $USER -- /home/$USER/architect-pkg.sh )|& tee 2-user.log
 
 echo "SETUP COMPLETED..."
 
@@ -71,6 +74,3 @@ echo "SETUP COMPLETED..."
 # else
 #     echo "Reboot cancelled."
 # fi
-
-echo "Dont forget to set passwd for root and $USER..."
-echo "Afterwars, run architect-pkg.sh"

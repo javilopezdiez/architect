@@ -2,7 +2,6 @@
 
 BASE_PKGS=(
         'nano'                           # Pico editor clone with enhancements
-        'zsh'                            # ZSH shell
 
         'xfce4'                          # xfce Package Group for xfce lightweight and modular desktop environment based on GTK
         'nm-connection-editor'           # NetworkManager GUI connection editor and widgets
@@ -10,9 +9,9 @@ BASE_PKGS=(
         'lightdm'                        # Lightweight display manager
         'lightdm-gtk-greeter'            # 
 
-        'htop'                           # Process viewer
         'extra/network-manager-applet'   # Applet for managing network connection
-
+        'htop'                           # Process viewer
+        'screenfetch'                    # CLI Bash script to show system/theme info in screenshots
 )
 
 PACMAN_PKGS=(
@@ -203,16 +202,9 @@ YAY_PKGS=(
     # 'remmina'                       # Remote Desktop Client
     # 'freerdp'                      # Remote Desktop Protocol
 )
-YAY_UNINSTALL_PKGS=(
-    # 'firefox'                       # Web browser
-    # 'xfce4-notes-plugin'            # Notes plugin for the Xfce
-)
 
 # --- PACMAN
 echo -e "\nUpdating PACMAN\n"
-# sudo pacman -Syu glibc-locales \
-# 	--overwrite /usr/lib/locale/\*/\* \
-# 	--noconfirm
 sudo pacman -Syu --noconfirm --needed
 
 echo -e "\nInstalling Base packages\n"
@@ -221,11 +213,11 @@ for PKG in "${BASE_PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 
-# echo -e "\nInstalling PACMAN packages\n"
-# for PKG in "${PACMAN_PKGS[@]}"; do
-#     echo "INSTALLING PACMAN PKG: ${PKG}"
-#     sudo pacman -S "$PKG" --noconfirm --needed
-# done
+echo -e "\nInstalling PACMAN packages\n"
+for PKG in "${PACMAN_PKGS[@]}"; do
+    echo "INSTALLING PACMAN PKG: ${PKG}"
+    sudo pacman -S "$PKG" --noconfirm --needed
+done
 
 # --- YAY
 # AUR helper install
@@ -237,22 +229,18 @@ rm -rf /tmp/yay
 
 echo -e "\nUpdating YAY\n"
 sudo yay -Syu
-# echo -e "\nInstalling Base System YAY\n"
-# for PKG in "${YAY_PKGS[@]}"; do
-#     echo "INSTALLING YAY PKG: ${PKG}"
-#     yay -S "$PKG" --noconfirm --needed
-# done
-# echo -e "\nUninstalling PRE-Packages YAY\n"
-# for PKG in "${YAY_UNINSTALL_PKGS[@]}"; do
-#     echo "UNINSTALLING YAY PKG: ${PKG}"
-#     yay -Rnsc "$PKG" --noconfirm
-# done
+
+echo -e "\nInstalling YAY packages\n"
+for PKG in "${YAY_PKGS[@]}"; do
+    echo "INSTALLING YAY PKG: ${PKG}"
+    yay -S "$PKG" --noconfirm --needed
+done
 
 # --- Python Packages
-    # pip3 install --user \
-    #     --force-reinstall \
-    #     --break-system-packages \
-    #     https://github.com/dlenski/gp-saml-gui/archive/master.zip
+    pip3 install --user \
+        --force-reinstall \
+        --break-system-packages \
+        https://github.com/dlenski/gp-saml-gui/archive/master.zip
 
 # --- RUST
     # yay -S rust

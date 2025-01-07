@@ -106,7 +106,12 @@ echo "Updating keyrings"
 pacman -Sy --needed archlinux-keyring --noconfirm
 # Installing base system
 echo "Installing base system..."
-pacstrap /mnt linux linux-firmware base base-devel grub networkmanager --noconfirm
+pacstrap /mnt linux \
+    linux-firmware \
+    base base-devel \
+    grub \
+    networkmanager \
+    zsh --noconfirm
 
 # Saving mounting config
 echo "Generating fstab..."
