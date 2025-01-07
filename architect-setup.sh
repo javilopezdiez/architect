@@ -69,6 +69,9 @@ sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/
 sudo systemctl enable lightdm
 sudo systemctl enable NetworkManager
 
+# ~/.config
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+
 echo "SETUP COMPLETED..."
 
 # Password config

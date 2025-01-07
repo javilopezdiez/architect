@@ -2,15 +2,16 @@
 
 BASE_PKGS=(
         'nano'                           # Pico editor clone with enhancements
-        'htop'                           # Process viewer
+        'zsh'                            # ZSH shell
 
-        'xfce4'                          # xfce Group for lightweight and modular desktop environment based on GTK, xfce
+        'xfce4'                          # xfce Package Group for xfce lightweight and modular desktop environment based on GTK
         'nm-connection-editor'           # NetworkManager GUI connection editor and widgets
 
         'lightdm'                        # Lightweight display manager
         'lightdm-gtk-greeter'            # 
 
-        # 'extra/network-manager-applet'   # Applet for managing network connection
+        'htop'                           # Process viewer
+        'extra/network-manager-applet'   # Applet for managing network connection
 
 )
 
@@ -119,7 +120,6 @@ PACMAN_PKGS=(
         # 'gsfonts'
 
     # --- terminal UTILITIES
-        # 'zsh'                           # ZSH shell
         # 'openssh'                       # SSH connectivity tools
         # 'unrar'                         # RAR compression program
         # 'unzip'                         # Zip compression program
