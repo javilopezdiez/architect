@@ -213,6 +213,7 @@ echo -e "\nUpdating PACMAN\n"
 # sudo pacman -Syu glibc-locales \
 # 	--overwrite /usr/lib/locale/\*/\* \
 # 	--noconfirm
+sudo pacman -Syu --noconfirm --needed
 
 echo -e "\nInstalling Base packages\n"
 for PKG in "${BASE_PKGS[@]}"; do
@@ -234,8 +235,8 @@ curl -OJ 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay'
 makepkg -si --noconfirm
 rm -rf /tmp/yay
 
-# echo -e "\nUpdating YAY\n"
-# sudo yay -Syu
+echo -e "\nUpdating YAY\n"
+sudo yay -Syu
 # echo -e "\nInstalling Base System YAY\n"
 # for PKG in "${YAY_PKGS[@]}"; do
 #     echo "INSTALLING YAY PKG: ${PKG}"

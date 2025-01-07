@@ -19,7 +19,6 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-
 echo "SETUP STARTED..."
 # Grub configuration
 grub-install --target=i386-pc --efi-directory=/boot $DISK
@@ -50,11 +49,6 @@ localectl --no-ask-password set-keymap ${KEYMAP}
 
 #Add parallel downloading
 sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
-# Package manager update
-sudo pacman -Syu --noconfirm --needed
-
-# Desktop environment isntall
-echo "Installing xfce Desktop environment..."
 
 # sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
 curl -L -o /home/$USER/.architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
