@@ -55,7 +55,7 @@ sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
 # echo "Downloading post-installer to /home/$USER/architect-pkg.sh..."
 curl -L -o /home/$USER/architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
-( arch-chroot /mnt /usr/bin/runuser -u $USER -- /home/$USER/architect-pkg.sh )|& tee 2-user.log
+( /usr/bin/runuser -u $USER -- /home/$USER/architect-pkg.sh )|& tee 2-user.log
 
 echo "SETUP COMPLETED..."
 

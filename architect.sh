@@ -120,4 +120,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 echo "INSTALL COMPLETED..."
 
 # Changing the root directory to /mnt
-arch-chroot /mnt bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-setup.sh | bash" > /mnt/architect-setup.log
+# arch-chroot /mnt bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-setup.sh | bash" > /mnt/architect-setup.log
+curl -L -o /mnt/architect-setup.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-setup.sh
+( arch-chroot /mnt bash -c /mnt/architect-setup.sh )|& tee architect-setup.log
+
+screenfetch

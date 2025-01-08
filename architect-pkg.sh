@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "POST-INSTALL STARTED..."
+
 BASE_PKGS=(
         'nano'                           # Pico editor clone with enhancements
 
@@ -273,4 +275,5 @@ sudo systemctl enable NetworkManager
 # ~/.config
 # cp /etc/X11/xinit/xinitrc ~/.xinitrc
 
-echo -e "\nDone!\n"
+
+echo "POST-INSTALL COMPLETED..."
