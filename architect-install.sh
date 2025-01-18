@@ -99,6 +99,13 @@ pacstrap /mnt linux \
     networkmanager \
     zsh --noconfirm
 
+
+# Copying scripts 0
+echo "Copying scripts 0 and keyserver, mirrorlist"
+echo "keyserver hkp://keyserver.ubuntu.com" >> /mnt/etc/pacman.d/gnupg/gpg.conf
+cp -R ${SCRIPT_DIR} /mnt/root/Architect
+cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
+
 # Saving mounting config
 echo "Generating fstab..."
 genfstab -U /mnt >> /mnt/etc/fstab

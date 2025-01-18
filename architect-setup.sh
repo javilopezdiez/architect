@@ -11,6 +11,12 @@ fi
 # Grub config
 grub-install --target=i386-pc --efi-directory=/boot $DISK
 grub-mkconfig -o /boot/grub/grub.cfg
+# TODO
+# if [[ ! -d "/sys/firmware/efi" ]]; then
+#     grub-install --boot-directory=/mnt/boot ${DISK}
+# else
+#     pacstrap /mnt efibootmgr --noconfirm --needed
+# fi
 
 # User config
 echo "Adding user $USER..."
@@ -19,7 +25,8 @@ echo "$USER:$PASSWORD" | chpasswd
 echo "$USER password set"
 sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 
-# Copying scripts
+# Copying scripts 1
+echo "Copying scripts 1"
 cp -R $HOME/architect /home/$USER/
 chown -R $USER: /home/$USER/architect
 
