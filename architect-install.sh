@@ -7,6 +7,11 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+
+# Installing DEPENDENCIES
+echo "Installing dependencies."
+pacman -Sy --noconfirm --needed numfmt
+
 ##### CONFIGURATION #####
 # keyboard config
 echo "Setting keyboard layout to $KEYMAP..."
