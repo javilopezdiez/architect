@@ -124,6 +124,22 @@ wget https://es.mirrors.cicku.me/archlinux/iso/2024.12.01/archlinux-2024.12.01-x
     # Desktop environment isntall
         sudo pamcan -Syu xorg xfce4 xfce4-goodies lightdm lightdm-gtk-greeter --noconfirm
         sudo systemctl enable lightdm
+```
 
+```bash
+    # Restarting xfwm4
+    xfwm4 --replace &
+
+    # curl -L -o architect.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect.sh && sudo bash architect.sh |& tee architect.log
+
+    # Changing the root directory to /mnt
+    # arch-chroot /mnt bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-setup.sh | bash" > /mnt/architect-setup.log
+    curl -L -o /mnt/architect-setup.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-setup.sh
+    ( arch-chroot /mnt bash -c /mnt/architect-setup.sh )|& tee architect-setup.log
+
+    sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
+    # echo "Downloading post-installer to /home/$USER/architect-pkg.sh..."
+    curl -L -o /home/$USER/architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
+    ( /usr/bin/runuser -u $USER -- /home/$USER/architect-pkg.sh )|& tee 2-user.log
 
 ```

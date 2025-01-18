@@ -1,17 +1,5 @@
 #/!bin/bash
-# Command for execution
-# bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-setup.sh | bash" > /mnt/architect-setup.log
-
-##### VARIABLES #####
-USER=loncelot
-HOSTNAME=architect
-DISK="/dev/vda"
-LOCATION="Europe/Madrid"
-KEYMAP="es"
-PART_BOOT="500M"
-PART_SWAP="3G"
-PART_ROOT="15G"
-PART_HOME="" # If empty, remaining space
+source properties.conf
 
 ##### ROOT #####
 if [[ $EUID -ne 0 ]]; then
@@ -19,17 +7,21 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-echo "SETUP STARTED..."
-# Grub configuration
+##### CONFIGURATION #####
+# Grub config
 grub-install --target=i386-pc --efi-directory=/boot $DISK
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # User config
 echo "Adding user $USER..."
-useradd -m -G wheel-s /bin/zsh $USERNAME 
+useradd -m -G wheel-s /bin/zsh $USER 
 echo "$USER:$PASSWORD" | chpasswd
 echo "$USER password set"
 sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
+
+# Copying scripts
+cp -R $HOME/architect /home/$USER/
+chown -R $USER: /home/$USER/architect
 
 # Host config
 echo "Naming host $HOSTNAME..."
@@ -51,26 +43,3 @@ localectl --no-ask-password set-keymap ${KEYMAP}
 
 #Add parallel downloading
 sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
-
-sudo bash -c "curl -L https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh | bash" > /mnt/architect-pkg.log
-# echo "Downloading post-installer to /home/$USER/architect-pkg.sh..."
-curl -L -o /home/$USER/architect-pkg.sh https://raw.githubusercontent.com/javilopezdiez/architect/main/architect-pkg.sh
-( /usr/bin/runuser -u $USER -- /home/$USER/architect-pkg.sh )|& tee 2-user.log
-
-echo "SETUP COMPLETED..."
-
-# Password config
-# echo "Please, Insert root passwd"
-# passwd
-# echo "Please, Insert your passwd"
-# passwd $USER
-
-# Sys reboot
-# echo "Do you want to reboot the system? (y/n)"
-# read -r choice
-# if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
-#     echo "Rebooting the system..."
-#     sudo reboot
-# else
-#     echo "Reboot cancelled."
-# fi
