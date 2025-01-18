@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Installing DEPENDENCIES
-echo "Installing git."
-pacman -Sy --noconfirm --needed git glibc numfmt
+echo "Installing dependencies."
+pacman -Sy --noconfirm --needed git numfmt
 
 # Cloning scripts
 echo "Cloning the architect script"
