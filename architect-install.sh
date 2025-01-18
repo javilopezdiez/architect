@@ -7,10 +7,9 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-
 # Installing DEPENDENCIES
 echo "Installing dependencies."
-pacman -Sy --noconfirm --needed numfmt
+pacman -Sy --noconfirm --needed glibc numfmt
 
 ##### CONFIGURATION #####
 # keyboard config
