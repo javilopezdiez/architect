@@ -1,0 +1,116 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.cursorStyle": "block",
+    "editor.fontSize": 14,
+    "files.associations": {
+        "*.ftl": "ftl"
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "terminal.integrated.allowMnemonics": true,
+    "settingsSync.ignoredExtensions": [],
+    "workbench.colorCustomizations": {
+        "editorCursor.background": "#000000",
+        "editorCursor.foreground": "#2ad639",
+        
+        "activityBar.background": "#000000",
+        "titleBar.activeBackground": "#73308d",
+        "titleBar.activeForeground": "#ffffff",
+        "editor.background": "#202020",
+        "scrollbarSlider.activeBackground": "#62fa1bcb",
+        "scrollbarSlider.hoverBackground": "#fa2a1b71",
+        "scrollbarSlider.background": "#c97554a6",
+        "editorPane.background": "#000000",
+        "diffEditor.ignoreTrimWhitespace": false,
+    },
+    "files.exclude": {
+        "**/.vscode": true
+    },
+    "terminal.integrated.automationProfile.linux": {},
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "none",
+    "settingsSync.ignoredSettings": [],
+    "extensions.ignoreRecommendations": true,
+    "[java]": {
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": true,
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "redhat.java",
+    },
+    "editor.multiCursorLimit": 99999,
+    "editor.renderWhitespace": "all",
+    "workbench.activityBar.location": "hidden",
+    "editor.stickyScroll.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "vscode-postgres.virtualFolders": [
+        "functions"
+    ],
+    "window.zoomLevel": -1,
+    "workbench.settings.applyToAllProfiles": [
+        "editor.tabSize"
+    ],
+    "workbench.editor.enablePreview": false,
+    "accessibility.verbosity.terminal": false,
+    "editor.rulers":[],
+    "editor.stickyScroll.scrollWithEditor": false,
+    "workbench.tree.enableStickyScroll": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.wordWrap": "off",
+    "diffEditor.renderSideBySide": false,
+    "diffEditor.maxComputationTime": 0,
+    "diffEditor.renderGutterMenu": false,
+
+    // Terminal
+    // "git.path": "D:\\Program Files\\Git\\bin\\git.exe",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.defaultProfile.windows": "bash",
+    "terminal.integrated.profiles.windows": {
+        "bash": {
+            "path": "D:\\Program Files\\Git\\bin\\bash.exe",
+            "icon": "terminal-bash"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/bin/bash",
+            "args": [
+                "-c",  // Tells bash to execute the following command string
+                "cd ${workspaceFolder} && sudo -u $(echo ${workspaceFolder} | cut -d'/' -f3) bash",
+                    // Change the working directory to the VSCode workspace folder
+                    // Switch to the user and start a new bash shell
+                    // ${userHome} - /home/your-username so i do pipe to get the user of the folder
+                "--noprofile",  // Don't load profile scripts like .bash_profile
+                "--norc",  // Don't source .bashrc or other initialization files
+                "-c",  // Instruct the new bash shell to execute the following command string
+                "'exec bash'",  // Replace the current shell process with an interactive bash session
+            ],
+            "icon": "terminal-linux"
+        }
+    },
+    
+    // Extensions
+    "glassit.alpha": 235,
+
+    "[oraclesql]": {
+        "editor.suggest.showSnippets": true,
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+
+    "oracledevtools.connectionConfiguration.showPromptForPasswordStoreMigrationToSecretStorage": false,
+    "oracledevtools.connectionConfiguration.configFilesFolder": "/root/Oracle/network/admin",
+    "oracledevtools.connectionConfiguration.walletFileFolder": "/root/Oracle/network/admin",
+    "oracledevtools.bookmarkFileFolder": "/root/Oracle/oracle.oracledevtools",
+    "oracledevtools.download.otherFolder": "/root/downloads",
+    "json.schemas": [],
+    "git.openRepositoryInParentFolders": "never",
+}
