@@ -23,7 +23,7 @@ end
 local avoid_roles = {
     "dropdown"
 }
-function avoidName()
+function avoidRoles()
     return contains(avoid_roles, get_window_role())
 end
 local avoid_names = {
@@ -81,6 +81,14 @@ function set_window_geometry_by_id(window_id, x_pos, y_pos, width, height)
     ))
 end
 
+-- Function to check if a command is available
+function is_command_available(command)
+    local handle = io.popen("command -v " .. command .. " &> /dev/null && echo 'true' || echo 'false'")
+    local result = handle:read("*a")
+    handle:close()
+    return result:match("true") ~= nil
+end
+
 -- INPUT
 if not get_window_type and arg[1] then
     local window_id = arg[1]
@@ -89,7 +97,7 @@ if not get_window_type and arg[1] then
 -- DEVILSPIE
 else
     if (not avoidType() and 
-        not avoid_roles() and 
+        not avoidRoles() and 
         not avoidName()) then
         debug()
         if is_main_display_active() then

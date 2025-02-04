@@ -1,6 +1,10 @@
 #/!bin/bash
 
 BASE_PKGS=(
+        # TODO description on?
+        # 'base-devel'                   Basic tools to build Manjaro Linux packages
+        # 'rsync'                          # File copying tool for remote and local files
+
         'nano'                           # Pico editor clone with enhancements
 
         'xfce4'                          # xfce Package Group for xfce lightweight and modular desktop environment based on GTK
@@ -11,12 +15,8 @@ BASE_PKGS=(
         'nm-connection-editor'           # NetworkManager GUI connection editor and widgets
         'extra/network-manager-applet'   # Applet for managing network connection
 
-        'rsync'
-
         'htop'                           # Process viewer
         'screenfetch'                    # CLI Bash script to show system/theme info in screenshots
-
-
 )
 
 PACMAN_PKGS=(
@@ -60,7 +60,7 @@ PACMAN_PKGS=(
         # 'nautilus'                      # Filesystem browser
         # 'pcmanfm'                       # Filesystem browser
         # 'nitrogen'                      # Wallpaper changer
-        # 'xorg-xrandr'                   # Screen output
+        'xorg-xrandr'                   # Primitive command line interface to RandR extension
         # 'arandr'                        # Visual front end for xrandr
         'tlp'                           # Battery saving command line utility
         'auto-cpufreq'                  # Automatic CPU speed & power optimizer
@@ -100,7 +100,7 @@ PACMAN_PKGS=(
         # 'pnmixer'                       # System tray volume control
 
     # --- Bluetooth SETUP
-	    # 'bluez'                         # Daemons for the bluetooth protocol stack
+	# 'bluez'                         # Daemons for the bluetooth protocol stack
         # 'bluez-utils'                   # Bluetooth development and debugging utilities
         # 'bluez-firmware'                # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
         # 'blueberry'                     # Bluetooth configuration tool
@@ -135,7 +135,7 @@ PACMAN_PKGS=(
         # 'terminator'                    # Terminal emulator
         # 'termite'                       # Terminal emulator
         # 'st'                            # Simple Terminal emulator
-	    # 'htop'                          # Process viewer
+	# 'htop'                          # Process viewer
         # 'screenfetch'                   # System information fancy display
         # 'tree'                          # File directory terminal display
         # 'rtorrent'                      # Torrent manager
@@ -202,8 +202,8 @@ YAY_PKGS=(
     'thorium-browser-bin'           # Web browser
     'visual-studio-code-bin'        # Visual Studio Code
     'vmware-horizon-client'         # Virtual Desktop
-    # 'virt-manager'                  # Virtual machine manager
-    # 'qemu-base'                     # Virtual machine headless emulator
+    'virt-manager'                  # Virtual machine manager
+    'qemu-base'                     # Virtual machine headless emulator
     # 'remmina'                       # Remote Desktop Client
     # 'freerdp'                      # Remote Desktop Protocol
 )
@@ -241,11 +241,12 @@ YAY_PKGS=(
         yay -S "$PKG" --noconfirm --needed
     done
 
-# --- PYTHON PACKAGES
-    pip3 install --user \
-        --force-reinstall \
-        --break-system-packages \
-        https://github.com/dlenski/gp-saml-gui/archive/master.zip
+# --- PYTHON PACKAGES 
+    # TODO, AFTER COPYING TO /.local/bin?
+    # pip3 install --user \
+    #     --force-reinstall \
+    #     --break-system-packages \
+    #     https://github.com/dlenski/gp-saml-gui/archive/master.zip
 
 # --- RUST
     # yay -S rust
@@ -254,17 +255,17 @@ YAY_PKGS=(
     
 # --- GITHUB SCRIPTS
     # https://github.com/calandoa/movescreen
-        # DEPENDENCIES=(
-        #     'xorg-xwininfo'                       # Cli tool to get windows info on an X server
-        #     'wmctrl'                              # Cli tool to Control EWMH window manager
-        #     'xdotool'                             # Cli tool for X11 automation
-        # )
-        # for PKG in "${DEPENDENCIES[@]}"; do
-        #     yay -S "$PKG" --noconfirm --needed
-        # done
+        DEPENDENCIES=(
+             'xorg-xwininfo'                       # Cli tool to get windows info on an X server
+             'wmctrl'                              # Cli tool to Control EWMH window manager
+             'xdotool'                             # Cli tool for X11 automation
+        )
+        for PKG in "${DEPENDENCIES[@]}"; do
+            yay -S "$PKG" --noconfirm --needed
+        done
 
-        # wget -O ~/.local/bin/movescreen.py https://raw.githubusercontent.com/calandoa/movescreen/master/movescreen.py
-        # chmod +x ~/.local/bin/movescreen.py
+        wget -O ~/.local/bin/movescreen.py https://raw.githubusercontent.com/calandoa/movescreen/master/movescreen.py
+        chmod +x ~/.local/bin/movescreen.py
 
     # https://github.com/trygveaa/kitty-kitten-search
         # wget -O ~/.config/kitty/scroll_mark.py https://raw.githubusercontent.com/trygveaa/kitty-kitten-search/master/scroll_mark.py
@@ -274,7 +275,7 @@ YAY_PKGS=(
 # --- SERVICE ENABLING
     # Display manager
         # Package: lightdm
-        sudo systemctl enable lightdm
+        # sudo systemctl enable lightdm
 
     # Network management
         # Disable DHCP client daemon (dhcpcd) as NetworkManager will manage the network
@@ -286,11 +287,11 @@ YAY_PKGS=(
             # yay -Rnsc dhcpcd
         # Network connection manager
             # Package: NetworkManager
-            sudo systemctl enable NetworkManager
+            # sudo systemctl enable NetworkManager
         # Avahi Daemon (for service discovery on a local network)
             # Package: avahi
-            sudo systemctl enable avahi-daemon.service
-            echo "  Avahi enabled"
+            # sudo systemctl enable avahi-daemon.service
+            # echo "  Avahi enabled"
         # NTP (Network Time Protocol) synchronization
             # Package: ntp
             # ntpd -qg
@@ -298,15 +299,15 @@ YAY_PKGS=(
             # echo "  NTP enabled"
     # Bluetooth
         # Package: bluez
-        sudo systemctl enable bluetooth
-        echo "  Bluetooth enabled"
+        # sudo systemctl enable bluetooth
+        # echo "  Bluetooth enabled"
     # Battery saving command line utility
         # Package: tlp
-        sudo systemctl enable tlp.service
+        # sudo systemctl enable tlp.service
     # Printer service
         # Package: cups
-        sudo systemctl enable cups.service
-        echo "Cups enabled"
+        # sudo systemctl enable cups.service
+        # echo "Cups enabled"
 
 # --- CONFIG
     echo -ne "--------------------------2.2- POST-INSTALL CONFIG STARTED...-------\n"

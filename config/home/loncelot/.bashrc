@@ -139,20 +139,20 @@ ex ()
 alias codes='sudo code --no-sandbox --user-data-dir ~/.config/Code '
 
 function yt {
-    if [[ $# -eq 2 && ( $1 == "720" || $1 == "1080" ) ]]; then
-        quality=$1
-        url=$2
-        if [[ $quality == "audio" ]]; then
+	if [[ $# -eq 2 && ( $1 == "720" || $1 == "1080" ) ]]; then
+		quality=$1
+		url=$2
+		if [[ $quality == "audio" ]]; then
 			yt-dlp -o "~/Downloads/%(title)s.%(ext)s" -f "bestaudio/best" "$url"
 		elif [[ $quality == "720" ]]; then
-            yt-dlp -o "~/Downloads/%(title)s.%(ext)s" -f "(mp4) bestvideo[height<=?720]+bestaudio/best" "$url"
-        elif [[ $quality == "1080" ]]; then
-            yt-dlp -o "~/Downloads/%(title)s.%(ext)s" -f "(mp4) bestvideo[height<=?1080]+bestaudio/best" "$url"
-        fi
-    else
+			yt-dlp -o "~/Downloads/%(title)s.%(ext)s" -f "(mp4) bestvideo[height<=?720]+bestaudio/best" "$url"
+		elif [[ $quality == "1080" ]]; then
+			yt-dlp -o "~/Downloads/%(title)s.%(ext)s" -f "(mp4) bestvideo[height<=?1080]+bestaudio/best" "$url"
+		fi
+	else
 		cd ~/Downloads
-        ytfzf -l -t "$@"
-    fi
+		ytfzf -l -t "$@"
+fi
 }
 alias chat='tgpt -m'
 function gpt {
@@ -162,3 +162,4 @@ function gpt {
 }
 
 PATH="$PATH:/home/loncelot/.cargo/bin"
+PATH="$HOME/.local/bin:$PATH"

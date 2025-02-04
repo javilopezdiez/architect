@@ -5,40 +5,43 @@ BU="Backup source files to destination"
 GU="Backup source files to git repo"
 
 # Default directories
-G="/run/media/$USER/nail/backup"
-B="$HOME/Workspace/architect/config"
+B="/run/media/$USER/nail/backup"
+G="$HOME/Workspace/architect/config"
 
 source_dirs=(
     "$HOME/.profile"
     "$HOME/.bashrc"
-    "$HOME/.face"
+    # "$HOME/.face"
 
     # "$HOME/.local/bin"
-    "$HOME/.local/bin/mysrc"
-    "$HOME/.local/bin/my*.sh"
+    # "$HOME/.local/bin/mysrc"
+    # "$HOME/.local/bin/my*.sh"
     "$HOME/.themes"
 
     "$HOME/.config/xfce4"
     "$HOME/.config/devilspie2"
-    # "$HOME/.config/Code/User"
     "$HOME/.config/Code/User/*.json"
     "$HOME/.config/Thunar"
+    "$HOME/.config/autostart/my*.desktop"
     # "$HOME/.config/autostart/mykeyboard.desktop"
     # "$HOME/.config/autostart/mydevilspie2.desktop"
-    "$HOME/.config/autostart/my*.desktop"
+    # "$HOME/.config/autostart/my*.desktop"
     "$HOME/.config/mimeapps.list"
     # "$HOME/.config/myicon"
 
     "$HOME/Pictures/wallpapers/art/bierstadt"
     "$HOME/Pictures/wallpapers/mybackground.png"
 
+    # TODO if changes mkconfig
     "/etc/default/grub"
     "/etc/lightdm/lightdm-gtk-greeter.conf"
     # "/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml"
-    "/etc/sudoers"
+    # TODO ownership root
+    # might it be sudo chmod 440 /etc/sudoers
+    # "/etc/sudoers"
     # "/etc/xdg"
 
-    "/usr/lib/vmware/view/dct/configFiles"
+    # "/usr/lib/vmware/view/dct/configFiles"
     "/usr/share/backgrounds/my-lockscreen.jpeg"
     "/usr/share/backgrounds/xfce/xfce-shapes.svg"
     "/usr/share/backgrounds/xfce/xfce-x.svg"
