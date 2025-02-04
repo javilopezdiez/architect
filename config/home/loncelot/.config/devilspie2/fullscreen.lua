@@ -1,5 +1,5 @@
 function debug()
-    debug_print( "get_window_name:                      " .. get_window_name())
+    debug_print( "get_window_name---------------------->" .. get_window_name())
     debug_print( "get_application_name:                 " .. get_application_name())
     debug_print( "get_window_geometry:                  " .. get_window_geometry())
     debug_print( "get_window_client_geometry:           " .. get_window_client_geometry())
@@ -27,6 +27,9 @@ function avoidRoles()
     return contains(avoid_roles, get_window_role())
 end
 local avoid_names = {
+    'Visual Studio Code',
+    'notify',
+    'Authenticate'
 }
 function avoidName()
     return contains(avoid_names, get_window_name())

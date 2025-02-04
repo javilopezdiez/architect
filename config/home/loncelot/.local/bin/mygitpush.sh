@@ -5,5 +5,5 @@ sudo git restore *myvpn.sh && \
 sudo git restore *myvm.sh && \
 git restore --staged . && \
 sudo git add . && \
-git commit -m "config added no pass" && \
+git commit -m "todo" && \
 git push -f
