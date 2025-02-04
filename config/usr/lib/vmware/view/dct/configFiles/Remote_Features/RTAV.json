@@ -1,0 +1,25 @@
+{
+  "featureName": "RTAV",
+  "logLevelSettings": {
+    "files": [
+      {
+        "path": "/etc/vmware/config",
+        "key": "rtav.LogLevel",
+        "logLevelMapping": {
+          "INFO": "info",
+          "DEBUG": "debug",
+          "TRACE": "trace",
+          "VERBOSE": "trace"
+        }
+      }
+    ]
+  },
+  "logCollectionSettings": {
+    "paths": [
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-RTAV-*"
+      }
+    ]
+  }
+}

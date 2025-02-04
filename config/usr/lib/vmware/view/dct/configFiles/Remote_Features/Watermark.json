@@ -1,0 +1,19 @@
+{
+  "featureName": "Digital Watermark",
+  "logCollectionSettings": {
+    "paths": [
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-mks-*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-rdeSvc-*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-vdpService-*"
+      }
+    ]
+  }
+}

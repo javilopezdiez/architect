@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=mydevilspie
+Comment=Starts devilspie2, window matching utility
+Exec=devilspie2
+Terminal=true
+Hidden=true

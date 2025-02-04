@@ -1,0 +1,55 @@
+{
+  "featureName": "Published Applications",
+  "logLevelSettings": {
+    "files": [
+      {
+        "path": [
+          "~/.vmware/config",
+          "/usr/lib/vmware/config",
+          "/etc/vmware/config"
+        ],
+        "key": "loglevel.crtbora",
+        "logLevelMapping": {
+          "INFO": "0",
+          "DEBUG": "9",
+          "TRACE": "9",
+          "VERBOSE": "9"
+        }
+      },
+      {
+        "path": "~/.vmware/view-preferences",
+        "key": "view.defaultLogLevel",
+        "logLevelMapping": {
+          "INFO": "'3'",
+          "DEBUG": "'2'",
+          "TRACE": "'1'",
+          "VERBOSE": "'0'"
+        }
+      }
+    ]
+  },
+  "logCollectionSettings": {
+    "paths": [
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-horizon-client*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-crtbora-*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-mks-*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-rdeSvc-*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-vdpService-*"
+      }
+    ]
+  }
+}

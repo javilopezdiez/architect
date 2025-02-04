@@ -1,0 +1,61 @@
+{
+  "featureName": "USB Redirection",
+  "logLevelSettings": {
+    "files": [
+      {
+        "path": "~/.vmware/config",
+        "key": "view-usbd.logLevel",
+        "logLevelMapping": {
+          "INFO": "INFO",
+          "DEBUG": "DEBUG",
+          "TRACE": "TRACE",
+          "VERBOSE": "TRACE"
+        }
+      },
+      {
+        "path": "/etc/vmware/euc/config",
+        "key": "log.fileLevel",
+        "logLevelMapping": {
+          "INFO": "info",
+          "DEBUG": "debug9",
+          "TRACE": "debug9",
+          "VERBOSE": "debug9"
+        }
+      },
+      {
+        "path": "/etc/vmware/euc/config",
+        "key": "loglevel.user.usb",
+        "logLevelMapping": {
+          "INFO": "1",
+          "DEBUG": "10",
+          "TRACE": "10",
+          "VERBOSE": "10"
+        }
+      }
+    ]
+  },
+  "logCollectionSettings": {
+    "paths": [
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-view-usbd-*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-UsbRedirectionClient*"
+      },
+      {
+        "srcfolder": "/var/log/vmware/",
+        "rule": "vmware-eucusbarb*"
+      },
+      {
+        "srcfolder": "/etc/vmware/euc/",
+        "rule": "config"
+      },
+      {
+        "srcfolder": "/etc/vmware/euc/",
+        "rule": "usbarb.rules"
+      }
+    ]
+  }
+}

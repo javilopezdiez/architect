@@ -1,0 +1,25 @@
+{
+  "featureName": "URL Content Redirection",
+  "logLevelSettings": {
+    "files": [
+      {
+        "path": "~/.vmware/config",
+        "key": "urlRedirection.log.enabled",
+        "logLevelMapping": {
+          "INFO": "false",
+          "DEBUG": "true",
+          "TRACE": "true",
+          "VERBOSE": "true"
+        }
+      }
+    ]
+  },
+  "logCollectionSettings": {
+    "paths": [
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-urlfilter*"
+      }
+    ]
+  }
+}

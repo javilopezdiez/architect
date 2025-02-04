@@ -1,0 +1,23 @@
+{
+  "featureName": "File Type Association",
+  "logLevelSettings": {
+    "files": [
+      {
+        "path": "~/.vmware/config",
+        "key": "appStub.appStubLogger.logLevel"
+      }
+    ]
+  },
+  "logCollectionSettings": {
+    "paths": [
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-appStub*"
+      },
+      {
+        "srcfolder": "VMWARE_TMP_DIR",
+        "rule": "vmware-horizon-client*"
+      }
+    ]
+  }
+}
