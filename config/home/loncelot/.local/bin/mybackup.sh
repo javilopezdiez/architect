@@ -34,7 +34,7 @@ file_patterns=(
 
 	# TODO ownership root
 	# might it be sudo chmod 440 /etc/sudoers
-	# "/etc/sudoers"
+	"/etc/sudoers"
 
 	# TODO if changes mkconfig
 	"/etc/default/grub"
@@ -139,18 +139,24 @@ copy() {
 	for file_pattern in "${file_patterns[@]}"; do
 		# Expand file patterns to match actual files (e.g., *.extension)
 		for full_path in $file_pattern; do
-			# Get parent directory from full file path
-			parent_directory="${full_path%/*}"
-			# Substitude HOME for locationHOME
-			if [[ "$parent_directory" == $HOME* ]]; then
-				backup_path="${parent_directory/$HOME/$locationHOME}"
+			# Get parent directory from full file path when restoring/*.extension
+			if [[ "$direction" == "restore" ]]; then
+				path="${full_path%/*}"
 			else
-				backup_path="${location}${parent_directory}"
+				path=$full_path
+			fi
+			# Substitude HOME for locationHOME
+			if [[ "$path" == $HOME* ]]; then
+				backup_path="${path/$HOME/$locationHOME}"
+			else
+				backup_path="${location}${path}"
 			fi
 			if [[ "$direction" == "backup" ]]; then
-				copy_content "$full_path" "$backup_path"
+				copy_content "$path" "$backup_path"
+				assignPrivileges loncelot "$path" "$backup_path"
 			elif [[ "$direction" == "restore" ]]; then
-				copy_content "$backup_path" "$parent_directory"
+				copy_content "$backup_path" "$path"
+				assignPrivileges root "$backup_path" "$path"
 			fi
 		done
 	done
@@ -161,10 +167,19 @@ copy_content() {
 	source="$1"
 	target="$2"
 	sudo mkdir -p "$(dirname "$target")"
-	if [[ -d "$source_path" ]]; then
+	if [[ -d "$source" ]]; then
 		sudo rsync -ah --info=progress2 "$source/" "$target"
 	else
 		sudo rsync -ah --info=progress2 "$source" "$target"
+	fi
+}
+
+assignPrivileges() {
+	user="$1"
+	source="$2"
+	target="$3"
+    if [[ "$source" == "/etc/sudoers" || "$target" == "/etc/sudoers" ]]; then
+		sudo chown "$user:$user" "$target"
 	fi
 }
 
