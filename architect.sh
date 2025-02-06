@@ -32,7 +32,7 @@ echo -ne "--------------------------2.1- POST-INSTALL PKG-SVC STARTED...--------
 
 echo -ne "--------------------------2.1- POST-INSTALL CONFIG COPY STARTED...-------\n"
 
-( arch-chroot /mnt /usr/nin/runuser -u $USERNAME -- \
+( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- \
 	/home/$USERNAME/architect/config/home/loncelot/.local/bin/mybackup.sh \
 	-d=/home/$USERNAME/architect/config -r )|& \
 	tee architect-backup.log
