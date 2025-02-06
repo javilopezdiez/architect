@@ -4,11 +4,11 @@ source $HOME/architect/properties.conf
 ##### CONFIGURATION #####
 # Grub config
 if [[ -d "/sys/firmware/efi" ]]; then
-    echo "Installing GRUB for EFI boot mode..."
-    grub-install --target=x86_64-efi --efi-directory=/boot $DISK
+	echo "Installing GRUB for EFI boot mode..."
+	grub-install --target=x86_64-efi --efi-directory=/boot $DISK
 else
-    echo "Installing GRUB for legacy (BIOS) boot mode..."
-    grub-install --target=i386-pc --boot-directory=/boot $DISK
+	echo "Installing GRUB for legacy (BIOS) boot mode..."
+	grub-install --target=i386-pc --boot-directory=/boot $DISK
 fi
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -23,8 +23,8 @@ read -s PASSWORD
 echo "Confirm password for $USERNAME:"
 read -s PASSWORD_CONFIRM
 if [ "$PASSWORD" != "$PASSWORD_CONFIRM" ]; then
-    echo "Passwords do not match. Please try again..."
-    exit 1
+	echo "Passwords do not match. Please try again..."
+	exit 1
 fi
 echo "$USERNAME:$PASSWORD" | chpasswd
 echo "$USERNAME password set"

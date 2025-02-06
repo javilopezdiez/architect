@@ -26,44 +26,44 @@ BOOT_END=$(printf "%.0f" $((3 + BOOT_SIZE)))
 SWAP_END=$(printf "%.0f" $((BOOT_END + SWAP_SIZE)))
 ROOT_END=$(printf "%.0f" $((SWAP_END + ROOT_SIZE)))
 if [[ -n "$PART_HOME" ]]; then
-    HOME_SIZE=$(numfmt --from=iec "$PART_HOME" | awk '{print $1/1024/1024}')
-    HOME_END=$(printf "%.0f" $((ROOT_END + HOME_SIZE)))"MiB"
+	HOME_SIZE=$(numfmt --from=iec "$PART_HOME" | awk '{print $1/1024/1024}')
+	HOME_END=$(printf "%.0f" $((ROOT_END + HOME_SIZE)))"MiB"
 else
-    PART_HOME="Remaining space"
-    HOME_END=100%
+	PART_HOME="Remaining space"
+	HOME_END=100%
 fi
 # PRE Formatting Drive
 echo "Unmounting partitions on $DISK..."
 umount -A --recursive /mnt
 echo "Disabling swap if any on $DISK..."
 swapoff "${DISK}"* 2>/dev/null \
-    || echo "No swap to disable on $DISK."
+	|| echo "No swap to disable on $DISK."
 echo "Wiping filesystem signatures and metadata on $DISK..."
 sgdisk -Z ${DISK}
 sgdisk -a 2048 -o ${DISK} \
-    || { echo "Error creating partition table"; exit 1; }
+	|| { echo "Error creating partition table"; exit 1; }
 # BIOS boot
 echo "Creating BIOS boot partition..."
 parted -s "$DISK" mkpart primary 1MiB 3MiB \
-    || { echo "Error creating BIOS boot partition"; exit 1; }
+	|| { echo "Error creating BIOS boot partition"; exit 1; }
 parted -s "$DISK" set 1 bios_grub on \
-    || { echo "Error setting BIOS boot flag"; exit 1; }
+	|| { echo "Error setting BIOS boot flag"; exit 1; }
 # Boot
 echo "Creating boot partition of size $PART_BOOT..."
 parted -s "$DISK" mkpart primary ext4 3MiB "$BOOT_END"MiB \
-    || { echo "Error creating boot partition"; exit 1; }
+	|| { echo "Error creating boot partition"; exit 1; }
 # Swap
 echo "Creating swap partition of size $PART_SWAP..."
 parted -s "$DISK" mkpart primary linux-swap "$BOOT_END"MiB "$SWAP_END""MiB" \
-    || { echo "Error creating swap partition"; exit 1; }
+	|| { echo "Error creating swap partition"; exit 1; }
 # Root
 echo "Creating root partition of size $PART_ROOT..."
 parted -s "$DISK" mkpart primary ext4 "$SWAP_END"MiB "$ROOT_END"MiB \
-    || { echo "Error creating root partition"; exit 1; }
+	|| { echo "Error creating root partition"; exit 1; }
 # Home
 echo "Allocating $PART_HOME to root partition..."
 parted -s "$DISK" mkpart primary ext4 "$ROOT_END"MiB $HOME_END \
-    || { echo "Error creating home partition"; exit 1; }
+	|| { echo "Error creating home partition"; exit 1; }
 # Formatting
 echo "Formatting partitions..."
 mkfs.ext4 -F ${DISK}2
@@ -86,11 +86,11 @@ pacman -Sy --needed archlinux-keyring --noconfirm
 # Installing base system
 echo "Installing base system..."
 pacstrap /mnt linux \
-    linux-firmware \
-    base base-devel \
-    grub \
-    networkmanager \
-    zsh --noconfirm
+	linux-firmware \
+	base base-devel \
+	grub \
+	networkmanager \
+	zsh --noconfirm
 
 # Pacman config 1
 echo "Package Manager: keyserver and mirrorlist..."
