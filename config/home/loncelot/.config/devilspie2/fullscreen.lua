@@ -1,14 +1,59 @@
-function debug()
-    debug_print( "get_window_name---------------------->" .. get_window_name())
-    debug_print( "get_application_name:                 " .. get_application_name())
-    debug_print( "get_window_geometry:                  " .. get_window_geometry())
-    debug_print( "get_window_client_geometry:           " .. get_window_client_geometry())
-    debug_print( "get_window_type:                      " .. get_window_type())
-    debug_print( "get_class_instance_name:              " .. get_class_instance_name())
-    debug_print( "get_window_role:                      " .. get_window_role())
-    debug_print( "get_window_xid:                       " .. get_window_xid())
-    debug_print( "get_window_class:                     " .. get_window_class())
-    debug_print( "get_workspace_count:                  " .. get_workspace_count())
+local avoid_roles = {
+    "dropdown"
+}
+local avoid_names = {
+    'Visual Studio Code',
+    'notify',
+    'Authenticate'
+}
+local accepted_types = {
+    "WINDOW_TYPE_NORMAL",
+    "WINDOW_TYPE_DIALOG"
+}
+
+function main()
+    -- INPUT
+    if isScript() then
+        debug(arg)
+        if is_main_display_active() then
+            maximize(arg[1])
+        else
+            center_and_resize_window(arg[1])
+        end
+    -- DEVILSPIE
+    else
+        if (not avoidType() and 
+            not avoidRoles() and 
+            not avoidName()) then
+            debug()
+            if is_main_display_active() then
+                maximize()
+            else
+                center_and_resize_window()
+            end
+        end
+    end
+end
+
+function debug(arg)
+    if isScript(arg) then
+        os.execute("echo 'get_window_xid---------------------->' " .. arg[1])
+    else
+        debug_print( "get_window_name---------------------->" .. get_window_name())
+        debug_print( "get_application_name:                 " .. get_application_name())
+        debug_print( "get_window_geometry:                  " .. get_window_geometry())
+        debug_print( "get_window_client_geometry:           " .. get_window_client_geometry())
+        debug_print( "get_window_type:                      " .. get_window_type())
+        debug_print( "get_class_instance_name:              " .. get_class_instance_name())
+        debug_print( "get_window_role:                      " .. get_window_role())
+        debug_print( "get_window_xid:                       " .. get_window_xid())
+        debug_print( "get_window_class:                     " .. get_window_class())
+        debug_print( "get_workspace_count:                  " .. get_workspace_count())
+    end
+end
+
+function isScript()
+    return not get_window_type and arg[1]
 end
 
 function contains(list, search_element)
@@ -19,35 +64,24 @@ function contains(list, search_element)
     end
     return false
 end
-
-local avoid_roles = {
-    "dropdown"
-}
 function avoidRoles()
     return contains(avoid_roles, get_window_role())
 end
-local avoid_names = {
-    'Visual Studio Code',
-    'notify',
-    'Authenticate'
-}
 function avoidName()
     return contains(avoid_names, get_window_name())
 end
-
-local accepted_types = {
-    "WINDOW_TYPE_NORMAL",
-    "WINDOW_TYPE_DIALOG"
-}
 function avoidType()
     return not contains(accepted_types, get_window_type())
 end
 
 function is_main_display_active()
-    local handle = io.popen("xrandr --listmonitors | grep '*'")
+    -- local handle = io.popen("xrandr --listmonitors | grep '*'")
+    local handle = io.popen("xrandr --listmonitors")
     local primary_display_info = handle:read("*all")
     handle:close()
-    return primary_display_info ~= nil and primary_display_info:find("%*")
+    os.execute("echo 'primary_display_info---------------------->'" .. primary_display_info)
+    -- return primary_display_info ~= nil and primary_display_info:find("%*")
+    return primary_display_info ~= nil and primary_display_info:match("LVDS%-1")
 end
 
 function get_screen_dimensions()
@@ -60,6 +94,15 @@ function get_screen_dimensions()
         return tonumber(width), tonumber(height)
     else
         return 1920, 1080
+    end
+end
+
+function maximize(window_id)
+    local screen_width, screen_height = get_screen_dimensions()
+    if window_id then 
+        set_window_geometry_by_id(window_id, 0, 0, screen_width, screen_height)
+    else 
+        set_window_geometry(0, 0, screen_width, screen_height)
     end
 end
 
@@ -84,29 +127,4 @@ function set_window_geometry_by_id(window_id, x_pos, y_pos, width, height)
     ))
 end
 
--- Function to check if a command is available
-function is_command_available(command)
-    local handle = io.popen("command -v " .. command .. " &> /dev/null && echo 'true' || echo 'false'")
-    local result = handle:read("*a")
-    handle:close()
-    return result:match("true") ~= nil
-end
-
--- INPUT
-if not get_window_type and arg[1] then
-    local window_id = arg[1]
-    os.execute("echo 'Focused Window ID: " .. window_id .. "'")
-    center_and_resize_window(window_id)
--- DEVILSPIE
-else
-    if (not avoidType() and 
-        not avoidRoles() and 
-        not avoidName()) then
-        debug()
-        if is_main_display_active() then
-            maximize()
-        else
-            center_and_resize_window()
-        end
-    end
-end
+main()
