@@ -1,10 +1,11 @@
 #!/bin/bash
 
+username="loncelot"
 backup_string="Backup source files to destination"
 git_string="Backup source files to git repo"
 
 # Default directories
-backup_directory="/run/media/$USER/nail/backup"
+backup_directory="/run/media/$username/nail/backup"
 	# I made the disk with a label like this
 		# sudo fdisk /dev/mmcblk0
 			# d -> all the partitions
@@ -30,10 +31,11 @@ file_patterns=(
 	"$HOME/Pictures/wallpapers/mybackground.png"
 
 	"/etc/sudoers"
+	"/etc/profile.d/home-local-bin.sh"
 	"/etc/default/grub"
 	"/etc/lightdm/lightdm-gtk-greeter.conf"
 
-	"/usr/share/backgrounds/my-lockscreen.jpeg"
+	"/usr/share/backgrounds/my-*"
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"
 	"/usr/share/backgrounds/xfce/xfce-x.svg"
 )
@@ -145,10 +147,15 @@ copy() {
 			fi
 			if [[ "$direction" == "backup" ]]; then
 				copy_content "$path" "$backup_path"
-				assignPrivileges loncelot "$backup_path"
+				set_sudoers_owner $username "$backup_path"
 			elif [[ "$direction" == "restore" ]]; then
-				assignPrivileges root "$backup_path"
+				set_sudoers_owner root "$backup_path"
 				copy_content "$backup_path" "$path"
+				# ~/ vs /etc vs /usr
+				if [[ "$path" == "$HOME"* ]]; then
+					# echo "sudo chown -R $username:$username $path"
+					sudo chown -R "$username:$username" "$path"
+				fi
 				# If restored from parent stop directory copying
 				if [[ "$file_pattern" == *\** ]]; then
 					break
@@ -162,30 +169,39 @@ copy() {
 copy_content() {
 	source="$1"
 	target="$2"
-	sudo mkdir -p "$(dirname "$target")"
+	create_dir $target
 	if [[ -d "$source" ]]; then
-		sudo rsync -ah --info=progress2 "$source/" "$target"
+		sudo rsync -ah --no-owner --info=progress2 "$source/" "$target"
 		# echo "Source: $source/"
 	else
-		sudo rsync -ah --info=progress2 "$source" "$target"
+		sudo rsync -ah --no-owner --info=progress2 "$source" "$target"
 		# echo "Source: $source"
 	fi
-		# echo "Target: $target"
-
+	# echo "Target: $target"
 }
 
-# Add here root directories
-# Asign privileges 
+create_dir() {
+	if [[ "$target" == "$HOME"* ]]; then
+		mkdir -p "$(dirname "$target")"
+	else
+		sudo mkdir -p "$(dirname "$target")"
+	fi
+}
+
+# Add here root directories so that they can be 
+# added in git as user
+# restored as root
+# Asign ownership 
 	# user -> backup
 	# root -> system
-assignPrivileges() {
+set_sudoers_owner() {
 	u="$1"
 	target="$2"
 	if [[ "$target" == *"/etc/sudoers" ]]; then
+		# echo "sudo chown "$u:$u" "$target""
 		sudo chown "$u:$u" "$target"
 	fi
 }
-
 
 # Execute the main function
 main "$@"

@@ -161,5 +161,5 @@ function gpt {
     eval $cmd
 }
 
-PATH="$HOME/.local/bin:$PATH"
-PATH="$PATH:$HOME/.cargo/bin"
+PATH="$PATH:/home/loncelot/.local/bin"
+PATH="$PATH:/home/loncelot/.cargo/bin"

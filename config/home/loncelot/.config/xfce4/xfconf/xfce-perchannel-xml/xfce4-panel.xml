@@ -80,17 +80,19 @@
         <value type="string" value="xfce4-mail-reader.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="gparted.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="vmware-view.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce-backdrop-settings.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="vmware-view.desktop"/>
-        <value type="string" value="lightdm-gtk-greeter-settings.desktop"/>
-        <value type="string" value="code.desktop"/>
       </property>
+      <property name="button-single-row" type="bool" value="false"/>
+      <property name="profile-shape" type="int" value="1"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="timezone" type="string" value="Europe/Madrid"/>
@@ -108,7 +110,7 @@
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="never-confirm-history-clear" type="bool" value="false"/>
-        <property name="inhibit" type="bool" value="false"/>
+        <property name="inhibit" type="bool" value="true"/>
       </property>
     </property>
     <property name="plugin-6" type="string" value="systray">

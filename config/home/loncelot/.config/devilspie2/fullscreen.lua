@@ -3,9 +3,10 @@ local WIDTH = 10/11
 local HEIGHT = 5/6
 
 local default_external_devil_size = "s"
-local WIDTH_S = 2/5
+local WIDTH_S = 3/5
 local HEIGHT_S = 2/3
 
+local avoidModalHeight = 260
 local avoid_roles = {
 	"dropdown"
 }
@@ -33,9 +34,7 @@ function main()
 			center_and_resize_window(arg[1])
 		end
 	else
-		if (not avoidType() and 
-			not avoidRoles() and 
-			not avoidName()) then
+		if (not avoidWindow()) then
 			debug(false, null)
 			if is_main_display_active() then
 				-- os.execute("mywin.sh --max")
@@ -59,8 +58,21 @@ function debug(isScript, arg)
 	else
 		debug_print("devil_get_window_name                         " .. get_window_name())
 		debug_print("devil_get_application_name:                   " .. get_application_name())
-		debug_print("devil_get_window_geometry:                    " .. get_window_geometry())
-		debug_print("devil_get_window_client_geometry:             " .. get_window_client_geometry())
+		
+		local x, y, width, height = get_window_geometry()
+		debug_print("devil_get_window_geometry:")
+		debug_print("X:                                            " .. x)
+		debug_print("Y:                                            " .. y)
+		debug_print("Width:                                        " .. width)
+		debug_print("Height:                                       " .. height)
+		
+		x, y, width, height = get_window_client_geometry()
+		debug_print("devil_get_window_client_geometry:")
+		debug_print("X:                                            " .. x)
+		debug_print("Y:                                            " .. y)
+		debug_print("Width:                                        " .. width)
+		debug_print("Height:                                       " .. height)
+
 		debug_print("devil_get_window_type:                        " .. get_window_type())
 		debug_print("devil_get_class_instance_name:                " .. get_class_instance_name())
 		debug_print("devil_get_window_role:                        " .. get_window_role())
@@ -84,14 +96,19 @@ function setSize(isScript, arg)
 		HEIGHT = HEIGHT_S
 	end
 end
-
-function contains(list, search_element)
-	for _, i in ipairs(list) do
-		if search_element:find(i) then
-			return i
-		end
+function avoidWindow()
+	return isModal() or
+		avoidType() or 
+		avoidRoles() or 
+		avoidName()
+end
+function isModal()
+	local _, _, _, window_height = get_window_geometry()
+	local isModal = window_height and window_height < avoidModalHeight
+	if isModal then
+		debug_print("devil_avoided_window_height:                    " .. window_height)
 	end
-	return null
+	return isModal 
 end
 function avoidRoles()
 	local contains = contains(avoid_roles, get_window_role())
@@ -113,6 +130,14 @@ function avoidType()
 		debug_print("devil_avoided_window_type:                    " .. get_window_type())
 	end
 	return contains == nil;
+end
+function contains(list, search_element)
+	for _, i in ipairs(list) do
+		if search_element:find(i) then
+			return i
+		end
+	end
+	return null
 end
 
 function is_main_display_active()

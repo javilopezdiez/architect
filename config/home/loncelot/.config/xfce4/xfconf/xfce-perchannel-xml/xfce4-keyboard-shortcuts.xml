@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-keyboard-shortcuts" version="1.0">
   <property name="commands" type="empty">
@@ -58,7 +58,6 @@
       <property name="&lt;Shift&gt;&lt;Super&gt;Right" type="string" value="movescreen.py next"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;Left" type="string" value="movescreen.py prev"/>
       <property name="&lt;Super&gt;Up" type="string" value="movescreen.py fit"/>
-      <property name="&lt;Primary&gt;Alt_L" type="string" value="myhorizoncapture.sh"/>
       <property name="&lt;Super&gt;k" type="string" value="mykeyboard.sh --toggleSound"/>
       <property name="&lt;Super&gt;space" type="string" value="mykeyboard.sh --toggleLayout"/>
       <property name="&lt;Shift&gt;&lt;Alt&gt;p" type="string" value="mywin.sh --top"/>
@@ -67,6 +66,7 @@
       <property name="&lt;Super&gt;2" type="string" value="bash -i -c &quot;codes&quot;"/>
       <property name="&lt;Super&gt;masculine" type="string" value="xfce4-terminal"/>
       <property name="&lt;Super&gt;l" type="string" value="mywin.sh --lua"/>
+      <property name="&lt;Primary&gt;Alt_L" type="string" value="myhorizoncapture.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

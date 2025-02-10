@@ -25,13 +25,11 @@ echo -ne "--------------------------1- SETUP STARTED...-------------------------
 	tee architect-setup.log
 
 echo -ne "--------------------------2.1- POST-INSTALL PKG-SVC STARTED...-----------\n"
-
 ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- \
 	/home/$USERNAME/architect/architect-pkg-svc.sh )|& \
 	tee architect-pkg-svc.log
 
 echo -ne "--------------------------2.1- POST-INSTALL CONFIG COPY STARTED...-------\n"
-
 ( arch-chroot /mnt \
 	sudo rm -rf /home/lost+found)|& \
 	tee $HOME/lost+found.log
@@ -48,4 +46,4 @@ echo -ne "--------------------------2.1- POST-INSTALL CONFIG COPY STARTED...----
 echo -ne "--------------------------2- POST-INSTALL ENDED...-----------------------\n"
 
 # LOGS
-cp -v *.log /mnt/home/$USERNAME
+cp -v *.log /mnt/home/$USERNAME/architect
