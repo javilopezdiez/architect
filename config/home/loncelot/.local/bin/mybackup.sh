@@ -20,6 +20,7 @@ file_patterns=(
 
 	"$HOME/.config/xfce4"
 	"$HOME/.config/autostart/my*.desktop"
+	"$HOME/.local/share/xfce4/helpers/custom-WebBrowser.desktop"
 	"$HOME/.config/mimeapps.list"
 	"$HOME/.config/devilspie2"
 	"$HOME/.config/Code/User/*.json"
@@ -34,6 +35,7 @@ file_patterns=(
 	"/etc/profile.d/home-local-bin.sh"
 	"/etc/default/grub"
 	"/etc/lightdm/lightdm-gtk-greeter.conf"
+	# "/etc/X11/xorg.conf.d/10-modesetting.conf"
 
 	"/usr/share/backgrounds/my-*"
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"
