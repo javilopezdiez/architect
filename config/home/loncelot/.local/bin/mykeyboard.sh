@@ -1,8 +1,15 @@
 #!/bin/bash
 
 setupLaout() {
-    setxkbmap -layout es,gb -variant mac
-    setxkbmap -option grp:win_space_toggle
+    setxkbmap -layout es,gb
+    # mac keyboard
+        # setxkbmap -layout es,gb -variant mac
+        # setxkbmap -option grp:win_space_toggle
+    # japaneese keyboard
+        xmodmap ~/.Xmodmap
+        # xkbcomp /home/loncelot/.config/mylayout.xkb $DISPLAY
+        # sudo systemd-hwdb update
+        # sudo udevadm trigger --subsystem-match=input --action=change
 }
 
 setupKeys() {
@@ -58,8 +65,8 @@ case "$1" in
         ;;
     --setup)
         setupLaout
-        setupKeys
-        setupTrackpad
+        # setupKeys
+        # setupTrackpad
         ;;
     --toggleSound)
         toggleMechanicalSound

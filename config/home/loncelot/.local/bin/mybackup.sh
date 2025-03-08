@@ -17,6 +17,7 @@ git_directory="$HOME/Workspace/architect/config"
 file_patterns=(
 	"$HOME/.bashrc"
 	"$HOME/.local/bin/my*"
+	"$HOME/.local/share/xfce4/helpers/custom-WebBrowser.desktop"
 
 	"$HOME/.config/xfce4"
 	"$HOME/.config/autostart/my*.desktop"
@@ -25,6 +26,7 @@ file_patterns=(
 	"$HOME/.config/Code/User/*.json"
 	"$HOME/.config/Thunar"
 
+	"$HOME/.Xmodmap"
 	"$HOME/.face"
 	"$HOME/.themes"
 	"$HOME/Pictures/wallpapers/art/bierstadt"
@@ -34,10 +36,14 @@ file_patterns=(
 	"/etc/profile.d/home-local-bin.sh"
 	"/etc/default/grub"
 	"/etc/lightdm/lightdm-gtk-greeter.conf"
+	"/etc/X11/xorg.conf.d/10-modesetting.conf"
 
 	"/usr/share/backgrounds/my-*"
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"
 	"/usr/share/backgrounds/xfce/xfce-x.svg"
+
+	"$HOME/.vmware/view-preferences"
+	"$HOME/.local/share/lutris/games/turtle-wow-1172-1740406132.yml"
 )
 
 main() {
