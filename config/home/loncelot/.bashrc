@@ -139,7 +139,7 @@ ex ()
 alias codes='sudo code --no-sandbox --user-data-dir ~/.config/Code '
 
 function yt {
-	if [[ $# -eq 2 && ( $1 == "720" || $1 == "1080" ) ]]; then
+	if [[ $# -eq 2 && ( $1 == "audio" || $1 == "720" || $1 == "1080" ) ]]; then
 		quality=$1
 		url=$2
 		if [[ $quality == "audio" ]]; then

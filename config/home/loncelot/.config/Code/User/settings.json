@@ -95,7 +95,7 @@
     },
     
     // Extensions
-    "glassit.alpha": 235,
+    "glassit.alpha": 230,
 
     "[oraclesql]": {
         "editor.suggest.showSnippets": true,

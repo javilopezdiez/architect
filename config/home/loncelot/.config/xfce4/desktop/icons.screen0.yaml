@@ -44,6 +44,16 @@ configs:
       last_seen: 1738933455472241
 - level: 0
   monitors:
+  - id: "e3ccd66662f6b375c334c080b2b1a8f640957287"
+    display_name: "VGA-1"
+    geometry:
+      x: 0
+      y: 0
+      width: 1024
+      height: 768
+  icons: {}
+- level: 0
+  monitors:
   - id: "50d0c65c890a0c68e3613b350be00f1750cccb27"
     display_name: "Seiko Epson Corporation 0x3047 (LVDS-1)"
     geometry:
@@ -51,20 +61,29 @@ configs:
       y: 0
       width: 1366
       height: 768
+  - id: "36935603381ecec4f4053566839a3d55e091b6af"
+    display_name: "Seiko Epson Corporation 0x3047 (LVDS1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1366
+      height: 768
   icons:
-    "Trash":
-      row: 0
-      col: 0
-    "/":
-      row: 1
-      col: 0
     "trash:///":
       row: 0
       col: 0
-    "91491b70-02fe-4508-a253-29c12c0cb0f9":
+    "/home/loncelot/Desktop/roadwarden_1_1_31_67621_gog_linux":
       row: 9
       col: 18
-      last_seen: 1738685147488297
+    "/home/loncelot/Desktop/gog_com-Roadwarden_1.desktop":
+      row: 9
+      col: 18
+    "/home/loncelot/Desktop/TurtleWoW Launcher.lnk":
+      row: 9
+      col: 18
+    "Trash":
+      row: 0
+      col: 0
     "720e8654-95b6-4a35-855a-5f78dbba0803":
       row: 9
       col: 18
@@ -72,3 +91,23 @@ configs:
     "/home/loncelot":
       row: 2
       col: 0
+    "91491b70-02fe-4508-a253-29c12c0cb0f9":
+      row: 9
+      col: 18
+      last_seen: 1738685147488297
+    "/":
+      row: 1
+      col: 0
+- level: 0
+  monitors:
+  - id: "7ecd47eef11609d49711a47bfd6c68726fd990ea"
+    display_name: "None-1"
+    geometry:
+      x: 0
+      y: 0
+      width: 1280
+      height: 1024
+  icons:
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 9
+      col: 17

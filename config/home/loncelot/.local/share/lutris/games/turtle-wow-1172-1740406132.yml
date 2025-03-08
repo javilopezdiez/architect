@@ -1,0 +1,70 @@
+game:
+  arch: win64
+  exe: /home/loncelot/Games/turtlewow/drive_c/Program Files (x86)/TurtleWoW/WoW_tweaked.exe
+  prefix: /home/loncelot/Games/turtlewow
+game_slug: turtlewow
+name: Turtle WoW
+script:
+  files:
+  - file1: https://turtle-eu.b-cdn.net/twmoa_1172.zip
+  game:
+    arch: win64
+    exe: drive_c/Program Files (x86)/TurtleWoW/WoW.exe
+    prefix: $GAMEDIR
+  installer:
+  - extract:
+      dst: $GAMEDIR/drive_c/Program Files (x86)/TurtleWoW
+      file: $file1
+  - task:
+      arch: win64
+      prefix: /home/loncelot/Games/turtlewow
+      wine_path: /home/loncelot/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+  - task:
+      app: arial
+      arch: win64
+      prefix: /home/loncelot/Games/turtlewow
+      wine_path: /home/loncelot/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+  - task:
+      arch: win64
+      key: backend
+      path: HKEY_CURRENT_USER\Software\Wine\DXVA2
+      prefix: /home/loncelot/Games/turtlewow
+      value: va
+      wine_path: /home/loncelot/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+  - task:
+      arch: win64
+      prefix: /home/loncelot/Games/turtlewow
+      wine_path: /home/loncelot/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+  - task:
+      arch: win64
+      prefix: /home/loncelot/Games/turtlewow
+      wine_path: /home/loncelot/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+  system:
+    env:
+      DXVK_HUD: compiler
+      DXVK_STATE_CACHE_PATH: $GAMEDIR
+      STAGING_SHARED_MEMORY: 1
+      __GL_SHADER_DISK_CACHE: 1
+      __GL_SHADER_DISK_CACHE_PATH: $GAMEDIR
+  wine:
+    overrides:
+      nvapi: disabled
+      nvapi64: disabled
+slug: turtle-wow-1172
+system:
+  env:
+    DXVK_HUD: compiler
+    DXVK_STATE_CACHE_PATH: /home/loncelot/Games/turtlewow
+    STAGING_SHARED_MEMORY: '1'
+    __GL_SHADER_DISK_CACHE: '1'
+    __GL_SHADER_DISK_CACHE_PATH: /home/loncelot/Games/turtlewow
+version: 1.17.2
+wine:
+  dxvk: false
+  esync: false
+  fsync: false
+  overrides:
+    nvapi: disabled
+    nvapi64: disabled
+  version: wine-ge-8-26-x86_64
+year: 2018

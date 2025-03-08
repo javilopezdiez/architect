@@ -80,16 +80,16 @@
         <value type="string" value="xfce4-mail-reader.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="vmware-view.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="xfce-backdrop-settings.desktop"/>
-        <value type="string" value="xfce-wm-settings.desktop"/>
-        <value type="string" value="virt-manager.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="thunar.desktop"/>
-        <value type="string" value="xfce4-screenshooter.desktop"/>
+        <value type="string" value="net.lutris.turtlewow-1.desktop"/>
+        <value type="string" value="net.lutris.Lutris.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
+        <value type="string" value="vmware-view.desktop"/>
+        <value type="string" value="transmission-gtk.desktop"/>
+        <value type="string" value="xfce4-terminal-settings.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce-mouse-settings.desktop"/>
+        <value type="string" value="blueman-manager.desktop"/>
+        <value type="string" value="vlc.desktop"/>
       </property>
       <property name="button-single-row" type="bool" value="false"/>
       <property name="profile-shape" type="int" value="1"/>
@@ -115,6 +115,12 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (76%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (78%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (77%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (72%)"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (76%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (70%)"/>
         <value type="string" value="xfce terminal"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="pamac-tray"/>
@@ -123,6 +129,7 @@
         <value type="string" value="drop-down terminal"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="vlc"/>
         <value type="string" value="Mechvibes1"/>
         <value type="string" value="blueman"/>
       </property>

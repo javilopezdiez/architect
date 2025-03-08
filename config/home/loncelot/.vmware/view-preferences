@@ -1,0 +1,7 @@
+view.autoHideToolbar = 'FALSE'
+view.defaultBroker = 'escritoriovirtual.gobiernodecanarias.net'
+view.deviceID = '6C:88:14:CB:8E:18'
+view.protocolConnectionCertCheckMode = '0'
+view.saveUser = 'ext-jlopdie@gobcan.net'
+view.singleAutoConnect = 'FALSE'
+view.sslVerificationMode = '3'
