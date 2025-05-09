@@ -12,7 +12,7 @@ loadkeys $KEYMAP
 
 # Setting clock
 echo "Setting clock and timezone to $LOCATION..."
-timedatectl set-ntp true
+timedatectl set-ntp true # Fecha sincronizada con internet
 timedatectl set-timezone "$LOCATION"
 
 ##### PARTITIONING #####
