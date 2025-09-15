@@ -18,40 +18,89 @@ configs:
       y: 0
       width: 1920
       height: 1080
+  - id: "ecf80f2b05d391e9f2cfbff19c59225fc0e7dfb0"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1824026469 (VGA-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "f86f0a3a66770a59c041351f105882254937d351"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026980 (VGA-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "846aeda00d598d28a634d5bdf337688a0eb0618d"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026976 (VGA-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
   icons:
-    "6ab17710-e94c-453a-a9a1-a6ce3e03f727":
-      row: 14
-      col: 25
-      last_seen: 1738925181342805
     "trash:///":
       row: 14
       col: 26
-    "91491b70-02fe-4508-a253-29c12c0cb0f9":
-      row: 14
-      col: 25
-      last_seen: 1738828217577840
-    "91a0439a-ea93-4776-9bd0-8061fc610312":
-      row: 14
-      col: 24
-      last_seen: 1738933053010868
-    "720e8654-95b6-4a35-855a-5f78dbba0803":
-      row: 14
-      col: 25
-      last_seen: 1738932520866613
     "2024-12-16-11-22-45-00":
       row: 14
       col: 23
       last_seen: 1738933455472241
+    "/home/loncelot/Desktop/net.lutris.turtlewow-1.desktop":
+      row: 14
+      col: 26
+    "720e8654-95b6-4a35-855a-5f78dbba0803":
+      row: 14
+      col: 25
+      last_seen: 1738932520866613
+    "91a0439a-ea93-4776-9bd0-8061fc610312":
+      row: 14
+      col: 24
+      last_seen: 1738933053010868
+    "6ab17710-e94c-453a-a9a1-a6ce3e03f727":
+      row: 14
+      col: 25
+      last_seen: 1738925181342805
+    "/home/loncelot/Desktop/TurtleWoW.AppImage":
+      row: 14
+      col: 25
+    "91491b70-02fe-4508-a253-29c12c0cb0f9":
+      row: 14
+      col: 25
+      last_seen: 1738828217577840
+    "/home/loncelot/Desktop/TurtleWoW.AppImage.crdownload":
+      row: 14
+      col: 26
 - level: 0
   monitors:
-  - id: "e3ccd66662f6b375c334c080b2b1a8f640957287"
-    display_name: "VGA-1"
+  - id: "7d16d74335b8a112c3053b2750a5b0ba90b90fa2"
+    display_name: "PNP(XXX) AAA (HDMI-1)"
     geometry:
       x: 0
       y: 0
-      width: 1024
+      width: 1366
       height: 768
-  icons: {}
+  icons:
+    "Trash":
+      row: 9
+      col: 18
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 9
+      col: 17
+- level: 0
+  monitors:
+  - id: "7ecd47eef11609d49711a47bfd6c68726fd990ea"
+    display_name: "None-1"
+    geometry:
+      x: 0
+      y: 0
+      width: 1280
+      height: 1024
+  icons:
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 9
+      col: 17
 - level: 0
   monitors:
   - id: "50d0c65c890a0c68e3613b350be00f1750cccb27"
@@ -100,14 +149,11 @@ configs:
       col: 0
 - level: 0
   monitors:
-  - id: "7ecd47eef11609d49711a47bfd6c68726fd990ea"
-    display_name: "None-1"
+  - id: "e3ccd66662f6b375c334c080b2b1a8f640957287"
+    display_name: "VGA-1"
     geometry:
       x: 0
       y: 0
-      width: 1280
-      height: 1024
-  icons:
-    "dc3b4a82-f11e-497d-9b19-9c369307177c":
-      row: 9
-      col: 17
+      width: 1024
+      height: 768
+  icons: {}

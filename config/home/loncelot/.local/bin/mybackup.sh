@@ -30,7 +30,9 @@ file_patterns=(
 	"$HOME/.face"
 	"$HOME/.themes"
 	"$HOME/Pictures/wallpapers/art/bierstadt"
-	"$HOME/Pictures/wallpapers/mybackground.png"
+	"$HOME/Pictures/wallpapers/art/kasmeneo"
+	"$HOME/Pictures/wallpapers/arch"
+	# "$HOME/Pictures/wallpapers/mybackground.png"
 
 	"/etc/sudoers"
 	"/etc/profile.d/home-local-bin.sh"
@@ -43,7 +45,7 @@ file_patterns=(
 	"/usr/share/backgrounds/xfce/xfce-x.svg"
 
 	"$HOME/.vmware/view-preferences"
-	"$HOME/.local/share/lutris/games/turtle-wow-1172-1740406132.yml"
+	# "$HOME/.local/share/lutris/games/turtle-wow-1172-1740406132.yml"
 )
 
 main() {

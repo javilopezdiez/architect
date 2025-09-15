@@ -1,5 +1,5 @@
 [Default Applications]
-application/octet-stream=mousepad.desktop
+application/octet-stream=code.desktop
 application/pdf=thorium-browser.desktop
 application/x-gettext-translation=mousepad.desktop
 application/xml=mousepad.desktop
@@ -25,4 +25,6 @@ video/webm=mpv.desktop;vlc.desktop;
 application/pdf=thorium-browser.desktop;
 video/x-matroska=vlc.desktop;
 text/plain=code.desktop;
-
+text/x-log=org.xfce.mousepad.desktop;
+application/octet-stream=code.desktop;
+text/html=code.desktop;thorium-browser.desktop;

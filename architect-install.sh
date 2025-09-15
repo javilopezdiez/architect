@@ -22,7 +22,7 @@ BOOT_SIZE=$(numfmt --from=iec "$PART_BOOT" | awk '{print $1/1024/1024}')
 SWAP_SIZE=$(numfmt --from=iec "$PART_SWAP" | awk '{print $1/1024/1024}')
 ROOT_SIZE=$(numfmt --from=iec "$PART_ROOT" | awk '{print $1/1024/1024}')
 # rounded to the nearest integer/whole number
-BOOT_END=$(printf "%.0f" $((3 + BOOT_SIZE)))
+BOOT_END=$(printf "%.0f" $((1 + BOOT_SIZE)))
 SWAP_END=$(printf "%.0f" $((BOOT_END + SWAP_SIZE)))
 ROOT_END=$(printf "%.0f" $((SWAP_END + ROOT_SIZE)))
 if [[ -n "$PART_HOME" ]]; then
@@ -42,19 +42,28 @@ echo "Wiping filesystem signatures and metadata on $DISK..."
 sgdisk -Z ${DISK}
 sgdisk -a 2048 -o ${DISK} \
     || { echo "Error creating partition table"; exit 1; }
-# BIOS boot
-echo "Creating BIOS boot partition..."
-parted -s "$DISK" mkpart primary 1MiB 3MiB \
-    || { echo "Error creating BIOS boot partition"; exit 1; }
-parted -s "$DISK" set 1 bios_grub on \
-    || { echo "Error setting BIOS boot flag"; exit 1; }
 # Boot
-echo "Creating boot partition of size $PART_BOOT..."
-parted -s "$DISK" mkpart primary ext4 3MiB "$BOOT_END"MiB \
-    || { echo "Error creating boot partition"; exit 1; }
+if [[ -d "/sys/firmware/efi" ]]; then
+    echo "Creating UEFI boot partition..."
+    N=0
+    parted -s "$DISK" mkpart ESP fat32 1MiB "$BOOT_END"MiB \
+        || { echo "Error creating EFI partition"; exit 1; }
+    parted -s "$DISK" set 1 esp on \
+        || { echo "Error setting ESP flag"; exit 1; }
+else
+    echo "Creating BIOS boot partition..."
+    N=1
+    parted -s "$DISK" mkpart primary 1MiB 3MiB \
+        || { echo "Error creating BIOS boot partition"; exit 1; }
+    parted -s "$DISK" set 1 bios_grub on \
+        || { echo "Error setting BIOS boot flag"; exit 1; }
+    echo "Creating BOOT partition of size $PART_BOOT..."
+    parted -s "$DISK" mkpart primary ext4 3MiB "$BOOT_END"MiB \
+        || { echo "Error creating boot partition"; exit 1; }
+fi
 # Swap
 echo "Creating swap partition of size $PART_SWAP..."
-parted -s "$DISK" mkpart primary linux-swap "$BOOT_END"MiB "$SWAP_END""MiB" \
+parted -s "$DISK" mkpart primary linux-swap "$BOOT_END"MiB "$SWAP_END"MiB \
     || { echo "Error creating swap partition"; exit 1; }
 # Root
 echo "Creating root partition of size $PART_ROOT..."
@@ -66,18 +75,29 @@ parted -s "$DISK" mkpart primary ext4 "$ROOT_END"MiB $HOME_END \
     || { echo "Error creating home partition"; exit 1; }
 # Formatting
 echo "Formatting partitions..."
-mkfs.ext4 -F ${DISK}2
-mkswap ${DISK}3
-swapon ${DISK}3
-mkfs.ext4 -F ${DISK}4
-mkfs.ext4 -F ${DISK}5
+if [[ -d "/sys/firmware/efi" ]]; then
+    echo "Formatting UEFI boot partition..."
+    mkfs.fat -F32 ${DISK}$((1+N))
+else
+    echo "Formatting BIOS boot partition..."
+    mkfs.ext4 -F ${DISK}$((1+N))
+fi
+mkswap ${DISK}$((2+N))
+swapon ${DISK}$((2+N))
+mkfs.ext4 -F ${DISK}$((3+N))
+mkfs.ext4 -F ${DISK}$((4+N))
 # Mounting partitions
 echo "Mounting partitions..."
-mount ${DISK}4 /mnt
-mkdir /mnt/boot
-mount ${DISK}2 /mnt/boot
+mount ${DISK}$((3+N)) /mnt
+if [[ -d "/sys/firmware/efi" ]]; then
+    mkdir -p /mnt/boot/efi
+    mount ${DISK}$((1+N)) /mnt/boot/efi
+else
+    mkdir /mnt/boot
+    mount ${DISK}$((1+N)) /mnt/boot
+fi
 mkdir /mnt/home
-mount ${DISK}5 /mnt/home
+mount ${DISK}$((4+N)) /mnt/home
 lsblk $DISK
 
 ##### INSTALL #####

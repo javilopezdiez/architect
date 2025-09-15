@@ -36,10 +36,10 @@ source $HOME/architect/properties.conf
 	    https://github.com/dlenski/gp-saml-gui/archive/master.zip
 
 	# --- RUST (Uncomment if needed)
-	yay -S rust
+	# yay -S rust
 
 	# --- Cargo Features (Uncomment if needed)
-	cargo install spotify_player --features image
+	# cargo install spotify_player --features image
 
 # --- GITHUB SCRIPTS (Optional, based on dependencies)
 	DEPENDENCIES=(

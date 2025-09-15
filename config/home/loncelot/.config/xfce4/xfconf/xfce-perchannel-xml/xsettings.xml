@@ -31,7 +31,7 @@
     <property name="ButtonImages" type="bool" value="true"/>
     <property name="MenuBarAccel" type="string" value="F10"/>
     <property name="CursorThemeName" type="string" value="elementary"/>
-    <property name="CursorThemeSize" type="int" value="0"/>
+    <property name="CursorThemeSize" type="int" value="16"/>
     <property name="DecorationLayout" type="string" value="icon,menu:minimize,maximize,close"/>
     <property name="DialogsUseHeader" type="empty"/>
     <property name="TitlebarMiddleClick" type="empty"/>

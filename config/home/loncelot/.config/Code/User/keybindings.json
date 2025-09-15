@@ -15,6 +15,16 @@
         "command": "-workbench.action.terminal.openNativeConsole",
         "when": "!terminalFocus"
     },
+    {
+        "key": "ctrl+shift+left",
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
     // TERMINAL LINUX
     {
         "key": "ctrl+shift+[Semicolon]",
@@ -65,12 +75,33 @@
         "command": "workbench.files.action.collapseExplorerFolders",
         "when": "explorerViewletFocus"
     },
+    {
+        "key": "ctrl+shift+left",
+        "command": "workbench.action.decreaseViewSize",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.increaseViewSize",
+        "when": "explorerViewletFocus"
+    },
     // SEARCH
     {
         "key": "ctrl+shift+c",
         "command": "search.action.collapseSearchResults",
         "when": "searchViewletFocus"
-    }
+    },
+    // SMC
+    {
+        "key": "ctrl+shift+left",
+        "command": "workbench.action.decreaseViewSize",
+        "when": "activeViewlet == 'workbench.view.scm'"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.increaseViewSize",
+        "when": "activeViewlet == 'workbench.view.scm'"
+    },
     // ZEN MODE
     {
         "key": "ctrl+shift+z",

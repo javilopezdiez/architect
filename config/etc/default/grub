@@ -39,11 +39,11 @@ GRUB_DISABLE_RECOVERY=true
 
 # Uncomment and set to the desired menu colors.  Used by normal and wallpaper
 # modes only.  Entries specified as foreground/background.
-# GRUB_COLOR_NORMAL="light-gray/black"
-# GRUB_COLOR_HIGHLIGHT="green/black"
+GRUB_COLOR_NORMAL="black/black"
+GRUB_COLOR_HIGHLIGHT="light-gray/gray"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-GRUB_BACKGROUND="/home/loncelot/Pictures/wallpapers/art/bierstadt/Albert_Bierstadt_Storm_in_the_Mountains.jpg"
+GRUB_BACKGROUND="/home/loncelot/Pictures/wallpapers/art/kasmeneo/Eisvogel_Kingfisher_Frankfurt_1_Grub.jpg"
 
 # Uncomment to get a beep at GRUB start
 #GRUB_INIT_TUNE="480 440 1"

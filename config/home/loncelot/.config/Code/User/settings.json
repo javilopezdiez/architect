@@ -1,6 +1,9 @@
 {
+    "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.enabled": false,
     "editor.cursorStyle": "block",
+    "editor.accessibilitySupport": "off",
+    "editor.pasteAs.enabled": false,
     "editor.fontSize": 14,
     "files.associations": {
         "*.ftl": "ftl"
@@ -12,7 +15,6 @@
             "strings": false
         }
     },
-    "terminal.integrated.allowMnemonics": true,
     "settingsSync.ignoredExtensions": [],
     "workbench.colorCustomizations": {
         "editorCursor.background": "#000000",
@@ -31,17 +33,47 @@
     "files.exclude": {
         "**/.vscode": true
     },
-    "terminal.integrated.automationProfile.linux": {},
     "redhat.telemetry.enabled": false,
     "workbench.startupEditor": "none",
     "settingsSync.ignoredSettings": [],
     "extensions.ignoreRecommendations": true,
+
+    // Extension pack for Java
+    // Language Support for Java(TM) by Red Hat
+    "java.configuration.maven.userSettings": "C:\\Users\\ext-jlopdie\\.m2\\settings.xml",
+    "java.configuration.maven.globalSettings": "D:\\Desarrollo\\apache-maven-3.8.4\\conf\\settings.xml",
+    "java.import.maven.offline.enabled": true,
+    "files.autoSave": "off",
+    "files.autoSaveDelay": 0,
+    "java.import.gradle.enabled": false,
+    "java.import.maven.enabled": true,
+    "java.jdt.ls.java.home": "c:\\Program Files\\Java\\jdk-21.0.6",
+    "java.jdt.ls.vmargs": "-Xmx7g",
+    "java.completion.enabled": true,
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.updateBuildConfiguration": "disabled",
+    // Java
     "[java]": {
         "editor.insertSpaces": false,
         "editor.detectIndentation": true,
         "editor.tabSize": 4,
         "editor.defaultFormatter": "redhat.java",
+        "editor.suggestOnTriggerCharacters": true
     },
+    "jdk.jdkhome": "c:\\Program Files\\Java\\jdk-21.0.6",
+    "jdk.project.jdkhome": "C:\\Program Files\\Java\\jdk1.8.0_271",
+    "jdk.java.onSave.organizeImports": false,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:\\Program Files\\Java\\jdk1.8.0_271",
+            "default": true
+        },
+        {
+            "name": "JavaSE-21",
+            "path": "c:\\Program Files\\Java\\jdk-21.0.6",
+        },
+    ],
     "editor.multiCursorLimit": 99999,
     "editor.renderWhitespace": "all",
     "workbench.activityBar.location": "hidden",
@@ -64,9 +96,10 @@
     "diffEditor.renderSideBySide": false,
     "diffEditor.maxComputationTime": 0,
     "diffEditor.renderGutterMenu": false,
-
+    "git.mergeEditor": false,
     // Terminal
     // "git.path": "D:\\Program Files\\Git\\bin\\git.exe",
+    "terminal.integrated.allowMnemonics": true,
     "terminal.explorerKind": "external",
     "terminal.integrated.defaultProfile.windows": "bash",
     "terminal.integrated.profiles.windows": {
@@ -95,7 +128,7 @@
     },
     
     // Extensions
-    "glassit.alpha": 230,
+    "glassit.alpha": 220,
 
     "[oraclesql]": {
         "editor.suggest.showSnippets": true,

@@ -5,7 +5,7 @@ source $HOME/architect/properties.conf
 # Grub config
 if [[ -d "/sys/firmware/efi" ]]; then
     echo "Installing GRUB for EFI boot mode..."
-    grub-install --target=x86_64-efi --efi-directory=/boot $DISK
+    grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch
 else
     echo "Installing GRUB for legacy (BIOS) boot mode..."
     grub-install --target=i386-pc --boot-directory=/boot $DISK

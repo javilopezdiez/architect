@@ -9,11 +9,11 @@
       <property name="Active" type="bool" value="false"/>
       <property name="EDID" type="string" value="4e7e907284e3601713b9d2e05459b923bb754fdd"/>
     </property>
-    <property name="HDMI-1" type="string" value="Samsung Electric Company 28&quot;">
+    <property name="DP-2" type="string" value="Samsung Electric Company 28&quot;">
       <property name="Active" type="bool" value="true"/>
-      <property name="EDID" type="string" value="8d0034eba196ac81d79ef78786505bc000e4d006"/>
-      <property name="Resolution" type="string" value="1920x1080"/>
-      <property name="RefreshRate" type="double" value="59.940202020202022"/>
+      <property name="EDID" type="string" value="ef854c5b87ab0567b8c27d4d0ad8675374cce82a"/>
+      <property name="Resolution" type="string" value="2560x1440"/>
+      <property name="RefreshRate" type="double" value="59.950550105254798"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>
