@@ -1,5 +1,5 @@
 #!/bin/bash
-source $HOME/architect/properties.conf
+source properties.conf
 
 # --- PACMAN
 	echo -e "Updating PACMAN..."
@@ -35,11 +35,12 @@ source $HOME/architect/properties.conf
 	    --break-system-packages \
 	    https://github.com/dlenski/gp-saml-gui/archive/master.zip
 
-	# --- RUST (Uncomment if needed)
-	# yay -S rust
+	# SPOTIFY 
+		# --- RUST (Uncomment if needed)
+		yay -S rust kitty alsa-lib pulseaudio-alsa
 
-	# --- Cargo Features (Uncomment if needed)
-	# cargo install spotify_player --features image
+		# --- Cargo Features (Uncomment if needed)
+		cargo install spotify_player --features image
 
 # --- GITHUB SCRIPTS (Optional, based on dependencies)
 	DEPENDENCIES=(

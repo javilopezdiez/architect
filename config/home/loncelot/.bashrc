@@ -136,7 +136,19 @@ ex ()
   fi
 }
 
+# autostart
+alias mykeyboard='/home/loncelot/.local/bin/mykeyboard.sh --setup'
+
 alias codes='sudo code --no-sandbox --user-data-dir ~/.config/Code '
+alias spotify='kitty -e spotify_player >/dev/null 2>&1 &'
+
+function thorium {
+    if command -v thorium-browser &> /dev/null; then
+        thorium-browser "$@"
+    else
+        /home/loncelot/.local/bin/thorium-browser-arm64/thorium "$@"
+    fi
+}
 
 function yt {
 	if [[ $# -eq 2 && ( $1 == "audio" || $1 == "720" || $1 == "1080" ) ]]; then
@@ -154,12 +166,15 @@ function yt {
 		ytfzf -l -t "$@"
 fi
 }
-alias chat='tgpt -m'
-function gpt {
-    local args="$@"
-    local cmd="tgpt \"$args\""
-    eval $cmd
-}
+
+alias chat='thorium-browser --incongnito --app=https://chatgpt.com/?temporary-chat=true >/dev/null 2>&1 &'
+alias tg='thorium-browser --app=https://web.telegram.org/k/ >/dev/null 2>&1 &'
+# alias chat='tgpt -m'
+# function gpt {
+#     local args="$@"
+#     local cmd="tgpt \"$args\""
+#     eval $cmd
+# }
 
 PATH="$PATH:/home/loncelot/.local/bin"
 PATH="$PATH:/home/loncelot/.cargo/bin"

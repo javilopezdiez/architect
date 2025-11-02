@@ -4,6 +4,7 @@
   <property name="theme" type="string" value="Default"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="AppImage"/>
       <value type="string" value="balenaEtcher"/>
       <value type="string" value="blueman"/>
       <value type="string" value="MSM Notifier"/>

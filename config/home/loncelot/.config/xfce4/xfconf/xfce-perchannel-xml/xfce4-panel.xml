@@ -74,22 +74,18 @@
       <property name="command-switchuser" type="string" value="dm-tool switch-to-greeter"/>
       <property name="show-command-switchuser" type="bool" value="true"/>
       <property name="favorites" type="array">
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="xfce4-file-manager.desktop"/>
-        <value type="string" value="xfce4-web-browser.desktop"/>
-        <value type="string" value="xfce4-mail-reader.desktop"/>
       </property>
       <property name="recent" type="array">
         <value type="string" value="xfce-backdrop-settings.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce-mouse-settings.desktop"/>
-        <value type="string" value="vmware-view.desktop"/>
-        <value type="string" value="xfce-display-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
-        <value type="string" value="blueman-manager.desktop"/>
-        <value type="string" value="blueman-adapters.desktop"/>
-        <value type="string" value="thunar-bulk-rename.desktop"/>
-        <value type="string" value="libreoffice-calc.desktop"/>
+        <value type="string" value="pdfstudio.desktop"/>
+        <value type="string" value="xfce4-taskmanager.desktop"/>
+        <value type="string" value="htop.desktop"/>
+        <value type="string" value="minecraft.desktop"/>
+        <value type="string" value="minecraft-launcher.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
       </property>
       <property name="button-single-row" type="bool" value="false"/>
       <property name="profile-shape" type="int" value="1"/>
@@ -115,6 +111,22 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (71%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (86%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (82%)"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (73%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (81%)"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (98%)"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (82%)"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (66%)"/>
+        <value type="string" value="ethernet network connection “wired connection 2” active"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (89%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (69%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (67%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (68%)"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (79%)"/>
+        <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (100%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (73%)"/>
         <value type="string" value="wi-fi network connection “es-lvtk975343” active: es-lvtk975343 (62%)"/>
         <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (63%)"/>
         <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (59%)"/>

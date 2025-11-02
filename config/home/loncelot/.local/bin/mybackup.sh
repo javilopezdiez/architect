@@ -17,6 +17,7 @@ git_directory="$HOME/Workspace/architect/config"
 file_patterns=(
 	"$HOME/.bashrc"
 	"$HOME/.local/bin/my*"
+	# "$HOME/.local/share/applications"
 	"$HOME/.local/share/xfce4/helpers/custom-WebBrowser.desktop"
 
 	"$HOME/.config/xfce4"
@@ -29,6 +30,7 @@ file_patterns=(
 	"$HOME/.Xmodmap"
 	"$HOME/.face"
 	"$HOME/.themes"
+	"$HOME/Pictures/ico"
 	"$HOME/Pictures/wallpapers/art/bierstadt"
 	"$HOME/Pictures/wallpapers/art/kasmeneo"
 	"$HOME/Pictures/wallpapers/arch"
@@ -37,8 +39,11 @@ file_patterns=(
 	"/etc/sudoers"
 	"/etc/profile.d/home-local-bin.sh"
 	"/etc/default/grub"
+	# "/etc/grub.d/10_linux"
 	"/etc/lightdm/lightdm-gtk-greeter.conf"
 	"/etc/X11/xorg.conf.d/10-modesetting.conf"
+
+	# "/boot/grub/themes/Primitivistical"
 
 	"/usr/share/backgrounds/my-*"
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"

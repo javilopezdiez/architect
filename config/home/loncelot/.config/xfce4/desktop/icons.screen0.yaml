@@ -18,6 +18,13 @@ configs:
       y: 0
       width: 1920
       height: 1080
+  - id: "d6d0270cbd0bce56a5b6d2efcf3b7199416049f3"
+    display_name: "Chimei Innolux Corporation 0x1239 (eDP-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
   - id: "ecf80f2b05d391e9f2cfbff19c59225fc0e7dfb0"
     display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1824026469 (VGA-1)"
     geometry:
@@ -40,16 +47,22 @@ configs:
       width: 1920
       height: 1080
   icons:
-    "trash:///":
+    "/home/loncelot/Desktop/net.lutris.turtlewow-1.desktop":
       row: 14
       col: 26
     "2024-12-16-11-22-45-00":
       row: 14
       col: 23
       last_seen: 1738933455472241
-    "/home/loncelot/Desktop/net.lutris.turtlewow-1.desktop":
+    "/home/loncelot/Desktop/mydevilspie2.desktop":
+      row: 11
+      col: 21
+    "trash:///":
       row: 14
       col: 26
+    "/home/loncelot/Desktop/# Rafael.md":
+      row: 11
+      col: 20
     "720e8654-95b6-4a35-855a-5f78dbba0803":
       row: 14
       col: 25
@@ -62,6 +75,9 @@ configs:
       row: 14
       col: 25
       last_seen: 1738925181342805
+    "/home/loncelot/Desktop/TurtleWoW.AppImage.crdownload":
+      row: 14
+      col: 26
     "/home/loncelot/Desktop/TurtleWoW.AppImage":
       row: 14
       col: 25
@@ -69,9 +85,45 @@ configs:
       row: 14
       col: 25
       last_seen: 1738828217577840
-    "/home/loncelot/Desktop/TurtleWoW.AppImage.crdownload":
+    "/home/loncelot/Desktop/note.md":
+      row: 0
+      col: 0
+    "/home/loncelot/Desktop/Interna.md":
+      row: 11
+      col: 21
+    "/home/loncelot/Desktop/DNI.md":
+      row: 11
+      col: 20
+- level: 0
+  monitors:
+  - id: "e78d2cf33e6dc2099f259af9f7504828e463aa40"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026935 (DVI-I-1-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "f86f0a3a66770a59c041351f105882254937d351"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026980 (DVI-I-1-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "3c0b368dd62faae6b825dc9d01662ee67f21f55b"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026971 (DVI-I-1-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  icons:
+    "Trash":
       row: 14
       col: 26
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 14
+      col: 25
 - level: 0
   monitors:
   - id: "7d16d74335b8a112c3053b2750a5b0ba90b90fa2"
@@ -157,3 +209,28 @@ configs:
       width: 1024
       height: 768
   icons: {}
+- level: 0
+  monitors:
+  - id: "2844bd83db886a13b74d67fb611089ccbadc73b9"
+    display_name: "Samsung Electric Company U28E590 HTPHB02192 (HDMI-2)"
+    geometry:
+      x: 0
+      y: 0
+      width: 2560
+      height: 1440
+  icons:
+    "/home/loncelot/Desktop/note.md":
+      row: 5
+      col: 8
+    "Trash":
+      row: 19
+      col: 35
+    "/home/loncelot/Desktop/DNI.md":
+      row: 19
+      col: 34
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 19
+      col: 34
+    "/home/loncelot/Desktop/Interna.md":
+      row: 19
+      col: 35

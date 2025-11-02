@@ -49,9 +49,6 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="xfce4-taskmanager"/>
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal --drop-down"/>
-      <property name="Print" type="string" value="xfce4-screenshooter -fd 1"/>
-      <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -wd 1"/>
-      <property name="&lt;Primary&gt;&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r"/>
       <property name="&lt;Super&gt;e" type="string" value="exo-open --launch FileManager"/>
       <property name="&lt;Super&gt;1" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;Right" type="string" value="movescreen.py next"/>
@@ -67,6 +64,8 @@
       <property name="&lt;Super&gt;l" type="string" value="mywin.sh --lua"/>
       <property name="&lt;Primary&gt;Alt_L" type="string" value="myhorizoncapture.sh"/>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-whiskermenu"/>
+      <property name="&lt;Super&gt;f" type="string" value="mywin.sh --max"/>
+      <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="xfce4-screenshooter -f"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -212,7 +211,6 @@
       <property name="&lt;Control&gt;F7" type="string" value="workspace_7_key"/>
       <property name="&lt;Control&gt;F3" type="string" value="workspace_3_key"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;f" type="string" value="maximize_window_key"/>
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;BackSpace" type="string" value="add_workspace_key"/>
       <property name="&lt;Super&gt;BackSpace" type="string" value="del_workspace_key"/>

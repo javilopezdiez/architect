@@ -1,13 +1,21 @@
 #!/bin/bash
 
 PYTHON_SITE_DIR="$HOME/.local/lib/python$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')/site-packages"
+DEFAULT_GP_SAML_GUI="/usr/lib/gp-saml-gui/gp_saml_gui.py"
 VPN_GATEWAY="evpn.gobiernodecanarias.org"
 USERNAME="ext-jlopdie"  # optional: you can also be prompted
 SCRIPT="/etc/vpnc/vpnc-script"
 
+# Determine actual gp_saml_gui.py path
+if [[ -f "$PYTHON_SITE_DIR/gp_saml_gui.py" ]]; then
+    GP_SAML_GUI_PATH="$PYTHON_SITE_DIR/gp_saml_gui.py"
+else
+    GP_SAML_GUI_PATH="$DEFAULT_GP_SAML_GUI"
+fi
+
 # Fix gp_saml_gui.py
-mymodder.sh \
-        --file "$PYTHON_SITE_DIR/gp_saml_gui.py" \
+sudo mymodder.sh \
+        --file "$GP_SAML_GUI_PATH" \
         --codefile "$HOME/.local/bin/mysrc/init_poolmanager.py"
 
 

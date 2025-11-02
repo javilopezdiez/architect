@@ -1,4 +1,6 @@
 -- VARIABLES
+local SCALE = 1
+
 local WIDTH = 10/11
 local HEIGHT = 5/6
 
@@ -11,6 +13,8 @@ local avoid_roles = {
 	"dropdown"
 }
 local avoid_names = {
+	'Mechvibes',
+	'Picture in picture',
 	'notify',
 	'Authenticate',
 	'xfce4-screenshooter'
@@ -141,11 +145,18 @@ function contains(list, search_element)
 end
 
 function is_main_display_active()
-	local main_handle = io.popen("xrandr --listmonitors | grep 'LVDS-1'")
+	-- x230
+	-- local main_handle = io.popen("xrandr --listmonitors | grep 'LVDS-1'") 
+	-- x270
+	local main_handle = io.popen("xrandr --listmonitors | grep 'eDP-1'")
 	local main_display_info = main_handle:read("*all")
 	main_handle:close()
 	local isMainDisplayActive = main_display_info ~= ""
+	if isMainDisplayActive then
+		SCALE = 1.25
+	end
 	os.execute("echo 'shared_isMainDisplayActive                    '" .. tostring(isMainDisplayActive))
+
 	return isMainDisplayActive
 end
 
@@ -171,14 +182,18 @@ function center_and_resize(w, h, window_id)
 	local new_height = math.floor(screen_height * h)
 	local x_pos = math.floor((screen_width - new_width) / 2)
 	local y_pos = math.floor((screen_height - new_height) / 2)
-	if window_id then 
-		set_window_geometry_by_id(window_id, x_pos, y_pos, new_width, new_height)
-	else 
-		set_window_geometry(x_pos, y_pos, new_width, new_height)
-	end
+    if window_id then 
+        set_window_geometry_by_id(window_id, x_pos/SCALE, y_pos/SCALE, new_width/SCALE, new_height/SCALE)
+    else 
+        set_window_geometry(x_pos/SCALE, y_pos/SCALE, new_width/SCALE, new_height/SCALE)
+    end
 end
 
 function set_window_geometry_by_id(window_id, x_pos, y_pos, width, height)
+	x_pos = math.floor(x_pos)
+	y_pos = math.floor(y_pos)
+	width = math.floor(width)
+	height = math.floor(height)
 	os.execute(string.format(
 		"xdotool windowmove %s %d %d windowsize %s %d %d",
 		window_id, x_pos, y_pos, window_id, width, height

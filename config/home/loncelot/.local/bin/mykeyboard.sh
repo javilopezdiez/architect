@@ -19,7 +19,13 @@ setupKeys() {
 }
 
 setupTrackpad() {
-    xinput set-prop "bcm5974" "libinput Tapping Enabled" 1
+    # Either x230
+    # xinput set-prop "bcm5974" "libinput Tapping Enabled" 1
+    # Disable x270
+    TRACKPAD_ID=$(xinput list | grep -i "synaptics" | awk '{print $6}' | sed 's/id=//')
+    if [ -n "$TRACKPAD_ID" ]; then
+        xinput disable "$TRACKPAD_ID"
+    fi
 }
 
 rightExternalTrackpad() {
@@ -66,7 +72,7 @@ case "$1" in
     --setup)
         setupLaout
         # setupKeys
-        # setupTrackpad
+        setupTrackpad
         ;;
     --toggleSound)
         toggleMechanicalSound

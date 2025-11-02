@@ -1,8 +1,8 @@
 app=ristretto
-custom_action_command=/usr/lib/xfce4/screenshooter/scripts/imgur-upload.sh %f %imgur_client_id
+custom_action_command=
 last_user=
 last_extension=png
-screenshot_dir=file:/home/loncelot/Pictures/wallpapers/art
+screenshot_dir=file:/home/loncelot/Downloads
 show_in_folder=true
 action=2
 delay=0

@@ -5,6 +5,9 @@
     "editor.accessibilitySupport": "off",
     "editor.pasteAs.enabled": false,
     "editor.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.fontWeight": "bold",
+    "editor.insertSpaces": true,
     "files.associations": {
         "*.ftl": "ftl"
     },
@@ -128,7 +131,7 @@
     },
     
     // Extensions
-    "glassit.alpha": 220,
+    "glassit.alpha": 240,
 
     "[oraclesql]": {
         "editor.suggest.showSnippets": true,
@@ -146,4 +149,5 @@
     "oracledevtools.download.otherFolder": "/root/downloads",
     "json.schemas": [],
     "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.tabs.enabled": false,
 }

@@ -5,18 +5,19 @@
   <property name="AutoEnableProfiles" type="int" value="3"/>
   <property name="ActiveProfile" type="string" value="Default"/>
   <property name="Default" type="empty">
-    <property name="LVDS-1" type="string" value="Laptop">
+    <property name="eDP-1" type="string" value="Laptop">
       <property name="Active" type="bool" value="false"/>
-      <property name="EDID" type="string" value="4e7e907284e3601713b9d2e05459b923bb754fdd"/>
+      <property name="EDID" type="string" value="1acf374cf5634a02fada63df42459df77f76e125"/>
     </property>
-    <property name="DP-2" type="string" value="Samsung Electric Company 28&quot;">
+    <property name="DP-1" type="string" value="Samsung Electric Company 28&quot;">
       <property name="Active" type="bool" value="true"/>
-      <property name="EDID" type="string" value="ef854c5b87ab0567b8c27d4d0ad8675374cce82a"/>
+      <property name="EDID" type="string" value="490802c25c470ce245a9b9d66518dc941b9e4132"/>
       <property name="Resolution" type="string" value="2560x1440"/>
       <property name="RefreshRate" type="double" value="59.950550105254798"/>
+      <property name="ModeFlags" type="uint64" value="9"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="false"/>
+      <property name="Primary" type="bool" value="true"/>
       <property name="Scale" type="double" value="1"/>
       <property name="Position" type="empty">
         <property name="X" type="int" value="0"/>

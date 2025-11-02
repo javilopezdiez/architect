@@ -42,7 +42,13 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-shapes.svg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="rgba1" type="array">
+            <value type="double" value="0.12666666666666668"/>
+            <value type="double" value="0.12666666666666668"/>
+            <value type="double" value="0.12666666666666668"/>
+            <value type="double" value="1"/>
+          </property>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
@@ -204,7 +210,33 @@
           <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/greenTrees.jpg"/>
         </property>
       </property>
+      <property name="monitoreDP-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/savana.jpg"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="rgba1" type="array">
+            <value type="double" value="0.12666666666666668"/>
+            <value type="double" value="0.12666666666666668"/>
+            <value type="double" value="0.12666666666666668"/>
+            <value type="double" value="1"/>
+          </property>
+          <property name="backdrop-cycle-enable" type="bool" value="false"/>
+          <property name="color-style" type="int" value="0"/>
+        </property>
+      </property>
+      <property name="monitorDVI-I-1-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+        </property>
+      </property>
+      <property name="monitorDP-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/bilbao_deusto.jpg"/>
+        </property>
+      </property>
     </property>
+    <property name="single-workspace-mode" type="bool" value="true"/>
+    <property name="single-workspace-number" type="int" value="0"/>
   </property>
   <property name="desktop-icons" type="empty">
     <property name="style" type="int" value="2"/>
@@ -215,6 +247,8 @@
       <property name="migrated-4.19" type="array">
         <value type="string" value="7ecd47eef11609d49711a47bfd6c68726fd990ea"/>
         <value type="string" value="7d16d74335b8a112c3053b2750a5b0ba90b90fa2"/>
+        <value type="string" value="2844bd83db886a13b74d67fb611089ccbadc73b9"/>
+        <value type="string" value="f86f0a3a66770a59c041351f105882254937d351"/>
       </property>
     </property>
     <property name="icon-size" type="uint" value="30"/>
@@ -228,8 +262,8 @@
     <property name="primary" type="bool" value="true"/>
   </property>
   <property name="last" type="empty">
-    <property name="window-width" type="int" value="1221"/>
-    <property name="window-height" type="int" value="620"/>
+    <property name="window-width" type="int" value="1376"/>
+    <property name="window-height" type="int" value="700"/>
   </property>
   <property name="last-settings-migration-version" type="uint" value="1"/>
 </channel>
