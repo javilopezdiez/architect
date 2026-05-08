@@ -2,6 +2,7 @@
 local windows = {
     {name = "Picture in picture", icon = "/home/loncelot/Pictures/ico/pip.png"},
     {name = "spotify_player", icon = "/home/loncelot/Pictures/ico/spotify.png"},
+    {name = "yt-x", icon = "/home/loncelot/Pictures/ico/yt.png"},
     -- Add more here
 }
 

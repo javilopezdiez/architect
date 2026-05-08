@@ -7,10 +7,25 @@
     "editor.fontSize": 14,
     "editor.tabSize": 4,
     "editor.fontWeight": "bold",
+    // "editor.cursorSurroundingLines": 1000,
+    "terminal.integrated.fontWeight": "bold",
     "editor.insertSpaces": true,
     "files.associations": {
         "*.ftl": "ftl"
     },
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli",
+        "bats"
+    ],
     "[markdown]": {
         "editor.quickSuggestions": {
             "other": true,
@@ -19,20 +34,63 @@
         }
     },
     "settingsSync.ignoredExtensions": [],
+
+    "window.titleBarStyle": "native",
+    "window.dialogStyle": "native",
+    "window.menuStyle": "custom", // doesnt work
+    "window.customTitleBarVisibility": "never",
+    "window.menuBarVisibility": "visible",
+
     "workbench.colorCustomizations": {
-        "editorCursor.background": "#000000",
+
+        "editor.selectionBackground":"#0f1955",
+        "editorCursor.background": "#181818",
         "editorCursor.foreground": "#2ad639",
-        
+
         "activityBar.background": "#000000",
-        "titleBar.activeBackground": "#73308d",
+
+        "titleBar.activeBackground": "#15051b",
         "titleBar.activeForeground": "#ffffff",
-        "editor.background": "#202020",
+
+        "editor.background": "#000000",
+        "editorPane.background": "#000000",
+
+        "terminal.background":"#000000",
+
         "scrollbarSlider.activeBackground": "#62fa1bcb",
         "scrollbarSlider.hoverBackground": "#fa2a1b71",
         "scrollbarSlider.background": "#c97554a6",
-        "editorPane.background": "#000000",
-        "diffEditor.ignoreTrimWhitespace": false,
+
+        "titleBar.inactiveBackground": "#1b1b1b",
+        "titleBar.inactiveForeground": "#aaaaaa",
+
+        // Dropdown / workspace menu that opens from it
+        "menu.background": "#000000",
+        "menu.foreground": "#ffffff",
+        "menu.selectionBackground": "#404040",
+        "menu.selectionForeground": "#ffffff",
+        "menu.border": "#555555",
+
+        // Tabs area
+        "tab.activeBackground": "#000000",
+        "tab.activeForeground": "#ffffff",
+        "tab.inactiveBackground": "#111111",
+        "tab.inactiveForeground": "#aaaaaa",
+        "tab.hoverBackground": "#111111",
+        "tab.border": "#000000",
+
+        // Optional: the bar containing tabs
+        "editorGroupHeader.tabsBackground": "#1b1b1b",
+        "editorGroupHeader.tabsBorder": "#000000"
+
     },
+    "git.showCommitInput": false,
+    "git.showActionButton": {
+        "commit": false,
+        "publish": false,
+        "sync": false
+    },
+
     "files.exclude": {
         "**/.vscode": true
     },
@@ -131,7 +189,7 @@
     },
     
     // Extensions
-    "glassit.alpha": 240,
+    "glassit.alpha": 235,
 
     "[oraclesql]": {
         "editor.suggest.showSnippets": true,
@@ -150,4 +208,9 @@
     "json.schemas": [],
     "git.openRepositoryInParentFolders": "never",
     "terminal.integrated.tabs.enabled": false,
+    "editor.inlineSuggest.edits.showCollapsed": true,
+    "[shellscript]": {
+        "editor.defaultFormatter": "mkhl.shfmt"
+    },
+    "explorer.confirmDelete": false
 }

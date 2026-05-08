@@ -7,7 +7,7 @@ setupLaout() {
         # setxkbmap -option grp:win_space_toggle
     # japaneese keyboard
         xmodmap ~/.Xmodmap
-        # xkbcomp /home/loncelot/.config/mylayout.xkb $DISPLAY
+        # xkbcomp ${HOME}/.config/mylayout.xkb $DISPLAY
         # sudo systemd-hwdb update
         # sudo udevadm trigger --subsystem-match=input --action=change
 }
@@ -45,6 +45,11 @@ enableExternalTrackpad() {
 }
 
 toggleMechanicalSound() {
+
+    # pgrep -a mech
+    # ps -ef | grep mech
+    # ps -C mechvibes
+    # ps -f 13694 # full but not necessary
     process=$(pgrep -x "mechvibes")
     if [ -n "$process" ]; then
         killall mechvibes
@@ -52,6 +57,20 @@ toggleMechanicalSound() {
     else
         mechvibes & sleep 2
         mywin.sh --close "Mechvibes"
+    fi
+}
+toggleClick() {
+    process=$(pgrep -x "clicksound")
+    if [ -n "$process" ]; then
+        # kill $(pgrep clicksound) dunno if this would work
+        sudo killall clicksound
+    else
+        echo "ok"
+        sudo ${HOME}/.local/bin/myclick/clicksound \
+            ${HOME}/.local/bin/myclick/sounds/single.mp3 \
+            ${HOME}/.local/bin/myclick/sounds/mechsoft1.mp3 \
+            ${USER} \
+            >/dev/null 2>&1 &
     fi
 }
 
@@ -80,8 +99,12 @@ case "$1" in
     --toggleLayout)
         toggleLayout
         ;;
+    --toggleClick)
+        # pgrep -a click TODO, TOO MANY PROCESS
+        toggleClick
+        ;;
     *)
-        echo "Usage: $0 {--setup|--toggleSound|--toggleLayout}"
+        echo "Usage: $0 {--setup|--toggleSound|--toggleLayout|--toggleClick}"
         exit 1
         ;;
 esac

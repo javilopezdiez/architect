@@ -47,57 +47,223 @@ configs:
       width: 1920
       height: 1080
   icons:
+    "/home/loncelot/Desktop/O Brother, Where Art Thou (2000) [1080p]":
+      row: 0
+      col: 23
     "/home/loncelot/Desktop/net.lutris.turtlewow-1.desktop":
       row: 14
       col: 26
-    "2024-12-16-11-22-45-00":
-      row: 14
-      col: 23
-      last_seen: 1738933455472241
-    "/home/loncelot/Desktop/mydevilspie2.desktop":
-      row: 11
-      col: 21
-    "trash:///":
-      row: 14
-      col: 26
-    "/home/loncelot/Desktop/# Rafael.md":
-      row: 11
-      col: 20
-    "720e8654-95b6-4a35-855a-5f78dbba0803":
-      row: 14
-      col: 25
-      last_seen: 1738932520866613
-    "91a0439a-ea93-4776-9bd0-8061fc610312":
-      row: 14
-      col: 24
-      last_seen: 1738933053010868
-    "6ab17710-e94c-453a-a9a1-a6ce3e03f727":
-      row: 14
-      col: 25
-      last_seen: 1738925181342805
-    "/home/loncelot/Desktop/TurtleWoW.AppImage.crdownload":
-      row: 14
-      col: 26
-    "/home/loncelot/Desktop/TurtleWoW.AppImage":
-      row: 14
-      col: 25
     "91491b70-02fe-4508-a253-29c12c0cb0f9":
       row: 14
       col: 25
       last_seen: 1738828217577840
-    "/home/loncelot/Desktop/note.md":
+    "/home/loncelot/Desktop/The.Anarchists.S01.COMPLETE.720p.HMAX.WEBRip.x264-GalaxyTV[TGx]":
       row: 0
-      col: 0
-    "/home/loncelot/Desktop/Interna.md":
-      row: 11
-      col: 21
+      col: 19
+    "/home/loncelot/Desktop/ElCaminoDeLosReyes.epub":
+      row: 0
+      col: 59
+    "6ab17710-e94c-453a-a9a1-a6ce3e03f727":
+      row: 14
+      col: 25
+      last_seen: 1738925181342805
+    "afc://00008110-0014303E0A06401E:3/":
+      row: 0
+      col: 22
+      last_seen: 1763225991514460
+    "/home/loncelot/Desktop/The Master (2012) [1080p]":
+      row: 0
+      col: 24
+    "/home/loncelot/Desktop/ip.png":
+      row: 0
+      col: 24
+    "2005-10-06-22-37-06-00":
+      row: 0
+      col: 24
+      last_seen: 1776986825437800
+    "2005-10-06-22-39-57-00":
+      row: 0
+      col: 24
+      last_seen: 1776986889726957
+    "/home/loncelot/Desktop/Eliseo Subiela - 1992 - El lado oscuro del coraz\xF3n.avi":
+      row: 0
+      col: 24
     "/home/loncelot/Desktop/DNI.md":
       row: 11
       col: 20
+    "/home/loncelot/Desktop/American.Anarchist.1080p.x264.AAC.MVGroup.Forum.mp4":
+      row: 0
+      col: 18
+    "/home/loncelot/Desktop/Call of Duty(R) 2 Single Player.desktop":
+      row: 0
+      col: 23
+    "/home/loncelot/Desktop/Call of Duty(R) 2 Multiplayer.desktop":
+      row: 0
+      col: 24
+    "2024-12-16-11-22-45-00":
+      row: 14
+      col: 23
+      last_seen: 1738933455472241
+    "2005-10-06-22-34-11-00":
+      row: 0
+      col: 24
+      last_seen: 1776985793608461
+    "/home/loncelot/Desktop/Minecraft 1.12.2 Cracked [Full, Cracked, Online, Server List]":
+      row: 11
+      col: 19
+    "/home/loncelot/Desktop/Counter-Strike.desktop":
+      row: 0
+      col: 33
+    "00008110-001518C61E53A01E":
+      row: 19
+      col: 32
+      last_seen: 1762520369444966
+    "/home/loncelot/Desktop/La Pianiste (2001)":
+      row: 0
+      col: 24
+    "2005-10-06-22-39-12-00":
+      row: 1
+      col: 26
+      last_seen: 1777072541537199
+    "91a0439a-ea93-4776-9bd0-8061fc610312":
+      row: 14
+      col: 24
+      last_seen: 1738933053010868
+    "afc://00008030-001479891A9A402E:3/":
+      row: 0
+      col: 22
+      last_seen: 1769087802602232
+    "/home/loncelot/Desktop/TurtleWoW.AppImage":
+      row: 14
+      col: 25
+    "/home/loncelot/mnt/sda1":
+      row: 11
+      col: 19
+      last_seen: 1762622033713147
+    "/home/loncelot/Desktop/mydevilspie2.desktop":
+      row: 11
+      col: 21
+    "/home/loncelot/Desktop/note.md":
+      row: 0
+      col: 0
+    "/home/loncelot/Desktop/.goutputstream-ZYC3F3":
+      row: 0
+      col: 23
+    "/home/loncelot/Desktop/net.lutris.call-of-duty-2-19.desktop":
+      row: 0
+      col: 24
+    "/home/loncelot/Desktop/# Rafael.md":
+      row: 11
+      col: 20
+    "00008030-001479891A9A402E":
+      row: 0
+      col: 23
+      last_seen: 1769087716535235
+    "00008110-0014303E0A06401E":
+      row: 0
+      col: 33
+      last_seen: 1776246008007737
+    "/home/loncelot/Desktop/Interna.md":
+      row: 11
+      col: 21
+    "trash:///":
+      row: 0
+      col: 61
+    "2005-10-06-22-41-02-00":
+      row: 0
+      col: 24
+      last_seen: 1777244881820683
+    "/home/loncelot/Desktop/TurtleWoW.AppImage.crdownload":
+      row: 14
+      col: 26
+    "720e8654-95b6-4a35-855a-5f78dbba0803":
+      row: 0
+      col: 60
+      last_seen: 1778146557622245
+    "/home/loncelot/Desktop/Sanderson, Brandon - [El archivo de las tormentas 01] El camino de los reyes [3459] (r5.0).epub":
+      row: 0
+      col: 24
+    "2005-10-06-22-40-28-00":
+      row: 0
+      col: 24
+      last_seen: 1776986918100788
 - level: 0
   monitors:
-  - id: "e78d2cf33e6dc2099f259af9f7504828e463aa40"
-    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026935 (DVI-I-1-1)"
+  - id: "2844bd83db886a13b74d67fb611089ccbadc73b9"
+    display_name: "Samsung Electric Company U28E590 HTPHB02192 (CROPPED)"
+    geometry:
+      x: 0
+      y: 0
+      width: 2560
+      height: 1240
+  icons:
+    "00008110-0014303E0A06401E":
+      row: 0
+      col: 33
+      last_seen: 1774611478832304
+    "trash:///":
+      row: 0
+      col: 30
+    "/home/loncelot/Desktop/ElCaminoDeLosReyes.epub":
+      row: 0
+      col: 28
+    "720e8654-95b6-4a35-855a-5f78dbba0803":
+      row: 0
+      col: 29
+      last_seen: 1778146555336373
+    "/home/loncelot/Desktop/Sanderson, Brandon - [El archivo de las tormentas 01] El camino de los reyes [3459] (r5.0).epub":
+      row: 0
+      col: 52
+- level: 0
+  monitors:
+  - id: "dbee131e9d8a80bf705c80c50657af9ce2eaac45"
+    display_name: "CROPPED"
+    geometry:
+      x: 0
+      y: 0
+      width: 3840
+      height: 1820
+  icons:
+    "Trash":
+      row: 9
+      col: 18
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 9
+      col: 17
+- level: 0
+  monitors:
+  - id: "de311d01ea15088ead47484f4fde407ff16c10a2"
+    display_name: "LG Electronics LG TV 0x01010101 (DP-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 3840
+      height: 2160
+  - id: "3d52eefe8ae5ee4dc99586eff79fdbfb350f2046"
+    display_name: "DP-1"
+    geometry:
+      x: 0
+      y: 0
+      width: 3840
+      height: 2160
+  icons:
+    "Trash":
+      row: 9
+      col: 18
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 9
+      col: 17
+- level: 0
+  monitors:
+  - id: "2844bd83db886a13b74d67fb611089ccbadc73b9"
+    display_name: "Samsung Electric Company U28E590 HTPHB02192 (DP-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "56ff3d09a36c964b3573c9a6d516272f73b3ba96"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827027064 (DVI-I-1-1)"
     geometry:
       x: 0
       y: 0
@@ -110,8 +276,43 @@ configs:
       y: 0
       width: 1920
       height: 1080
+  - id: "b9f8211ad263f60a6fa95a1f073700182bdf67b1"
+    display_name: "Samsung Electric Company LC27RG50 HNMN900176 (HDMI-2)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "d6d0270cbd0bce56a5b6d2efcf3b7199416049f3"
+    display_name: "Chimei Innolux Corporation 0x1239 (eDP-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "b4a5656d16d24fcc9728d4524a4e08fbbe8ec653"
+    display_name: "Samsung Electric Company SAMSUNG 0x00000001 (HDMI-2)"
+    geometry:
+      x: 1920
+      y: 0
+      width: 1920
+      height: 1080
   - id: "3c0b368dd62faae6b825dc9d01662ee67f21f55b"
     display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026971 (DVI-I-1-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "e78d2cf33e6dc2099f259af9f7504828e463aa40"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026935 (DVI-I-1-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1920
+      height: 1080
+  - id: "b6868969432a408cb2b6c7560f780b4c8c1dfd29"
+    display_name: "Philips Consumer Electronics Company PHL 241B7Q UHB1827026940 (DVI-I-1-1)"
     geometry:
       x: 0
       y: 0
@@ -124,6 +325,10 @@ configs:
     "dc3b4a82-f11e-497d-9b19-9c369307177c":
       row: 14
       col: 25
+    "00008030-001479891A9A402E":
+      row: 0
+      col: 24
+      last_seen: 1764747956331895
 - level: 0
   monitors:
   - id: "7d16d74335b8a112c3053b2750a5b0ba90b90fa2"
@@ -170,8 +375,11 @@ configs:
       width: 1366
       height: 768
   icons:
-    "trash:///":
+    "Trash":
       row: 0
+      col: 0
+    "/":
+      row: 1
       col: 0
     "/home/loncelot/Desktop/roadwarden_1_1_31_67621_gog_linux":
       row: 9
@@ -179,26 +387,16 @@ configs:
     "/home/loncelot/Desktop/gog_com-Roadwarden_1.desktop":
       row: 9
       col: 18
-    "/home/loncelot/Desktop/TurtleWoW Launcher.lnk":
-      row: 9
-      col: 18
-    "Trash":
-      row: 0
-      col: 0
-    "720e8654-95b6-4a35-855a-5f78dbba0803":
-      row: 9
-      col: 18
-      last_seen: 1738865702731893
-    "/home/loncelot":
-      row: 2
-      col: 0
     "91491b70-02fe-4508-a253-29c12c0cb0f9":
       row: 9
       col: 18
       last_seen: 1738685147488297
-    "/":
-      row: 1
+    "/home/loncelot":
+      row: 2
       col: 0
+    "/home/loncelot/Desktop/TurtleWoW Launcher.lnk":
+      row: 9
+      col: 18
 - level: 0
   monitors:
   - id: "e3ccd66662f6b375c334c080b2b1a8f640957287"
@@ -219,18 +417,43 @@ configs:
       width: 2560
       height: 1440
   icons:
-    "/home/loncelot/Desktop/note.md":
-      row: 5
-      col: 8
-    "Trash":
+    "smb://Admin-USB@192.168.1.1/sda1/":
       row: 19
-      col: 35
+      col: 33
+      last_seen: 1762624704140930
+    "/home/loncelot/Desktop/Half-Life.desktop":
+      row: 0
+      col: 32
+    "smb://192.168.1.1/sda1/":
+      row: 19
+      col: 32
+      last_seen: 1762625065929388
+    "/home/loncelot/Desktop/steam.desktop":
+      row: 0
+      col: 33
     "/home/loncelot/Desktop/DNI.md":
       row: 19
       col: 34
+    "ba60c50ae1110235ccbaf7448ce794775f97ccc7":
+      row: 0
+      col: 33
+      last_seen: 1770027619509661
     "dc3b4a82-f11e-497d-9b19-9c369307177c":
       row: 19
       col: 34
+    "/home/loncelot/Desktop/Half life but with Subtitles.desktop":
+      row: 0
+      col: 33
+    "/home/loncelot/Desktop/note.md":
+      row: 5
+      col: 8
+    "/home/loncelot/mnt/sda1":
+      row: 19
+      col: 33
+      last_seen: 1762509987904685
     "/home/loncelot/Desktop/Interna.md":
+      row: 19
+      col: 35
+    "Trash":
       row: 19
       col: 35

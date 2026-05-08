@@ -95,12 +95,12 @@
     {
         "key": "ctrl+shift+left",
         "command": "workbench.action.decreaseViewSize",
-        "when": "activeViewlet == 'workbench.view.scm'"
+        "when": "activeViewlet == 'workbench.view.scm' && !editorFocus"
     },
     {
         "key": "ctrl+shift+right",
         "command": "workbench.action.increaseViewSize",
-        "when": "activeViewlet == 'workbench.view.scm'"
+        "when": "activeViewlet == 'workbench.view.scm' && !editorFocus"
     },
     // ZEN MODE
     {
@@ -111,7 +111,7 @@
         "key": "ctrl+k z",
         "command": "-workbench.action.toggleZenMode"
     },
-    // COMMENT
+    // COMMENT or FOLD
     {
         "key": "ctrl+k ctrl+c",
         "command": "editor.action.blockComment",
@@ -131,6 +131,16 @@
         "key": "ctrl+oem_2",
         "command": "-editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k ctrl+f",
+        "command": "editor.toggleFoldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "ctrl+k ctrl+shift+l",
+        "command": "-editor.toggleFoldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
     },
     // ORACLE DDBB
     {

@@ -4,7 +4,8 @@ Version=1.0
 Encoding=UTF-8
 Type=X-XFCE-Helper
 X-XFCE-Category=WebBrowser
-X-XFCE-CommandsWithParameter=thorium "%s"
+X-XFCE-CommandsWithParameter=/usr/bin/thorium-browser "%s"
 Icon=thorium-browser
 Name=thorium-browser
-X-XFCE-Commands=thorium
+X-XFCE-Commands=/usr/bin/thorium-browser
+

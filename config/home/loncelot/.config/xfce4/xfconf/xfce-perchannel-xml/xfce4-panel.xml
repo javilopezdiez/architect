@@ -10,6 +10,7 @@
         <value type="int" value="8"/>
         <value type="int" value="3"/>
         <value type="int" value="7"/>
+        <value type="int" value="13"/>
         <value type="int" value="4"/>
         <value type="int" value="6"/>
         <value type="int" value="9"/>
@@ -24,9 +25,10 @@
       <property name="size" type="uint" value="19"/>
       <property name="mode" type="uint" value="0"/>
       <property name="autohide-behavior" type="uint" value="0"/>
-      <property name="icon-size" type="uint" value="20"/>
+      <property name="icon-size" type="uint" value="23"/>
       <property name="enable-struts" type="bool" value="true"/>
     </property>
+    <property name="dark-mode" type="bool" value="false"/>
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-2" type="string" value="actions">
@@ -46,10 +48,18 @@
       </property>
       <property name="button-title" type="uint" value="1"/>
     </property>
-    <property name="plugin-4" type="string" value="pager"/>
+    <property name="plugin-4" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="wrap-workspaces" type="bool" value="true"/>
+      <property name="miniature-view" type="bool" value="true"/>
+    </property>
     <property name="plugin-3" type="string" value="tasklist">
       <property name="grouping" type="bool" value="false"/>
       <property name="show-labels" type="bool" value="false"/>
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="flat-buttons" type="bool" value="true"/>
+      <property name="show-tooltips" type="bool" value="true"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
     </property>
     <property name="plugin-7" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
@@ -76,16 +86,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="kitty.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="transmission-gtk.desktop"/>
         <value type="string" value="xfce-backdrop-settings.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="xfce-display-settings.desktop"/>
+        <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
-        <value type="string" value="pdfstudio.desktop"/>
-        <value type="string" value="xfce4-taskmanager.desktop"/>
-        <value type="string" value="htop.desktop"/>
-        <value type="string" value="minecraft.desktop"/>
-        <value type="string" value="minecraft-launcher.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="net.lutris.cod-2-sp-20.desktop"/>
+        <value type="string" value="net.lutris.call-of-duty-2-19.desktop"/>
       </property>
       <property name="button-single-row" type="bool" value="false"/>
       <property name="profile-shape" type="int" value="1"/>
@@ -100,7 +110,15 @@
     <property name="plugin-10" type="string" value="xkb"/>
     <property name="notes" type="empty">
       <property name="global" type="empty">
-        <property name="version" type="string" value="1.11.0"/>
+        <property name="version" type="string" value="1.12.0"/>
+        <property name="skip-taskbar-hint" type="bool" value="true"/>
+        <property name="background-color" type="string" value="#ab67a9174d15"/>
+        <property name="font-description" type="string" value="Monospace Bold 12"/>
+      </property>
+      <property name="new-window" type="empty">
+        <property name="sticky" type="bool" value="false"/>
+        <property name="width" type="int" value="240"/>
+        <property name="height" type="int" value="300"/>
       </property>
     </property>
     <property name="clipman" type="empty">
@@ -111,6 +129,119 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (66%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (65%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (42%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (52%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (56%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (55%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (41%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (40%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (44%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (43%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (49%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (50%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (71%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (84%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (69%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (67%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (70%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (94%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (78%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (89%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (72%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (87%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (61%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (62%)"/>
+        <value type="string" value="wi-fi network connection “digifibra-plus-h4hw” active: digifibra-plus-h4hw (66%)"/>
+        <value type="string" value="wi-fi network connection “digifibra-plus-h4hw” active: digifibra-plus-h4hw (78%)"/>
+        <value type="string" value="wi-fi network connection “digifibra-plus-h4hw” active: digifibra-plus-h4hw (61%)"/>
+        <value type="string" value="wi-fi network connection “digifibra-plus-h4hw” active: digifibra-plus-h4hw (79%)"/>
+        <value type="string" value="wi-fi network connection “digifibra-plus-h4hw” active: digifibra-plus-h4hw (82%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (76%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (95%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (97%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (81%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (95%)"/>
+        <value type="string" value="wi-fi network connection “fastweb-szckd9” active: fastweb-szckd9 (69%)"/>
+        <value type="string" value="wi-fi network connection “fastweb-szckd9” active: fastweb-szckd9 (71%)"/>
+        <value type="string" value="rednotebook"/>
+        <value type="string" value="blueman"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (74%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (92%)"/>
+        <value type="string" value="wi-fi network connection “vidaller3” active: vidaller3 (69%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (80%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (78%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (77%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (83%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (82%)"/>
+        <value type="string" value="requesting an ethernet network address for “wired connection 3”…"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (82%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (79%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (57%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (80%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (81%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (74%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (77%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (85%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (75%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (68%)"/>
+        <value type="string" value="requesting a wi-fi network address for “madriguera”…"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (76%)"/>
+        <value type="string" value="ethernet network connection “wired connection 3” active"/>
+        <value type="string" value="steam"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (70%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (71%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (65%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (67%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (66%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (92%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (94%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (96%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (85%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (79%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (68%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (98%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (83%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (93%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (61%)"/>
+        <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (63%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (90%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (74%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (67%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (66%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (68%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (91%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (87%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (89%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (86%)"/>
+        <value type="string" value="wi-fi network connection “iphonese” active: iphonese (88%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (84%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (81%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (86%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (100%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (85%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (83%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (82%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (74%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (75%)"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (92%)"/>
+        <value type="string" value="no network connection"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (70%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (79%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (77%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (75%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (72%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (71%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (72%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (69%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (73%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (69%)"/>
+        <value type="string" value="wi-fi network connection “iphone13mini” active: iphone13mini (76%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (63%)"/>
+        <value type="string" value="mechvibes"/>
+        <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (62%)"/>
+        <value type="string" value="notes"/>
         <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (71%)"/>
         <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (86%)"/>
         <value type="string" value="wi-fi network connection “miwifi_upfc” active: miwifi_upfc (82%)"/>
@@ -152,6 +283,9 @@
         <value type="string" value="drop-down terminal"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="QElectroTech"/>
+        <value type="string" value="steam"/>
+        <value type="string" value="chrome_status_icon_1"/>
         <value type="string" value="Mechvibes4"/>
         <value type="string" value="Mechvibes3"/>
         <value type="string" value="Mechvibes2"/>
@@ -159,6 +293,14 @@
         <value type="string" value="Mechvibes1"/>
         <value type="string" value="blueman"/>
       </property>
+    </property>
+    <property name="plugin-13" type="string" value="genmon">
+      <property name="command" type="string" value="mybattery.sh"/>
+      <property name="use-label" type="bool" value="false"/>
+      <property name="text" type="string" value="(genmon)"/>
+      <property name="update-period" type="int" value="30000"/>
+      <property name="enable-single-row" type="bool" value="true"/>
+      <property name="font" type="string" value="Monospace 10"/>
     </property>
   </property>
   <property name="configver" type="int" value="2"/>

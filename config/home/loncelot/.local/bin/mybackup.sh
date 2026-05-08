@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 username="loncelot"
 backup_string="Backup source files to destination"
@@ -6,12 +6,12 @@ git_string="Backup source files to git repo"
 
 # Default directories
 backup_directory="/run/media/$username/nail/backup"
-	# I made the disk with a label like this
-		# sudo fdisk /dev/mmcblk0
-			# d -> all the partitions
-			# n -> 1 partition deleting signature
-			# w write changes
-		# sudo mkfs.ext4 -L nail /dev/mmcblk0p1
+# I made the disk with a label like this
+# sudo fdisk /dev/mmcblk0
+# d -> all the partitions
+# n -> 1 partition deleting signature
+# w write changes
+# sudo mkfs.ext4 -L nail /dev/mmcblk0p1
 git_directory="$HOME/Workspace/architect/config"
 
 file_patterns=(
@@ -23,18 +23,35 @@ file_patterns=(
 	"$HOME/.config/xfce4"
 	"$HOME/.config/autostart/my*.desktop"
 	"$HOME/.config/mimeapps.list"
+	"$HOME/.config/picom/picom.conf"
 	"$HOME/.config/devilspie2"
 	"$HOME/.config/Code/User/*.json"
 	"$HOME/.config/Thunar"
+	"$HOME/.config/kitty"
+	"$HOME/.config/spotify-player/app.toml"
+	"$HOME/.config/yt-x/yt-x.conf"
+
+	# Key pairs
+	# "$HOME/.gnupg"
+
+	# Server
+	# "/etc/ssh/ssh_config"
+
+	# Client
+	# "/etc/ssh/sshd_config"
+	# "/root/.ssh/config"
+	# "$HOME/.ssh" ?
 
 	"$HOME/.Xmodmap"
 	"$HOME/.face"
 	"$HOME/.themes"
 	"$HOME/Pictures/ico"
-	"$HOME/Pictures/wallpapers/art/bierstadt"
-	"$HOME/Pictures/wallpapers/art/kasmeneo"
-	"$HOME/Pictures/wallpapers/arch"
-	# "$HOME/Pictures/wallpapers/mybackground.png"
+	"$HOME/Pictures/wallpapers/ubuntu6_06.png"
+	"$HOME/Pictures/wallpapers/mybackground.png"
+	# "$HOME/Pictures/wallpapers/art/bierstadt"
+	# "$HOME/Pictures/wallpapers/art/kasmeneo"
+	# "$HOME/Pictures/wallpapers/arch"
+	# "$HOME/Pictures/wallpapers/basque/"
 
 	"/etc/sudoers"
 	"/etc/profile.d/home-local-bin.sh"
@@ -48,13 +65,14 @@ file_patterns=(
 	"/usr/share/backgrounds/my-*"
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"
 	"/usr/share/backgrounds/xfce/xfce-x.svg"
+	"/usr/share/icons/loncelot/cursors/index.theme"
 
 	"$HOME/.vmware/view-preferences"
 	# "$HOME/.local/share/lutris/games/turtle-wow-1172-1740406132.yml"
 )
 
 main() {
-	if ! command -v rsync &> /dev/null; then
+	if ! command -v rsync &>/dev/null; then
 		echo "rsync is not installed. Installing..."
 		if ! sudo pacman -S rsync --noconfirm; then
 			echo "Failed to install rsync. Exiting."
@@ -72,17 +90,17 @@ dirParameter() {
 	# Resetting the dir in case there is
 	while [[ $# -gt 0 ]]; do
 		case "$1" in
-			-d*|--directory*)
-				backup_directory=$(get_directory_argument "$1")
-				echo Backup directory set to $backup_directory
-				;;
-			-r|--restore);;
-			-b|--backup);;
-			-g|--git);;
-			*)
-				usage
-				exit 1
-				;;
+		-d* | --directory*)
+			backup_directory=$(get_directory_argument "$1")
+			echo Backup directory set to $backup_directory
+			;;
+		-r | --restore) ;;
+		-b | --backup) ;;
+		-g | --git) ;;
+		*)
+			usage
+			exit 1
+			;;
 		esac
 		shift
 	done
@@ -91,27 +109,26 @@ actionParameters() {
 	# Copying
 	while [[ $# -gt 0 ]]; do
 		case "$1" in
-			-d*|--directory*)
-				;;
-			-r|--restore)
-				direction="restore"
-				copy $backup_directory
-				exit
-				;;
-			-b|--backup)
-				echo $backup_string;
-				direction="backup"
-				copy $backup_directory
-				;;
-			-g|--git)
-				echo $git_string;
-				direction="backup"
-				copy $git_directory
-				;;
-			*)
-				usage
-				exit 1
-				;;
+		-d* | --directory*) ;;
+		-r | --restore)
+			direction="restore"
+			copy $backup_directory
+			exit
+			;;
+		-b | --backup)
+			echo $backup_string
+			direction="backup"
+			copy $backup_directory
+			;;
+		-g | --git)
+			echo $git_string
+			direction="backup"
+			copy $git_directory
+			;;
+		*)
+			usage
+			exit 1
+			;;
 		esac
 		shift
 	done
@@ -201,12 +218,12 @@ create_dir() {
 	fi
 }
 
-# Add here root directories so that they can be 
+# Add here root directories so that they can be
 # added in git as user
 # restored as root
-# Asign ownership 
-	# user -> backup
-	# root -> system
+# Asign ownership
+# user -> backup
+# root -> system
 set_sudoers_owner() {
 	u="$1"
 	target="$2"

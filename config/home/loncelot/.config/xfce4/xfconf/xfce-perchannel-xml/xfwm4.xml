@@ -64,8 +64,8 @@
     <property name="toggle_workspaces" type="bool" value="false"/>
     <property name="unredirect_overlays" type="bool" value="true"/>
     <property name="urgent_blink" type="bool" value="false"/>
-    <property name="use_compositing" type="bool" value="true"/>
-    <property name="workspace_count" type="int" value="3"/>
+    <property name="use_compositing" type="bool" value="false"/>
+    <property name="workspace_count" type="int" value="2"/>
     <property name="wrap_cycle" type="bool" value="true"/>
     <property name="wrap_layout" type="bool" value="true"/>
     <property name="wrap_resistance" type="int" value="10"/>
@@ -92,9 +92,9 @@
     <property name="horiz_scroll_opacity" type="bool" value="false"/>
     <property name="vblank_mode" type="string" value="auto"/>
     <property name="zoom_pointer" type="bool" value="false"/>
-    <property name="margin_top" type="int" value="0"/>
-    <property name="margin_right" type="int" value="0"/>
-    <property name="margin_bottom" type="int" value="0"/>
-    <property name="margin_left" type="int" value="0"/>
+    <property name="margin_top" type="int" value="30"/>
+    <property name="margin_right" type="int" value="10"/>
+    <property name="margin_bottom" type="int" value="10"/>
+    <property name="margin_left" type="int" value="10"/>
   </property>
 </channel>

@@ -3,6 +3,7 @@ source $HOME/architect/properties.conf
 
 ##### CONFIGURATION #####
 # Grub config
+pacman -S grub efibootmgr --noconfirm --needed
 if [[ -d "/sys/firmware/efi" ]]; then
     echo "Installing GRUB for EFI boot mode..."
     grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch

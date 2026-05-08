@@ -6,4 +6,6 @@
     <property name="sort-id" type="uint" value="7"/>
   </property>
   <property name="window-maximized" type="bool" value="true"/>
+  <property name="window-width" type="int" value="1434"/>
+  <property name="window-height" type="int" value="730"/>
 </channel>

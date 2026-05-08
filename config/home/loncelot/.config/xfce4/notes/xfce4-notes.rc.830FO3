@@ -1,0 +1,23 @@
+[Notes 2]
+PosX=1160
+PosY=480
+Width=240
+Height=300
+TabsOrder=Note 1;
+LastTab=0
+Above=false
+Sticky=false
+Transparency=9
+Visible=false
+
+[Notes]
+PosX=1521
+PosY=80
+Width=274
+Height=193
+TabsOrder=TODO;
+LastTab=0
+Above=false
+Sticky=false
+Transparency=9
+Visible=true

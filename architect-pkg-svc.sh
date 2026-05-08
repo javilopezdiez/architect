@@ -1,5 +1,5 @@
 #!/bin/bash
-source properties.conf
+source $HOME/architect/properties.conf
 
 # --- PACMAN
 	echo -e "Updating PACMAN..."
@@ -37,10 +37,10 @@ source properties.conf
 
 	# SPOTIFY 
 		# --- RUST (Uncomment if needed)
-		yay -S rust kitty alsa-lib pulseaudio-alsa
+		# yay -S rust kitty alsa-lib pulseaudio-alsa
 
 		# --- Cargo Features (Uncomment if needed)
-		cargo install spotify_player --features image
+		# cargo install spotify_player --features image
 
 # --- GITHUB SCRIPTS (Optional, based on dependencies)
 	DEPENDENCIES=(

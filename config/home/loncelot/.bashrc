@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+DISPLAY="" fastfetch -l gnu
 
 [[ $- != *i* ]] && return
 
@@ -136,11 +137,24 @@ ex ()
   fi
 }
 
-# autostart
 alias mykeyboard='/home/loncelot/.local/bin/mykeyboard.sh --setup'
-
 alias codes='sudo code --no-sandbox --user-data-dir ~/.config/Code '
+alias codessh='codes --folder-uri "vscode-remote://ssh-remote+root-ssh.loncelot/home/loncelot/Workspace"'
+alias hl='steam -silent -offline -applaunch 70 -windowed -w 2520 -h 1175'
+alias cs='steam -silent -offline -applaunch 10 -windowed -w 2520 -h 1175'
+
+function sshWeb {
+	ssh -p 2222 -L 8080:"$@":80 root@ssh.loncelot.com
+}
+alias killWeb='pkill -f 'ssh.*ssh.loncelot.com''
+alias copyy='rsync -ah --info=progress2 '
+alias fast='fastfetch -l gnome'
+alias gnu='fastfetch -l gnu'
+alias mac='fastfetch -l mac'
+
 alias spotify='kitty -e spotify_player >/dev/null 2>&1 &'
+alias chat='thorium --incongnito --app=https://chatgpt.com/?temporary-chat=true >/dev/null 2>&1 &'
+alias tg='thorium --app=https://web.telegram.org/k/ >/dev/null 2>&1 &'
 
 function thorium {
     if command -v thorium-browser &> /dev/null; then
@@ -149,7 +163,6 @@ function thorium {
         /home/loncelot/.local/bin/thorium-browser-arm64/thorium "$@"
     fi
 }
-
 function yt {
 	if [[ $# -eq 2 && ( $1 == "audio" || $1 == "720" || $1 == "1080" ) ]]; then
 		quality=$1
@@ -162,19 +175,13 @@ function yt {
 			yt-dlp -o "~/Downloads/%(title)s.%(ext)s" -f "(mp4) bestvideo[height<=?1080]+bestaudio/best" "$url"
 		fi
 	else
-		cd ~/Downloads
-		ytfzf -l -t "$@"
-fi
+		# YTFZF
+			# cd ~/Downloads
+			# ytfzf -l -t "$@"
+		# YT-Z
+			kitty -e yt-x "$@" >/dev/null 2>&1 &
+	fi
 }
-
-alias chat='thorium-browser --incongnito --app=https://chatgpt.com/?temporary-chat=true >/dev/null 2>&1 &'
-alias tg='thorium-browser --app=https://web.telegram.org/k/ >/dev/null 2>&1 &'
-# alias chat='tgpt -m'
-# function gpt {
-#     local args="$@"
-#     local cmd="tgpt \"$args\""
-#     eval $cmd
-# }
 
 PATH="$PATH:/home/loncelot/.local/bin"
 PATH="$PATH:/home/loncelot/.cargo/bin"

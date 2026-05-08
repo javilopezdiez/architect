@@ -13,6 +13,17 @@ local avoid_roles = {
 	"dropdown"
 }
 local avoid_names = {
+	'SAML Login',
+	'Xephyr',
+	'Panel Preferences',
+	'Session and Startup',
+	'Settings',
+	'Display',
+	'Keyboard',
+	'Appearance',
+	'Window Manager',
+	'Terminal',
+	'Notes',
 	'Mechvibes',
 	'Picture in picture',
 	'notify',
@@ -26,6 +37,10 @@ local accepted_types = {
 
 -- MAIN
 function main()
+	-- Retrieving mydisplay note
+	-- if io.open("/tmp/devilspie_pause", "r") then
+	-- 	return
+	-- end
 	if isScript() then
 		setSize(true, arg)
 		debug(true, arg)
@@ -55,6 +70,7 @@ function main()
 end
 
 -- METHODS
+-- devilspie2 -d
 function debug(isScript, arg)
 	if isScript then
 		os.execute("echo 'script_window_xid                             '" .. arg[1])
@@ -149,23 +165,63 @@ function is_main_display_active()
 	-- local main_handle = io.popen("xrandr --listmonitors | grep 'LVDS-1'") 
 	-- x270
 	local main_handle = io.popen("xrandr --listmonitors | grep 'eDP-1'")
+	-- local main_handle = io.popen("xrandr --listmonitors | grep 'DP-1'")
 	local main_display_info = main_handle:read("*all")
 	main_handle:close()
 	local isMainDisplayActive = main_display_info ~= ""
-	if isMainDisplayActive then
+	if isMainDisplayActive and (get_scale('eDP-1') == 0.8) then
 		SCALE = 1.25
 	end
 	os.execute("echo 'shared_isMainDisplayActive                    '" .. tostring(isMainDisplayActive))
+	os.execute("echo 'shared SCALE                                  '" .. tostring(SCALE))
 
 	return isMainDisplayActive
 end
 
-function get_screen_dimensions()
+function get_scale(display)
+	local f = io.popen("xrandr --verbose")
+	local output = f:read("*a")
+	f:close()
+	local pattern = display .. "[^\n]*\n(.-)\n[^\n]*Connected"
+	local section = output:match(pattern)
+	if not section then
+		section = output:match(display .. ".*\n([^\n]*\n[^\n]*\n[^\n]*\n[^\n]*\n[^\n]*)")
+	end
+	if not section then
+		return nil
+	end
+	local line = section:match("Transform:%s*(.-)\n")
+	if not line then
+		return nil
+	end
+	local scale = line:match("([0-9]+%.[0-9]+)")
+	if not scale then
+		return nil
+	end
+	scale = tonumber(scale)
+	scale = math.floor(scale * 10 + 0.5) / 10
+	return scale
+end
+
+function get_screen_dimensions2()
 	local handle = io.popen("xrandr | grep '*' | awk '{print $1}' | head -n 1")
 	local resolution = handle:read("*line")
 	handle:close()
 	if resolution then
 		local width, height = resolution:match("(%d+)x(%d+)")
+		return tonumber(width), tonumber(height)
+	else
+		return 1920, 1080
+	end
+end
+function get_screen_dimensions()
+	local handle = io.popen("xrandr --listmonitors | grep -Eo '[0-9]+/[0-9]+x[0-9]+/[0-9]+\\+[0-9]+\\+[0-9]+' | head -n 1")
+	local geometry = handle:read("*line")
+	handle:close()
+
+	if geometry then
+		-- Extract width and height before the '/'
+		local width, height = geometry:match("(%d+)/%d+x(%d+)/%d+%+%d+%+%d+")
 		return tonumber(width), tonumber(height)
 	else
 		return 1920, 1080
@@ -182,11 +238,13 @@ function center_and_resize(w, h, window_id)
 	local new_height = math.floor(screen_height * h)
 	local x_pos = math.floor((screen_width - new_width) / 2)
 	local y_pos = math.floor((screen_height - new_height) / 2)
-    if window_id then 
-        set_window_geometry_by_id(window_id, x_pos/SCALE, y_pos/SCALE, new_width/SCALE, new_height/SCALE)
-    else 
-        set_window_geometry(x_pos/SCALE, y_pos/SCALE, new_width/SCALE, new_height/SCALE)
-    end
+	if window_id then
+		-- set_window_geometry_by_id(window_id, x_pos/SCALE, y_pos/SCALE, new_width/SCALE, new_height/SCALE)
+		set_window_geometry_by_id(window_id, x_pos, y_pos, new_width, new_height)
+	else 
+        -- set_window_geometry(x_pos/SCALE, y_pos/SCALE, new_width/SCALE, new_height/SCALE)
+		set_window_geometry(x_pos, y_pos, new_width, new_height)
+	end
 end
 
 function set_window_geometry_by_id(window_id, x_pos, y_pos, width, height)
