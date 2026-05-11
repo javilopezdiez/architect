@@ -19,12 +19,13 @@ setupKeys() {
 }
 
 setupTrackpad() {
-    # Either x230
-    # xinput set-prop "bcm5974" "libinput Tapping Enabled" 1
-    # Disable x270
-    TRACKPAD_ID=$(xinput list | grep -i "synaptics" | awk '{print $6}' | sed 's/id=//')
+    TRACKPAD_ID=$(xinput list | grep -i "synaptics" | grep -o 'id=[0-9]*' | cut -d= -f2)
+
     if [ -n "$TRACKPAD_ID" ]; then
+        echo "$TRACKPAD_ID"
         xinput disable "$TRACKPAD_ID"
+    else
+        echo "Trackpad not found"
     fi
 }
 

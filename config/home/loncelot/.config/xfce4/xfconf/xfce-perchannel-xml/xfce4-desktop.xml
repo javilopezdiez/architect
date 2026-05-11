@@ -7,14 +7,14 @@
         <property name="color-style" type="int" value="0"/>
         <property name="image-style" type="int" value="5"/>
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         <property name="last-single-image" type="string" value="/home/loncelot/Pictures/wallpapers/art/bierstadt/Albert_Bierstadt_Among_the_Sierra_Nevada_California.jpg"/>
       </property>
       <property name="monitorLVDS-1" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.08666666666666667"/>
             <value type="double" value="0.08666666666666667"/>
@@ -25,24 +25,24 @@
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorHDMI-2" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.12666666666666668"/>
             <value type="double" value="0.12666666666666668"/>
@@ -53,44 +53,44 @@
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitor0" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/others/ubuntu6_06.png"/>
         <property name="image-show" type="bool" value="true"/>
@@ -100,120 +100,120 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace5" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorHDMI2" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorDP2" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorHDMI1" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorHDMI-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
       </property>
       <property name="monitorDP-2" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
       </property>
       <property name="monitoreDP-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.30588235294117649"/>
@@ -226,32 +226,32 @@
           <property name="iconview-placement" type="int" value="2"/>
         </property>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
           <property name="iconview-placement" type="int" value="2"/>
         </property>
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         <property name="workspace2" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="iconview-placement" type="int" value="2"/>
         </property>
         <property name="workspace3" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorDVI-I-1-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorDP-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.30588235294117649"/>
@@ -263,24 +263,24 @@
           <property name="color-style" type="int" value="0"/>
         </property>
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/savana.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace3" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorCROPPED" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/others/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
       </property>
@@ -290,53 +290,61 @@
             <property name="iconview-placement" type="int" value="2"/>
           </property>
         </property>
+        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        </property>
       </property>
       <property name="monitorDVI-I-2-2" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorDVI-I-3-3" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorDVI-I-4-4" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorsecondary_display1" type="empty">
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/savana.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorDP-1-8" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="workspace2" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
       <property name="monitorDP-1-9" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/savana.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
         </property>
       </property>
     </property>
@@ -378,8 +386,8 @@
     </property>
   </property>
   <property name="last" type="empty">
-    <property name="window-width" type="int" value="1725"/>
-    <property name="window-height" type="int" value="880"/>
+    <property name="window-width" type="int" value="2284"/>
+    <property name="window-height" type="int" value="1420"/>
   </property>
   <property name="last-settings-migration-version" type="uint" value="1"/>
 </channel>

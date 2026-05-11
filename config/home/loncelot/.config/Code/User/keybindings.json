@@ -220,5 +220,10 @@
         "key": "f12",
         "command": "-editor.action.revealDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-markdown.togglePreview",
+        "when": "!notebookEditorFocused && resourceLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
     }
 ]

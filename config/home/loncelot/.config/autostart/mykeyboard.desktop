@@ -3,4 +3,4 @@ Encoding=UTF-8
 Type=Application
 Name=mykeyboard
 Comment=Changes keyboard behabiour and trackpad
-Exec=/home/loncelot/.local/bin/mykeyboard.sh --setup
+Exec=mykeyboard.sh --setup

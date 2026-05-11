@@ -212,5 +212,6 @@
     "[shellscript]": {
         "editor.defaultFormatter": "mkhl.shfmt"
     },
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
 }

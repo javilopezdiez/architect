@@ -10,7 +10,6 @@
         <value type="int" value="8"/>
         <value type="int" value="3"/>
         <value type="int" value="7"/>
-        <value type="int" value="13"/>
         <value type="int" value="4"/>
         <value type="int" value="6"/>
         <value type="int" value="9"/>
@@ -86,16 +85,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
-        <value type="string" value="kitty.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="transmission-gtk.desktop"/>
-        <value type="string" value="xfce-backdrop-settings.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="xfce4-power-manager-settings.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="kitty.desktop"/>
+        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
-        <value type="string" value="net.lutris.cod-2-sp-20.desktop"/>
-        <value type="string" value="net.lutris.call-of-duty-2-19.desktop"/>
+        <value type="string" value="org.pulseaudio.pavucontrol.desktop"/>
+        <value type="string" value="steam.desktop"/>
+        <value type="string" value="transmission-gtk.desktop"/>
+        <value type="string" value="thorium-browser.desktop"/>
+        <value type="string" value="xfce-backdrop-settings.desktop"/>
       </property>
       <property name="button-single-row" type="bool" value="false"/>
       <property name="profile-shape" type="int" value="1"/>
@@ -129,6 +128,8 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (55%)"/>
+        <value type="string" value="wi-fi network connection “madriguera” active: madriguera (52%)"/>
         <value type="string" value="wi-fi network connection “iphonese” active: iphonese (66%)"/>
         <value type="string" value="wi-fi network connection “iphonese” active: iphonese (65%)"/>
         <value type="string" value="wi-fi network connection “vodafone-c01260177” active: vodafone-c01260177 (42%)"/>

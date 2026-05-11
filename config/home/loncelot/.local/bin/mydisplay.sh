@@ -27,7 +27,7 @@ crop_h=1820
 # full_h=1440
 # crop_h=1240
 
-wallpaper='/home/loncelot/Pictures/wallpapers/others/ubuntu6_06.png'
+wallpaper='/home/loncelot/Pictures/wallpapers/ubuntu6_06.png'
 
 active_display=""
 

@@ -153,12 +153,12 @@ alias gnu='fastfetch -l gnu'
 alias mac='fastfetch -l mac'
 
 alias spotify='kitty -e spotify_player >/dev/null 2>&1 &'
-alias chat='thorium --incongnito --app=https://chatgpt.com/?temporary-chat=true >/dev/null 2>&1 &'
-alias tg='thorium --app=https://web.telegram.org/k/ >/dev/null 2>&1 &'
+alias chat='thorium-browser --incongnito --app=https://chatgpt.com/?temporary-chat=true >/dev/null 2>&1 &'
+alias tg='thorium-browser --app=https://web.telegram.org/k/ >/dev/null 2>&1 &'
 
 function thorium {
     if command -v thorium-browser &> /dev/null; then
-        thorium-browser "$@"
+        thorium-browser --remote-debugging-port=9222 --no-first-run --no-default-browser-check "$@"
     else
         /home/loncelot/.local/bin/thorium-browser-arm64/thorium "$@"
     fi

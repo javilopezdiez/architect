@@ -45,7 +45,7 @@ function main()
 		setSize(true, arg)
 		debug(true, arg)
 		if is_main_display_active() then
-			-- os.execute("mywin.sh --max")
+			-- os.execute(" mywin.sh --max")
 			-- center_and_resize(WIDTH, HEIGHT, arg[1]) -- equivalent
 			center_and_resize_window(arg[1])
 		else
@@ -56,7 +56,7 @@ function main()
 		if (not avoidWindow()) then
 			debug(false, null)
 			if is_main_display_active() then
-				-- os.execute("mywin.sh --max")
+				-- os.execute(" mywin.sh --max")
 				-- center_and_resize(WIDTH, HEIGHT) -- equivalent
 				center_and_resize_window()
 			else
@@ -73,38 +73,38 @@ end
 -- devilspie2 -d
 function debug(isScript, arg)
 	if isScript then
-		os.execute("echo 'script_window_xid                             '" .. arg[1])
-		if arg[2] then os.execute("echo 'size                                          '" .. arg[2]) end
+		os.execute(" echo 'fullscreen.lua - script_window_xid                             '" .. arg[1])
+		if arg[2] then os.execute(" echo 'fullscreen.lua - size                                          '" .. arg[2]) end
 	else
-		debug_print("devil_get_window_name                         " .. get_window_name())
-		debug_print("devil_get_application_name:                   " .. get_application_name())
+		debug_print("fullscreen.lua - devil_get_window_name                         " .. get_window_name())
+		debug_print("fullscreen.lua - devil_get_application_name:                   " .. get_application_name())
 		
 		local x, y, width, height = get_window_geometry()
-		debug_print("devil_get_window_geometry:")
-		debug_print("X:                                            " .. x)
-		debug_print("Y:                                            " .. y)
-		debug_print("Width:                                        " .. width)
-		debug_print("Height:                                       " .. height)
+		debug_print("fullscreen.lua - devil_get_window_geometry:")
+		debug_print("fullscreen.lua - X:                                            " .. x)
+		debug_print("fullscreen.lua - Y:                                            " .. y)
+		debug_print("fullscreen.lua - Width:                                        " .. width)
+		debug_print("fullscreen.lua - Height:                                       " .. height)
 		
 		x, y, width, height = get_window_client_geometry()
-		debug_print("devil_get_window_client_geometry:")
-		debug_print("X:                                            " .. x)
-		debug_print("Y:                                            " .. y)
-		debug_print("Width:                                        " .. width)
-		debug_print("Height:                                       " .. height)
+		debug_print("fullscreen.lua - devil_get_window_client_geometry:")
+		debug_print("fullscreen.lua - X:                                            " .. x)
+		debug_print("fullscreen.lua - Y:                                            " .. y)
+		debug_print("fullscreen.lua - Width:                                        " .. width)
+		debug_print("fullscreen.lua - Height:                                       " .. height)
 
-		debug_print("devil_get_window_type:                        " .. get_window_type())
-		debug_print("devil_get_class_instance_name:                " .. get_class_instance_name())
-		debug_print("devil_get_window_role:                        " .. get_window_role())
-		debug_print("devil_get_window_xid:                         " .. get_window_xid())
-		debug_print("devil_get_window_class:                       " .. get_window_class())
-		debug_print("devil_get_workspace_count:                    " .. get_workspace_count())
+		debug_print("fullscreen.lua - devil_get_window_type:                        " .. get_window_type())
+		debug_print("fullscreen.lua - devil_get_class_instance_name:                " .. get_class_instance_name())
+		debug_print("fullscreen.lua - devil_get_window_role:                        " .. get_window_role())
+		debug_print("fullscreen.lua - devil_get_window_xid:                         " .. get_window_xid())
+		debug_print("fullscreen.lua - devil_get_window_class:                       " .. get_window_class())
+		debug_print("fullscreen.lua - devil_get_workspace_count:                    " .. get_workspace_count())
 	end
 end
 
 function isScript()
 	local isScript = not get_window_type and arg[1] ~= nil
-	os.execute("echo 'shared_isScript------------------------------>'" .. tostring(isScript))
+	os.execute(" echo 'fullscreen.lua - shared_isScript------------------------------>'" .. tostring(isScript))
 	return isScript
 end
 function setSize(isScript, arg)
@@ -126,28 +126,28 @@ function isModal()
 	local _, _, _, window_height = get_window_geometry()
 	local isModal = window_height and window_height < avoidModalHeight
 	if isModal then
-		debug_print("devil_avoided_window_height:                    " .. window_height)
+		debug_print("fullscreen.lua - devil_avoided_window_height:                    " .. window_height)
 	end
 	return isModal 
 end
 function avoidRoles()
 	local contains = contains(avoid_roles, get_window_role())
 	if contains ~= nil then
-		debug_print("devil_avoided_window_role:                    " .. contains)
+		debug_print("fullscreen.lua - devil_avoided_window_role:                    " .. contains)
 	end
 	return contains ~= nil;
 end
 function avoidName()
 	local contains = contains(avoid_names, get_window_name())
 	if contains ~= nil then
-		debug_print("devil_avoided_window_name:                    " .. contains)
+		debug_print("fullscreen.lua - devil_avoided_window_name:                    " .. contains)
 	end
 	return contains ~= nil;
 end
 function avoidType()
 	local contains = contains(accepted_types, get_window_type())
 	if contains == nil then
-		debug_print("devil_avoided_window_type:                    " .. get_window_type())
+		debug_print("fullscreen.lua - devil_avoided_window_type:                    " .. get_window_type())
 	end
 	return contains == nil;
 end
@@ -172,8 +172,8 @@ function is_main_display_active()
 	if isMainDisplayActive and (get_scale('eDP-1') == 0.8) then
 		SCALE = 1.25
 	end
-	os.execute("echo 'shared_isMainDisplayActive                    '" .. tostring(isMainDisplayActive))
-	os.execute("echo 'shared SCALE                                  '" .. tostring(SCALE))
+	os.execute(" echo 'fullscreen.lua - shared_isMainDisplayActive                    '" .. tostring(isMainDisplayActive))
+	os.execute(" echo 'fullscreen.lua - shared SCALE                                  '" .. tostring(SCALE))
 
 	return isMainDisplayActive
 end
@@ -232,7 +232,7 @@ function center_and_resize_window(window_id)
 	center_and_resize(WIDTH, HEIGHT, window_id)
 end
 function center_and_resize(w, h, window_id)
-	os.execute("echo 'script_local                                  resize'")
+	os.execute(" echo 'fullscreen.lua - script_local                                  resize'")
 	local screen_width, screen_height = get_screen_dimensions()
 	local new_width = math.floor(screen_width * w)
 	local new_height = math.floor(screen_height * h)
