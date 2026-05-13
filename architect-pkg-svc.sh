@@ -51,8 +51,8 @@ source $HOME/architect/properties.conf
 	for PKG in "${DEPENDENCIES[@]}"; do
 		yay -S "$PKG" --noconfirm --needed
 	done
-	wget -O /home/$USERNAME/.local/bin/movescreen.py https://raw.githubusercontent.com/calandoa/movescreen/master/movescreen.py
-	chmod +x /home/$USERNAME/.local/bin/movescreen.py
+	#wget -O /home/$USERNAME/.local/bin/movescreen.py https://raw.githubusercontent.com/calandoa/movescreen/master/movescreen.py
+	#chmod +x /home/$USERNAME/.local/bin/movescreen.py
 
 # --- SERVICE ENABLING
 	for SVC in "${SERVICES[@]}"; do
