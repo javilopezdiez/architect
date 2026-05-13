@@ -7,7 +7,7 @@ xprop -spy -root _NET_ACTIVE_WINDOW | while read -r line; do
     TITLE=$(xdotool getwindowname "$WIN_ID" 2>/dev/null)
 
     if [ -n "$TITLE" ] && [ "$TITLE" != "$LAST" ]; then
-        lua "$HOME/.config/devilspie2/thoriumico.lua"
+        lua "$HOME/.local/bin/thoriumico.lua"
         LAST="$TITLE"
     fi
 done

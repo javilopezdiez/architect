@@ -55,7 +55,7 @@ file_patterns=(
 
 	"/etc/sudoers"
 	"/etc/profile.d/home-local-bin.sh"
-	"/etc/default/grub"
+	# "/etc/default/grub"
 	# "/etc/grub.d/10_linux"
 	"/etc/lightdm/lightdm-gtk-greeter.conf"
 	"/etc/X11/xorg.conf.d/10-modesetting.conf"
