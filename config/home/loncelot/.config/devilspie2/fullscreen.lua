@@ -28,7 +28,8 @@ local avoid_names = {
 	'Picture in picture',
 	'notify',
 	'Authenticate',
-	'xfce4-screenshooter'
+	'xfce4-screenshooter',
+	'Bluetooth Devices'
 }
 local accepted_types = {
 	"WINDOW_TYPE_NORMAL",

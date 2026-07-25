@@ -1,8 +1,6 @@
 [Desktop Entry]
-Encoding=UTF-8
 Type=Application
 Name=mythoriumico
 Comment=Changes the thorium icon for the web page that it's in
-Exec=mythoriumico.sh
-Terminal=true
-Hidden=true
+Exec=/home/loncelot/.local/bin/mythoriumico.sh
+Terminal=false
