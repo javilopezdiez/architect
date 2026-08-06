@@ -12,7 +12,7 @@ source $HOME/architect/properties.conf
 	echo -e "Installing PACMAN Extra packages..."
 	for PKG in "${PACMAN_EXTRA_PKGS[@]}"; do
 		echo "INSTALLING PACMAN EXTRA PKG: ${PKG}..."
-		sudo pacman -S "$PKG" --noconfirm --needed
+		sudo yay -S "$PKG" --noconfirm --needed
 	done
 
 # --- YAY (AUR Helper)
@@ -57,10 +57,29 @@ source $HOME/architect/properties.conf
 # --- SERVICE ENABLING
 	for SVC in "${SERVICES[@]}"; do
 		if ! systemctl is-enabled --quiet "$SVC"; then
-			sudo systemctl enable "$SVC"
-			echo "$SVC enabled..."
+			if sudo systemctl enable "$SVC"; then
+				echo "$SVC enabled..."
+			else
+				echo "Failed to enable $SVC"
+			fi
+		else
+			echo "$SVC already enabled"
 		fi
 	done
+
+	for SVC in "${USER_SERVICES[@]}"; do
+		if ! systemctl --user is-enabled --quiet "$SVC"; then
+			if systemctl --user enable --now "$SVC"; then
+				echo "$SVC enabled and started..."
+			else
+				echo "Failed to enable $SVC"
+			fi
+		else
+			echo "$SVC already enabled"
+		fi
+	done
+
+	systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 # --- SERVICE DISABLING
 	for SVC in "${disable_services[@]}"; do
