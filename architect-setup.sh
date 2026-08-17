@@ -19,6 +19,7 @@ groupadd libvirt
 echo "Adding user $USERNAME..."
 useradd -m -G wheel,libvirt -s /bin/bash $USERNAME
 # Prompt for the password
+clear
 echo "Enter password for $USERNAME:"
 read -s PASSWORD
 echo "Confirm password for $USERNAME:"
@@ -39,6 +40,7 @@ echo "Scripts: Copying scripts 1..."
 cp -R $HOME/architect /home/$USERNAME/
 chown -R $USERNAME: /home/$USERNAME/architect
 
+clear
 # Host config
 while true; do
     read -rp "Enter hostname: " HOSTNAME

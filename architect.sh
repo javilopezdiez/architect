@@ -29,7 +29,7 @@ echo -ne "--------------------------2.1- POST-INSTALL PKG-SVC STARTED...--------
 	/home/$USERNAME/architect/architect-pkg-svc.sh )|& \
 	tee architect-pkg-svc.log
 
-echo -ne "--------------------------2.1- POST-INSTALL CONFIG COPY STARTED...-------\n"
+echo -ne "--------------------------2.2- POST-INSTALL CONFIG COPY STARTED...-------\n"
 ( arch-chroot /mnt \
 	sudo rm -rf /home/lost+found)|& \
 	tee $HOME/lost+found.log
@@ -43,7 +43,11 @@ echo -ne "--------------------------2.1- POST-INSTALL CONFIG COPY STARTED...----
 	sudo grub-mkconfig -o /boot/grub/grub.cfg )|& \
 	tee grub-mkconfig.log
 
-echo -ne "--------------------------2- POST-INSTALL ENDED...-----------------------\n"
+echo -ne "--------------------------2.3- POST-INSTALL ENDED...-----------------------\n"
 
 # LOGS
 cp -v *.log /mnt/home/$USERNAME/architect
+
+clear
+echo -ne "--------------------------3- DONE...-----------------------\n"
+
