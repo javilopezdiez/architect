@@ -1,8 +1,6 @@
 #
 # ~/.bashrc
 #
-DISPLAY="" fastfetch -l gnu
-
 [[ $- != *i* ]] && return
 
 colors() {

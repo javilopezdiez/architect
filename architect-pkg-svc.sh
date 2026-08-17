@@ -82,7 +82,7 @@ source $HOME/architect/properties.conf
 	systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 # --- SERVICE DISABLING
-	for SVC in "${disable_services[@]}"; do
+	for SVC in "${DISABLE_SERVICES[@]}"; do
 		if systemctl is-active --quiet "$SVC"; then
 			sudo systemctl stop "$SVC"
 			echo "$SVC stopped..."

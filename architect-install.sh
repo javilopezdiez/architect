@@ -16,6 +16,21 @@ timedatectl set-ntp true # Fecha sincronizada con internet
 timedatectl set-timezone "$LOCATION"
 
 ##### PARTITIONING #####
+while true; do
+    read -rp "Enter SWAP size (e.g. 4G, 8G, 16G): " PART_SWAP
+    if [[ "$PART_SWAP" =~ ^[0-9]+([MG])$ ]]; then
+        break
+    fi
+    echo "Invalid size. Please use a format like 4G, 8G, or 512M."
+done
+while true; do
+    echo "Enter ROOT size (e.g. 20G, 50G):"
+    read -rp "ROOT size: " PART_ROOT
+    if [[ "$PART_ROOT" =~ ^[0-9]+([MG])$ ]]; then
+        break
+    fi
+    echo "Invalid ROOT size. Please use a format like 20G or 500M."
+done
 # BOOT - SWAP - ROOT - HOME
 # M or G to-> bytes to-> megabytes
 BOOT_SIZE=$(numfmt --from=iec "$PART_BOOT" | awk '{print $1/1024/1024}')

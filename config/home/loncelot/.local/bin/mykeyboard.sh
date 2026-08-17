@@ -3,7 +3,7 @@
 setupLaout() {
     setxkbmap -layout es,gb
     # mac keyboard
-        # setxkbmap -layout es,gb -variant mac
+        setxkbmap -layout es,gb -variant mac
         # setxkbmap -option grp:win_space_toggle
     # japaneese keyboard
         xmodmap ~/.Xmodmap
@@ -18,6 +18,7 @@ setupKeys() {
     echo "1" | sudo tee /sys/module/hid_apple/parameters/iso_layout
 }
 
+# thinkpad
 setupTrackpad() {
     TRACKPAD_ID=$(xinput list | grep -i "synaptics" | grep -o 'id=[0-9]*' | cut -d= -f2)
 
@@ -26,6 +27,23 @@ setupTrackpad() {
         xinput disable "$TRACKPAD_ID"
     else
         echo "Trackpad not found"
+    fi
+}
+
+# macbook
+toggleTrackpad() {
+    TRACKPAD="bcm5974"
+    if xinput list-props "$TRACKPAD" | grep -q "Device Enabled.*1$"; then
+        echo "Disabling trackpad"
+        xinput disable "$TRACKPAD"
+    else
+        echo "Enabling trackpad"
+        xinput enable "$TRACKPAD"
+        # (
+        #     sleep 300 # seconds
+        #     xinput disable "$TRACKPAD"
+        #     echo "Trackpad automatically disabled"
+        # ) &
     fi
 }
 
@@ -87,12 +105,16 @@ toggleLayout() {
 
 case "$1" in
     --trackpad)
-        invertExternalTrackpad
+        toggleTrackpad
+        # invertExternalTrackpad
         ;;
     --setup)
         setupLaout
-        # setupKeys
-        setupTrackpad
+        # thinkpad
+        # setupTrackpad
+        # mac
+        setupKeys
+        toggleTrackpad
         ;;
     --toggleSound)
         toggleMechanicalSound

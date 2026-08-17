@@ -40,6 +40,13 @@ cp -R $HOME/architect /home/$USERNAME/
 chown -R $USERNAME: /home/$USERNAME/architect
 
 # Host config
+while true; do
+    read -rp "Enter hostname: " HOSTNAME
+    if [[ "$HOSTNAME" =~ ^[a-zA-Z0-9][a-zA-Z0-9.-]*$ ]]; then
+        break
+    fi
+    echo "Invalid hostname. Use letters, numbers, hyphens, or dots."
+done
 echo "Naming host $HOSTNAME..."
 echo "$HOSTNAME" > /etc/hostname
 echo "127.0.0.1 localhost" > /etc/hosts
