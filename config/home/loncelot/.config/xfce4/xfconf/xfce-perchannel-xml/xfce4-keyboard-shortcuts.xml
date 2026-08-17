@@ -68,6 +68,7 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfce4-terminal"/>
       <property name="&lt;Super&gt;t" type="string" value="mycomp.sh"/>
       <property name="&lt;Super&gt;d" type="string" value="mytoggledisplay.sh"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;space" type="string" value="mypanel.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -159,12 +159,22 @@ configs:
     "/home/loncelot/Desktop/net.lutris.call-of-duty-2-19.desktop":
       row: 0
       col: 24
-    "/home/loncelot/Desktop/.goutputstream-ZYC3F3":
+    "720e8654-95b6-4a35-855a-5f78dbba0803":
       row: 0
-      col: 23
+      col: 29
+      last_seen: 1785772278637572
     "/home/loncelot/Desktop/# Rafael.md":
       row: 11
       col: 20
+    "trash:///":
+      row: 0
+      col: 30
+    "/home/loncelot/Desktop/.goutputstream-ZYC3F3":
+      row: 0
+      col: 23
+    "/home/loncelot/Desktop/Interna.md":
+      row: 11
+      col: 21
     "00008030-001479891A9A402E":
       row: 0
       col: 23
@@ -173,151 +183,72 @@ configs:
       row: 0
       col: 33
       last_seen: 1776246008007737
-    "/home/loncelot/Desktop/Interna.md":
-      row: 11
-      col: 21
-    "trash:///":
+    "/home/loncelot/Desktop/Sanderson, Brandon - [El archivo de las tormentas 01] El camino de los reyes [3459] (r5.0).epub":
       row: 0
-      col: 40
+      col: 24
     "/home/loncelot/Desktop/TurtleWoW.AppImage.crdownload":
       row: 14
       col: 26
-    "2005-10-06-22-41-02-00":
-      row: 0
-      col: 24
-      last_seen: 1777244881820683
     "2005-10-06-22-40-28-00":
       row: 0
       col: 24
       last_seen: 1776986918100788
-    "/home/loncelot/Desktop/Sanderson, Brandon - [El archivo de las tormentas 01] El camino de los reyes [3459] (r5.0).epub":
+    "2005-10-06-22-41-02-00":
       row: 0
       col: 24
-    "720e8654-95b6-4a35-855a-5f78dbba0803":
-      row: 0
-      col: 60
-      last_seen: 1778146557622245
+      last_seen: 1777244881820683
 - level: 0
   monitors:
   - id: "2844bd83db886a13b74d67fb611089ccbadc73b9"
-    display_name: "Samsung Electric Company U28E590 HTPHB02192 (HDMI-2)"
+    display_name: "Samsung Electric Company U28E590 HTPHB02192 (CROPPED)"
     geometry:
       x: 0
       y: 0
       width: 2560
-      height: 1440
+      height: 1240
   icons:
-    "smb://Admin-USB@192.168.1.1/sda1/":
-      row: 19
-      col: 33
-      last_seen: 1762624704140930
-    "/home/loncelot/Desktop/Half-Life.desktop":
-      row: 0
-      col: 32
-    "smb://192.168.1.1/sda1/":
-      row: 19
-      col: 32
-      last_seen: 1762625065929388
-    "/home/loncelot/Desktop/steam.desktop":
+    "00008110-0014303E0A06401E":
       row: 0
       col: 33
-    "/home/loncelot/Desktop/DNI.md":
-      row: 19
-      col: 34
-    "ba60c50ae1110235ccbaf7448ce794775f97ccc7":
+      last_seen: 1774611478832304
+    "/home/loncelot/Desktop/ElCaminoDeLosReyes.epub":
       row: 0
-      col: 33
-      last_seen: 1770027619509661
-    "dc3b4a82-f11e-497d-9b19-9c369307177c":
-      row: 19
-      col: 34
-    "/home/loncelot/Desktop/Half life but with Subtitles.desktop":
+      col: 28
+    "/home/loncelot/Desktop/Sanderson, Brandon - [El archivo de las tormentas 01] El camino de los reyes [3459] (r5.0).epub":
       row: 0
-      col: 33
-    "/home/loncelot/Desktop/note.md":
-      row: 5
-      col: 8
-    "/home/loncelot/mnt/sda1":
-      row: 19
-      col: 33
-      last_seen: 1762509987904685
-    "/home/loncelot/Desktop/Interna.md":
-      row: 19
-      col: 35
+      col: 52
+- level: 0
+  monitors:
+  - id: "dbee131e9d8a80bf705c80c50657af9ce2eaac45"
+    display_name: "CROPPED"
+    geometry:
+      x: 0
+      y: 0
+      width: 3840
+      height: 1820
+  icons:
     "Trash":
-      row: 19
-      col: 35
-- level: 0
-  monitors:
-  - id: "e3ccd66662f6b375c334c080b2b1a8f640957287"
-    display_name: "VGA-1"
-    geometry:
-      x: 0
-      y: 0
-      width: 1024
-      height: 768
-  icons: {}
-- level: 0
-  monitors:
-  - id: "50d0c65c890a0c68e3613b350be00f1750cccb27"
-    display_name: "Seiko Epson Corporation 0x3047 (LVDS-1)"
-    geometry:
-      x: 0
-      y: 0
-      width: 1366
-      height: 768
-  - id: "36935603381ecec4f4053566839a3d55e091b6af"
-    display_name: "Seiko Epson Corporation 0x3047 (LVDS1)"
-    geometry:
-      x: 0
-      y: 0
-      width: 1366
-      height: 768
-  icons:
-    "/home/loncelot/Desktop/TurtleWoW Launcher.lnk":
       row: 9
       col: 18
-    "Trash":
-      row: 0
-      col: 0
-    "/":
-      row: 1
-      col: 0
-    "/home/loncelot/Desktop/roadwarden_1_1_31_67621_gog_linux":
-      row: 9
-      col: 18
-    "/home/loncelot/Desktop/gog_com-Roadwarden_1.desktop":
-      row: 9
-      col: 18
-    "91491b70-02fe-4508-a253-29c12c0cb0f9":
-      row: 9
-      col: 18
-      last_seen: 1738685147488297
-    "/home/loncelot":
-      row: 2
-      col: 0
-- level: 0
-  monitors:
-  - id: "7ecd47eef11609d49711a47bfd6c68726fd990ea"
-    display_name: "None-1"
-    geometry:
-      x: 0
-      y: 0
-      width: 1280
-      height: 1024
-  icons:
     "dc3b4a82-f11e-497d-9b19-9c369307177c":
       row: 9
       col: 17
 - level: 0
   monitors:
-  - id: "7d16d74335b8a112c3053b2750a5b0ba90b90fa2"
-    display_name: "PNP(XXX) AAA (HDMI-1)"
+  - id: "de311d01ea15088ead47484f4fde407ff16c10a2"
+    display_name: "LG Electronics LG TV 0x01010101 (DP-1)"
     geometry:
       x: 0
       y: 0
-      width: 1366
-      height: 768
+      width: 3840
+      height: 2160
+  - id: "3d52eefe8ae5ee4dc99586eff79fdbfb350f2046"
+    display_name: "DP-1"
+    geometry:
+      x: 0
+      y: 0
+      width: 3840
+      height: 2160
   icons:
     "Trash":
       row: 9
@@ -394,6 +325,9 @@ configs:
     "Trash":
       row: 14
       col: 26
+    "trash:///":
+      row: 0
+      col: 30
     "dc3b4a82-f11e-497d-9b19-9c369307177c":
       row: 14
       col: 25
@@ -401,22 +335,19 @@ configs:
       row: 0
       col: 24
       last_seen: 1764747956331895
+    "720e8654-95b6-4a35-855a-5f78dbba0803":
+      row: 0
+      col: 29
+      last_seen: 1785395259210482
 - level: 0
   monitors:
-  - id: "de311d01ea15088ead47484f4fde407ff16c10a2"
-    display_name: "LG Electronics LG TV 0x01010101 (DP-1)"
+  - id: "7d16d74335b8a112c3053b2750a5b0ba90b90fa2"
+    display_name: "PNP(XXX) AAA (HDMI-1)"
     geometry:
       x: 0
       y: 0
-      width: 3840
-      height: 2160
-  - id: "3d52eefe8ae5ee4dc99586eff79fdbfb350f2046"
-    display_name: "DP-1"
-    geometry:
-      x: 0
-      y: 0
-      width: 3840
-      height: 2160
+      width: 1366
+      height: 768
   icons:
     "Trash":
       row: 9
@@ -426,44 +357,113 @@ configs:
       col: 17
 - level: 0
   monitors:
-  - id: "dbee131e9d8a80bf705c80c50657af9ce2eaac45"
-    display_name: "CROPPED"
+  - id: "7ecd47eef11609d49711a47bfd6c68726fd990ea"
+    display_name: "None-1"
     geometry:
       x: 0
       y: 0
-      width: 3840
-      height: 1820
+      width: 1280
+      height: 1024
   icons:
-    "Trash":
-      row: 9
-      col: 18
     "dc3b4a82-f11e-497d-9b19-9c369307177c":
       row: 9
       col: 17
+- level: 0
+  monitors:
+  - id: "50d0c65c890a0c68e3613b350be00f1750cccb27"
+    display_name: "Seiko Epson Corporation 0x3047 (LVDS-1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1366
+      height: 768
+  - id: "36935603381ecec4f4053566839a3d55e091b6af"
+    display_name: "Seiko Epson Corporation 0x3047 (LVDS1)"
+    geometry:
+      x: 0
+      y: 0
+      width: 1366
+      height: 768
+  icons:
+    "Trash":
+      row: 0
+      col: 0
+    "/":
+      row: 1
+      col: 0
+    "/home/loncelot/Desktop/roadwarden_1_1_31_67621_gog_linux":
+      row: 9
+      col: 18
+    "/home/loncelot/Desktop/gog_com-Roadwarden_1.desktop":
+      row: 9
+      col: 18
+    "91491b70-02fe-4508-a253-29c12c0cb0f9":
+      row: 9
+      col: 18
+      last_seen: 1738685147488297
+    "/home/loncelot/Desktop/TurtleWoW Launcher.lnk":
+      row: 9
+      col: 18
+    "/home/loncelot":
+      row: 2
+      col: 0
+- level: 0
+  monitors:
+  - id: "e3ccd66662f6b375c334c080b2b1a8f640957287"
+    display_name: "VGA-1"
+    geometry:
+      x: 0
+      y: 0
+      width: 1024
+      height: 768
+  icons: {}
 - level: 0
   monitors:
   - id: "2844bd83db886a13b74d67fb611089ccbadc73b9"
-    display_name: "Samsung Electric Company U28E590 HTPHB02192 (CROPPED)"
+    display_name: "Samsung Electric Company U28E590 HTPHB02192 (HDMI-2)"
     geometry:
       x: 0
       y: 0
       width: 2560
-      height: 1240
+      height: 1440
   icons:
-    "00008110-0014303E0A06401E":
+    "smb://Admin-USB@192.168.1.1/sda1/":
+      row: 19
+      col: 33
+      last_seen: 1762624704140930
+    "/home/loncelot/Desktop/Half-Life.desktop":
+      row: 0
+      col: 32
+    "smb://192.168.1.1/sda1/":
+      row: 19
+      col: 32
+      last_seen: 1762625065929388
+    "/home/loncelot/Desktop/steam.desktop":
       row: 0
       col: 33
-      last_seen: 1774611478832304
-    "trash:///":
+    "/home/loncelot/Desktop/DNI.md":
+      row: 19
+      col: 34
+    "ba60c50ae1110235ccbaf7448ce794775f97ccc7":
       row: 0
-      col: 30
-    "/home/loncelot/Desktop/ElCaminoDeLosReyes.epub":
+      col: 33
+      last_seen: 1770027619509661
+    "dc3b4a82-f11e-497d-9b19-9c369307177c":
+      row: 19
+      col: 34
+    "/home/loncelot/Desktop/Half life but with Subtitles.desktop":
       row: 0
-      col: 28
-    "720e8654-95b6-4a35-855a-5f78dbba0803":
-      row: 0
-      col: 29
-      last_seen: 1778146555336373
-    "/home/loncelot/Desktop/Sanderson, Brandon - [El archivo de las tormentas 01] El camino de los reyes [3459] (r5.0).epub":
-      row: 0
-      col: 52
+      col: 33
+    "/home/loncelot/Desktop/note.md":
+      row: 5
+      col: 8
+    "/home/loncelot/mnt/sda1":
+      row: 19
+      col: 33
+      last_seen: 1762509987904685
+    "/home/loncelot/Desktop/Interna.md":
+      row: 19
+      col: 35
+    "Trash":
+      row: 19
+      col: 35

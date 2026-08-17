@@ -23,7 +23,7 @@
       <property name="background-style" type="uint" value="0"/>
       <property name="size" type="uint" value="19"/>
       <property name="mode" type="uint" value="0"/>
-      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="autohide-behavior" type="uint" value="2"/>
       <property name="icon-size" type="uint" value="23"/>
       <property name="enable-struts" type="bool" value="true"/>
     </property>
@@ -85,16 +85,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="kitty.desktop"/>
-        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
-        <value type="string" value="org.pulseaudio.pavucontrol.desktop"/>
-        <value type="string" value="steam.desktop"/>
-        <value type="string" value="transmission-gtk.desktop"/>
+        <value type="string" value="xfce-display-settings.desktop"/>
+        <value type="string" value="net.lutris.wow-14.desktop"/>
+        <value type="string" value="net.lutris.Lutris.desktop"/>
         <value type="string" value="thorium-browser.desktop"/>
-        <value type="string" value="xfce-backdrop-settings.desktop"/>
+        <value type="string" value="xfce4-web-browser.desktop"/>
+        <value type="string" value="transmission-gtk.desktop"/>
+        <value type="string" value="xfce4-taskmanager.desktop"/>
+        <value type="string" value="calibre-gui.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
       </property>
       <property name="button-single-row" type="bool" value="false"/>
       <property name="profile-shape" type="int" value="1"/>
@@ -128,6 +128,15 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (71%)"/>
+        <value type="string" value="requesting an ethernet network address for “wired connection 2”…"/>
+        <value type="string" value="wi-fi network connection “guestdnet” active: guestdnet (69%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (88%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (83%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (86%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (84%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (79%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (78%)"/>
         <value type="string" value="wi-fi network connection “madriguera” active: madriguera (55%)"/>
         <value type="string" value="wi-fi network connection “madriguera” active: madriguera (52%)"/>
         <value type="string" value="wi-fi network connection “iphonese” active: iphonese (66%)"/>

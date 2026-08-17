@@ -152,6 +152,8 @@ alias fast='fastfetch -l gnome'
 alias gnu='fastfetch -l gnu'
 alias mac='fastfetch -l mac'
 
+alias calibre-server='calibre-server /home/loncelot/Calibre\ Library --num-per-page 500'
+
 alias spotify='kitty -e spotify_player >/dev/null 2>&1 &'
 alias chat='thorium-browser --incongnito --app=https://chatgpt.com/?temporary-chat=true >/dev/null 2>&1 &'
 alias tg='thorium-browser --app=https://web.telegram.org/k/ >/dev/null 2>&1 &'

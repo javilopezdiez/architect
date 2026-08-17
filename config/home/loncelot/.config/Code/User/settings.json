@@ -1,46 +1,23 @@
 {
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.minimap.enabled": false,
-    "editor.cursorStyle": "block",
-    "editor.accessibilitySupport": "off",
-    "editor.pasteAs.enabled": false,
-    "editor.fontSize": 14,
-    "editor.tabSize": 4,
-    "editor.fontWeight": "bold",
-    // "editor.cursorSurroundingLines": 1000,
-    "terminal.integrated.fontWeight": "bold",
-    "editor.insertSpaces": true,
-    "files.associations": {
-        "*.ftl": "ftl"
-    },
-    "shellformat.effectLanguages": [
-        "shellscript",
-        "dockerfile",
-        "dotenv",
-        "hosts",
-        "jvmoptions",
-        "ignore",
-        "gitignore",
-        "properties",
-        "spring-boot-properties",
-        "azcli",
-        "bats"
+    
+    "vscode_custom_css.imports": ["file:///C:/Users/ext-jlopdie/AppData/Roaming/Code/User/theme.css"],
+
+    "workbench.settings.applyToAllProfiles": [
+        "editor.tabSize"
     ],
-    "[markdown]": {
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": false
-        }
-    },
-    "settingsSync.ignoredExtensions": [],
-
-    "window.titleBarStyle": "native",
-    "window.dialogStyle": "native",
-    "window.menuStyle": "custom", // doesnt work
-    "window.customTitleBarVisibility": "never",
-    "window.menuBarVisibility": "visible",
-
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.showTabs": "multiple",
+    "workbench.editor.useModal": "off",
+    "workbench.settings.useSplitJSON": false,
+    "workbench.tree.enableStickyScroll": false,
+    
+    // "workbench.colorCustomizations": {
+    //     "editor.selectionBackground":"#0f1955",
+    //     "editorCursor.background": "#181818",
+    //     "editorCursor.foreground": "#2ad639",
+    // },
     "workbench.colorCustomizations": {
 
         "editor.selectionBackground":"#0f1955",
@@ -84,6 +61,54 @@
         "editorGroupHeader.tabsBorder": "#000000"
 
     },
+
+    "workbench.browser.showInTitleBar": false,
+    "workbench.browser.searchEngine": "duckduckgo",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.activityBar.location": "hidden",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": false,
+    "workbench.layoutControl.enabled": false,
+
+    "window.titleBarStyle": "native",
+    "window.dialogStyle": "native",
+    "window.menuStyle": "custom", // doesnt work
+    "window.customTitleBarVisibility": "never",
+    "window.menuBarVisibility": "visible",
+    "window.commandCenter": false,
+
+    "editor.multiCursorLimit": 99999,
+    "editor.renderWhitespace": "all",
+    "editor.stickyScroll.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.rulers":[],
+    "editor.stickyScroll.scrollWithEditor": false,
+    "editor.minimap.enabled": false,
+    "editor.cursorStyle": "block",
+    "editor.accessibilitySupport": "off",
+    "editor.pasteAs.enabled": false,
+    "editor.fontSize": 16,
+    "editor.tabSize": 4,
+    "editor.fontWeight": "bold",
+    // "editor.cursorSurroundingLines": 1000,
+
+    "terminal.integrated.fontWeight": "bold",
+    "files.associations": {
+        "*.ftl": "ftl"
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "xml.java.home": "/usr/java/jre1.8.0_202",
+    "settingsSync.ignoredExtensions": [],
+
     "git.showCommitInput": false,
     "git.showActionButton": {
         "commit": false,
@@ -95,19 +120,19 @@
         "**/.vscode": true
     },
     "redhat.telemetry.enabled": false,
-    "workbench.startupEditor": "none",
     "settingsSync.ignoredSettings": [],
+
     "extensions.ignoreRecommendations": true,
 
     // Extension pack for Java
     // Language Support for Java(TM) by Red Hat
+    "java.project.importOnFirstTimeStartup": "disabled",
+    "java.import.gradle.enabled": false,
+    "java.import.maven.enabled": false,
+
     "java.configuration.maven.userSettings": "C:\\Users\\ext-jlopdie\\.m2\\settings.xml",
     "java.configuration.maven.globalSettings": "D:\\Desarrollo\\apache-maven-3.8.4\\conf\\settings.xml",
-    "java.import.maven.offline.enabled": true,
-    "files.autoSave": "off",
     "files.autoSaveDelay": 0,
-    "java.import.gradle.enabled": false,
-    "java.import.maven.enabled": true,
     "java.jdt.ls.java.home": "c:\\Program Files\\Java\\jdk-21.0.6",
     "java.jdt.ls.vmargs": "-Xmx7g",
     "java.completion.enabled": true,
@@ -135,31 +160,19 @@
             "path": "c:\\Program Files\\Java\\jdk-21.0.6",
         },
     ],
-    "editor.multiCursorLimit": 99999,
-    "editor.renderWhitespace": "all",
-    "workbench.activityBar.location": "hidden",
-    "editor.stickyScroll.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
+
     "vscode-postgres.virtualFolders": [
         "functions"
     ],
-    "window.zoomLevel": -1,
-    "workbench.settings.applyToAllProfiles": [
-        "editor.tabSize"
-    ],
-    "workbench.editor.enablePreview": false,
     "accessibility.verbosity.terminal": false,
-    "editor.rulers":[],
-    "editor.stickyScroll.scrollWithEditor": false,
-    "workbench.tree.enableStickyScroll": false,
-    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.wordWrap": "off",
     "diffEditor.renderSideBySide": false,
     "diffEditor.maxComputationTime": 0,
     "diffEditor.renderGutterMenu": false,
+    "diffEditor.ignoreTrimWhitespace": false,
     "git.mergeEditor": false,
     // Terminal
-    // "git.path": "D:\\Program Files\\Git\\bin\\git.exe",
+    "git.path": "D:\\Program Files\\Git\\bin\\git.exe",
     "terminal.integrated.allowMnemonics": true,
     "terminal.explorerKind": "external",
     "terminal.integrated.defaultProfile.windows": "bash",
@@ -189,7 +202,7 @@
     },
     
     // Extensions
-    "glassit.alpha": 235,
+    "glassit.alpha": 245,
 
     "[oraclesql]": {
         "editor.suggest.showSnippets": true,
@@ -200,18 +213,38 @@
         }
     },
 
-    "oracledevtools.connectionConfiguration.showPromptForPasswordStoreMigrationToSecretStorage": false,
-    "oracledevtools.connectionConfiguration.configFilesFolder": "/root/Oracle/network/admin",
-    "oracledevtools.connectionConfiguration.walletFileFolder": "/root/Oracle/network/admin",
-    "oracledevtools.bookmarkFileFolder": "/root/Oracle/oracle.oracledevtools",
-    "oracledevtools.download.otherFolder": "/root/downloads",
-    "json.schemas": [],
-    "git.openRepositoryInParentFolders": "never",
-    "terminal.integrated.tabs.enabled": false,
-    "editor.inlineSuggest.edits.showCollapsed": true,
-    "[shellscript]": {
-        "editor.defaultFormatter": "mkhl.shfmt"
+    "oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\ext-jlopdie\\Oracle\\network\\admin",
+    "oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\ext-jlopdie\\Oracle\\network\\admin",
+    "oracledevtools.bookmarkFileFolder": "C:\\Users\\ext-jlopdie\\Oracle\\oracle.oracledevtools",
+    "oracledevtools.download.otherFolder": "C:\\Users\\ext-jlopdie\\downloads",
+
+    "xml.server.preferBinary": true,
+    "jdk.telemetry.enabled": false,
+    "glassit.step": 10,
+    "animations.Install-Method": "Apc Customize UI++",
+    "apc.imports": [
+        "file:///c:/Users/ext-jlopdie/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    ],
+    "java.debug.settings.enableRunDebugCodeLens": false,
+    "java.debug.settings.forceBuildBeforeLaunch": false,
+    "java.debug.settings.hotCodeReplace": "never",
+    "jdk.java.completion.commit.chars": [],
+    "java.debug.settings.debugSupportOnDecompiledSource": "off",
+    "java.dependency.enableDependencyCheckup": false,
+    "java.import.gradle.annotationProcessing.enabled": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "sqldeveloper.sqlHistory.historyLimit": 500,
+    "sqldeveloper.telemetry.enabled": true,
+    "sqldeveloper.datagrid.fontFamily": "Consolas, 'Courier New', monospace",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
     },
-    "explorer.confirmDelete": false,
-    "workbench.secondarySideBar.defaultVisibility": "hidden"
+    "update.showReleaseNotes": false,
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "chat.disableAIFeatures": true,
+    "hideVSCodeIcon.enabled": true,
+    "git.openRepositoryInParentFolders": "always"
 }
