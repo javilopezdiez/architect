@@ -12,10 +12,12 @@ local function exec(cmd)
 end
 
 for _, win in ipairs(windows) do
-    local win_id = exec('xdotool search --name "' .. win.name .. '" | head -n 1'):gsub("%s+", "")
+    local win_id = exec('xdotool search --onlyvisible --name "' .. win.name .. '" | head -n 1'):gsub("%s+", "")
     
     if win_id ~= "" then
         print("windowico.lua - Setting icon for window:", win.name)
+        print("windowico.lua - Setting icon for window:", win_id)
+        print("windowico.lua - Setting icon for window:", win.icon)
         -- Apply icon
         os.execute('xseticon -id ' .. win_id .. ' "' .. win.icon .. '"')
     end

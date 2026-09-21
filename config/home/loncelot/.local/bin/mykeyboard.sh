@@ -12,10 +12,25 @@ setupLaout() {
         # sudo udevadm trigger --subsystem-match=input --action=change
 }
 
-setupKeys() {
+# Left  Command	64  Super_L
+# Left  Option	133	Alt_L
+# Right Option	108	ISO_Level3_Shift
+# Right Command	134	Super_R
+
+setupKeys11() {
     echo "1" | sudo tee /sys/module/hid_apple/parameters/swap_fn_leftctrl
     echo "1" | sudo tee /sys/module/hid_apple/parameters/swap_opt_cmd
     echo "1" | sudo tee /sys/module/hid_apple/parameters/iso_layout
+}
+
+setupKeys12() {
+    echo 1 | sudo tee /sys/module/applespi/parameters/fnremap
+    # setxkbmap -option altwin:swap_lalt_lwin
+    # setxkbmap -option altwin:swap_ralt_rwin
+    echo 1 | sudo tee /sys/module/applespi/parameters/iso_layout
+    xinput set-prop "Apple SPI Touchpad" "libinput Tapping Enabled" 1
+    xinput set-prop "Apple SPI Touchpad" "libinput Disable While Typing Enabled" 1
+    xinput set-prop "PalmReject Virtual Touchpad" "libinput Tapping Enabled" 1
 }
 
 # thinkpad
@@ -29,10 +44,16 @@ setupTrackpad() {
         echo "Trackpad not found"
     fi
 }
+# /usr/share/libinput/local-overrides.quirks
+# [Keyd Virtual Keyboard]
+# MatchName=keyd virtual keyboard
+# MatchUdevType=keyboard
+# MatchBus=usb
+# AttrKeyboardIntegration=internal
 
 # macbook
 toggleTrackpad() {
-    TRACKPAD="bcm5974"
+    TRACKPAD="Apple SPI Touchpad"
     if xinput list-props "$TRACKPAD" | grep -q "Device Enabled.*1$"; then
         echo "Disabling trackpad"
         xinput disable "$TRACKPAD"
@@ -44,6 +65,27 @@ toggleTrackpad() {
         #     xinput disable "$TRACKPAD"
         #     echo "Trackpad automatically disabled"
         # ) &
+    fi
+}
+toggle12Palm() {
+    DEVICE="Apple SPI Touchpad"
+    PROP="libinput Disable While Typing Enabled"
+
+    VALUE=$(xinput list-props "$DEVICE" |
+        grep -i "$PROP" |
+        head -n 1 |
+        sed -E 's/.*:[[:space:]]*([01]).*/\1/')
+
+    if [ "$VALUE" = "1" ]; then
+        xinput set-prop "$DEVICE" "$PROP" 0
+        echo "DisableWhileTyping: OFF"
+    elif [ "$VALUE" = "0" ]; then
+        xinput set-prop "$DEVICE" "$PROP" 1
+        echo "DisableWhileTyping: ON"
+    else
+        echo "Could not determine current DisableWhileTyping state."
+        echo "Detected value: '$VALUE'"
+        return 1
     fi
 }
 
@@ -104,17 +146,16 @@ toggleLayout() {
 }
 
 case "$1" in
-    --trackpad)
+    --togglePalm)
+        toggle12Palm
+        ;;
+    --toggleTrackpad)
         toggleTrackpad
-        # invertExternalTrackpad
         ;;
     --setup)
+        setxkbmap -option
         setupLaout
-        # thinkpad
-        # setupTrackpad
-        # mac
-        setupKeys
-        toggleTrackpad
+        setupKeys12
         ;;
     --toggleSound)
         toggleMechanicalSound
@@ -123,7 +164,6 @@ case "$1" in
         toggleLayout
         ;;
     --toggleClick)
-        # pgrep -a click TODO, TOO MANY PROCESS
         toggleClick
         ;;
     *)

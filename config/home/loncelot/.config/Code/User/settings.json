@@ -1,250 +1,276 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    
-    "vscode_custom_css.imports": ["file:///C:/Users/ext-jlopdie/AppData/Roaming/Code/User/theme.css"],
+	"security.workspace.trust.untrustedFiles": "open",
+	
+	"vscode_custom_css.imports": [
+		// "file:///C:/Users/ext-jlopdie/AppData/Roaming/Code/User/theme.css",
+		"file:////home/loncelot/.config/Code/User/theme.css"
+	],
 
-    "workbench.settings.applyToAllProfiles": [
-        "editor.tabSize"
-    ],
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.showTabs": "multiple",
-    "workbench.editor.useModal": "off",
-    "workbench.settings.useSplitJSON": false,
-    "workbench.tree.enableStickyScroll": false,
-    
-    // "workbench.colorCustomizations": {
-    //     "editor.selectionBackground":"#0f1955",
-    //     "editorCursor.background": "#181818",
-    //     "editorCursor.foreground": "#2ad639",
-    // },
-    "workbench.colorCustomizations": {
+	"workbench.settings.applyToAllProfiles": [
+		"editor.tabSize"
+	],
+	"workbench.editor.enablePreview": false,
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"workbench.editor.showTabs": "multiple",
+	"workbench.editor.useModal": "off",
+	"workbench.editor.tabSizing": "fixed",
+	"workbench.settings.useSplitJSON": false,
+	"workbench.tree.enableStickyScroll": false,
+	
+	"workbench.colorCustomizations": {
 
-        "editor.selectionBackground":"#0f1955",
-        "editorCursor.background": "#181818",
-        "editorCursor.foreground": "#2ad639",
+		"editor.findMatchBackground": "#104e20",
+		"editor.lineHighlightBorder": "#858484",
 
-        "activityBar.background": "#000000",
+		"editor.selectionHighlightBorder": "#00000000",
+		"editor.wordHighlightBorder": "#00000000",
+		"editor.wordHighlightStrongBorder": "#00000000",
+	
+		// Guides
+		"editorIndentGuide.background1": "#858484",
+		"editorIndentGuide.activeBackground1": "#858484",
+		"editorWhitespace.foreground": "#858484",
 
-        "titleBar.activeBackground": "#15051b",
-        "titleBar.activeForeground": "#ffffff",
+		"editor.selectionBackground":"#404040",
+		"editorCursor.background": "#070707",
+		"editorCursor.foreground": "#2ad639",
 
-        "editor.background": "#000000",
-        "editorPane.background": "#000000",
+		// Left section
+		"list.activeSelectionBackground": "#404040",
+		"list.focusBackground": "#404040",
+		"list.inactiveFocusBackground": "#3A3D41",
+		"quickInputList.focusBackground": "#3A3D41",
+		"list.focusOutline": "#ffffff",
+		
+		// Menu background
+		"sideBar.background": "#000000",
+		"sideBar.foreground": "#ffffff",
+		"sideBar.border": "#333333",
 
-        "terminal.background":"#000000",
+		"sideBarSectionHeader.background": "#000000",
+		"sideBarSectionHeader.foreground": "#ffffff",
+		"sideBarSectionHeader.border": "#333333",
 
-        "scrollbarSlider.activeBackground": "#62fa1bcb",
-        "scrollbarSlider.hoverBackground": "#fa2a1b71",
-        "scrollbarSlider.background": "#c97554a6",
+		"activityBar.background": "#000000",
 
-        "titleBar.inactiveBackground": "#1b1b1b",
-        "titleBar.inactiveForeground": "#aaaaaa",
+		// "titleBar.activeBackground": "#15051b",
+		"titleBar.activeForeground": "#ffffff",
 
-        // Dropdown / workspace menu that opens from it
-        "menu.background": "#000000",
-        "menu.foreground": "#ffffff",
-        "menu.selectionBackground": "#404040",
-        "menu.selectionForeground": "#ffffff",
-        "menu.border": "#555555",
+		"editor.background": "#000000",
+		"editorPane.background": "#000000",
 
-        // Tabs area
-        "tab.activeBackground": "#000000",
-        "tab.activeForeground": "#ffffff",
-        "tab.inactiveBackground": "#111111",
-        "tab.inactiveForeground": "#aaaaaa",
-        "tab.hoverBackground": "#111111",
-        "tab.border": "#000000",
+		"terminal.background":"#000000",
 
-        // Optional: the bar containing tabs
-        "editorGroupHeader.tabsBackground": "#1b1b1b",
-        "editorGroupHeader.tabsBorder": "#000000"
+		"scrollbarSlider.activeBackground": "#62fa1bcb",
+		"scrollbarSlider.hoverBackground": "#111111",
+		"scrollbarSlider.background": "#676767",
 
-    },
+		"titleBar.inactiveBackground": "#1b1b1b",
+		"titleBar.inactiveForeground": "#aaaaaa",
 
-    "workbench.browser.showInTitleBar": false,
-    "workbench.browser.searchEngine": "duckduckgo",
-    "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.activityBar.location": "hidden",
-    "workbench.startupEditor": "none",
-    "workbench.statusBar.visible": false,
-    "workbench.layoutControl.enabled": false,
+		// Dropdown / workspace menu that opens from it
+		"menu.background": "#000000",
+		"menu.foreground": "#ffffff",
+		"menu.selectionBackground": "#404040",
+		"menu.selectionForeground": "#ffffff",
+		"menu.border": "#555555",
 
-    "window.titleBarStyle": "native",
-    "window.dialogStyle": "native",
-    "window.menuStyle": "custom", // doesnt work
-    "window.customTitleBarVisibility": "never",
-    "window.menuBarVisibility": "visible",
-    "window.commandCenter": false,
+		"breadcrumb.foreground": "#ffffff",
+	},
 
-    "editor.multiCursorLimit": 99999,
-    "editor.renderWhitespace": "all",
-    "editor.stickyScroll.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.rulers":[],
-    "editor.stickyScroll.scrollWithEditor": false,
-    "editor.minimap.enabled": false,
-    "editor.cursorStyle": "block",
-    "editor.accessibilitySupport": "off",
-    "editor.pasteAs.enabled": false,
-    "editor.fontSize": 16,
-    "editor.tabSize": 4,
-    "editor.fontWeight": "bold",
-    // "editor.cursorSurroundingLines": 1000,
+	"workbench.browser.showInTitleBar": false,
+	"workbench.browser.searchEngine": "duckduckgo",
+	"workbench.colorTheme": "Visual Studio Dark",
+	"workbench.activityBar.location": "hidden",
+	"workbench.startupEditor": "none",
+	"workbench.statusBar.visible": false,
+	"workbench.layoutControl.enabled": false,
 
-    "terminal.integrated.fontWeight": "bold",
-    "files.associations": {
-        "*.ftl": "ftl"
-    },
-    "[markdown]": {
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": false
-        }
-    },
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-    "xml.java.home": "/usr/java/jre1.8.0_202",
-    "settingsSync.ignoredExtensions": [],
+	"window.titleBarStyle": "native",
+	"window.dialogStyle": "native",
+	"window.menuStyle": "custom", // doesnt work
+	"window.customTitleBarVisibility": "never",
+	"window.menuBarVisibility": "visible",
+	"window.commandCenter": false,
 
-    "git.showCommitInput": false,
-    "git.showActionButton": {
-        "commit": false,
-        "publish": false,
-        "sync": false
-    },
+	"editor.multiCursorLimit": 99999,
+	"editor.renderWhitespace": "all",
+	"editor.stickyScroll.enabled": false,
+	"editor.stickyScroll.scrollWithEditor": false,
+	"editor.scrollbar.verticalScrollbarSize": 3,
+	"editor.scrollbar.horizontalScrollbarSize": 3,
+	"editor.multiCursorModifier": "ctrlCmd",
+	"editor.rulers":[],
+	"editor.minimap.enabled": false,
+	"editor.cursorStyle": "block",
+	"editor.cursorWidth": 20,
+	"editor.accessibilitySupport": "off",
+	"editor.pasteAs.enabled": false,
+	// "editor.fontFamily": "URW Gothic",
+	"editor.fontSize": 16,
+	"editor.tabSize": 4,
+	"editor.fontWeight": "bold",
+	// "editor.cursorSurroundingLines": 1000,
+	// "editor.lineNumbers": "off",
+	"editor.glyphMargin": false,
+	"editor.folding": false,
+	"editor.wordWrap": "off",
+	"terminal.integrated.fontWeight": "bold",
+	"files.associations": {
+		"*.ftl": "ftl"
+	},
+	"[markdown]": {
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": false,
+			"strings": false
+		}
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "redhat.vscode-xml"
+	},
+	"xml.java.home": "/usr/java/jre1.8.0_202",
+	"settingsSync.ignoredExtensions": [],
 
-    "files.exclude": {
-        "**/.vscode": true
-    },
-    "redhat.telemetry.enabled": false,
-    "settingsSync.ignoredSettings": [],
+	"git.showCommitInput": false,
+	"git.showActionButton": {
+		"commit": false,
+		"publish": false,
+		"sync": false
+	},
 
-    "extensions.ignoreRecommendations": true,
+	"files.exclude": {
+		"**/.vscode": true
+	},
+	"redhat.telemetry.enabled": false,
+	"settingsSync.ignoredSettings": [],
 
-    // Extension pack for Java
-    // Language Support for Java(TM) by Red Hat
-    "java.project.importOnFirstTimeStartup": "disabled",
-    "java.import.gradle.enabled": false,
-    "java.import.maven.enabled": false,
+	"extensions.ignoreRecommendations": true,
 
-    "java.configuration.maven.userSettings": "C:\\Users\\ext-jlopdie\\.m2\\settings.xml",
-    "java.configuration.maven.globalSettings": "D:\\Desarrollo\\apache-maven-3.8.4\\conf\\settings.xml",
-    "files.autoSaveDelay": 0,
-    "java.jdt.ls.java.home": "c:\\Program Files\\Java\\jdk-21.0.6",
-    "java.jdt.ls.vmargs": "-Xmx7g",
-    "java.completion.enabled": true,
-    "java.compile.nullAnalysis.mode": "disabled",
-    "java.configuration.updateBuildConfiguration": "disabled",
-    // Java
-    "[java]": {
-        "editor.insertSpaces": false,
-        "editor.detectIndentation": true,
-        "editor.tabSize": 4,
-        "editor.defaultFormatter": "redhat.java",
-        "editor.suggestOnTriggerCharacters": true
-    },
-    "jdk.jdkhome": "c:\\Program Files\\Java\\jdk-21.0.6",
-    "jdk.project.jdkhome": "C:\\Program Files\\Java\\jdk1.8.0_271",
-    "jdk.java.onSave.organizeImports": false,
-    "java.configuration.runtimes": [
-        {
-            "name": "JavaSE-1.8",
-            "path": "C:\\Program Files\\Java\\jdk1.8.0_271",
-            "default": true
-        },
-        {
-            "name": "JavaSE-21",
-            "path": "c:\\Program Files\\Java\\jdk-21.0.6",
-        },
-    ],
+	// Extension pack for Java
+	// Language Support for Java(TM) by Red Hat
+	"java.project.importOnFirstTimeStartup": "disabled",
+	"java.import.gradle.enabled": false,
+	"java.import.maven.enabled": false,
 
-    "vscode-postgres.virtualFolders": [
-        "functions"
-    ],
-    "accessibility.verbosity.terminal": false,
-    "diffEditor.wordWrap": "off",
-    "diffEditor.renderSideBySide": false,
-    "diffEditor.maxComputationTime": 0,
-    "diffEditor.renderGutterMenu": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "git.mergeEditor": false,
-    // Terminal
-    "git.path": "D:\\Program Files\\Git\\bin\\git.exe",
-    "terminal.integrated.allowMnemonics": true,
-    "terminal.explorerKind": "external",
-    "terminal.integrated.defaultProfile.windows": "bash",
-    "terminal.integrated.profiles.windows": {
-        "bash": {
-            "path": "D:\\Program Files\\Git\\bin\\bash.exe",
-            "icon": "terminal-bash"
-        }
-    },
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "terminal.integrated.profiles.linux": {
-        "bash": {
-            "path": "/bin/bash",
-            "args": [
-                "-c",  // Tells bash to execute the following command string
-                "cd ${workspaceFolder} && sudo -u $(echo ${workspaceFolder} | cut -d'/' -f3) bash",
-                    // Change the working directory to the VSCode workspace folder
-                    // Switch to the user and start a new bash shell
-                    // ${userHome} - /home/your-username so i do pipe to get the user of the folder
-                "--noprofile",  // Don't load profile scripts like .bash_profile
-                "--norc",  // Don't source .bashrc or other initialization files
-                "-c",  // Instruct the new bash shell to execute the following command string
-                "'exec bash'",  // Replace the current shell process with an interactive bash session
-            ],
-            "icon": "terminal-linux"
-        }
-    },
-    
-    // Extensions
-    "glassit.alpha": 245,
+	"java.configuration.maven.userSettings": "C:\\Users\\ext-jlopdie\\.m2\\settings.xml",
+	"java.configuration.maven.globalSettings": "D:\\Desarrollo\\apache-maven-3.8.4\\conf\\settings.xml",
+	"files.autoSaveDelay": 0,
+	"java.jdt.ls.java.home": "c:\\Program Files\\Java\\jdk-21.0.6",
+	"java.jdt.ls.vmargs": "-Xmx7g",
+	"java.completion.enabled": true,
+	"java.compile.nullAnalysis.mode": "disabled",
+	"java.configuration.updateBuildConfiguration": "disabled",
+	// Java
+	"[java]": {
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": true,
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "redhat.java",
+		"editor.suggestOnTriggerCharacters": true
+	},
+	"jdk.jdkhome": "c:\\Program Files\\Java\\jdk-21.0.6",
+	"jdk.project.jdkhome": "C:\\Program Files\\Java\\jdk1.8.0_271",
+	"jdk.java.onSave.organizeImports": false,
+	"java.configuration.runtimes": [
+		{
+			"name": "JavaSE-1.8",
+			"path": "C:\\Program Files\\Java\\jdk1.8.0_271",
+			"default": true
+		},
+		{
+			"name": "JavaSE-21",
+			"path": "c:\\Program Files\\Java\\jdk-21.0.6",
+		},
+	],
 
-    "[oraclesql]": {
-        "editor.suggest.showSnippets": true,
-        "editor.quickSuggestions": {
-            "comments": "on",
-            "strings": "on",
-            "other": "on"
-        }
-    },
+	"vscode-postgres.virtualFolders": [
+		"functions"
+	],
+	"accessibility.verbosity.terminal": false,
+	"diffEditor.wordWrap": "off",
+	"diffEditor.renderSideBySide": false,
+	"diffEditor.maxComputationTime": 0,
+	"diffEditor.renderGutterMenu": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"git.mergeEditor": false,
+	// Terminal
+	"git.path": "D:\\Program Files\\Git\\bin\\git.exe",
+	"terminal.integrated.allowMnemonics": true,
+	"terminal.explorerKind": "external",
+	"terminal.integrated.defaultProfile.windows": "bash",
+	"terminal.integrated.profiles.windows": {
+		"bash": {
+			"path": "D:\\Program Files\\Git\\bin\\bash.exe",
+			"icon": "terminal-bash"
+		}
+	},
+	"terminal.integrated.defaultProfile.linux": "bash",
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "/bin/bash",
+			"args": [
+				"-c",  // Tells bash to execute the following command string
+				"cd ${workspaceFolder} && sudo -u $(echo ${workspaceFolder} | cut -d'/' -f3) bash",
+					// Change the working directory to the VSCode workspace folder
+					// Switch to the user and start a new bash shell
+					// ${userHome} - /home/your-username so i do pipe to get the user of the folder
+				"--noprofile",  // Don't load profile scripts like .bash_profile
+				"--norc",  // Don't source .bashrc or other initialization files
+				"-c",  // Instruct the new bash shell to execute the following command string
+				"'exec bash'",  // Replace the current shell process with an interactive bash session
+			],
+			"icon": "terminal-linux"
+		}
+	},
+	
+	// Extensions
+	"glassit.alpha": 245,
 
-    "oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\ext-jlopdie\\Oracle\\network\\admin",
-    "oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\ext-jlopdie\\Oracle\\network\\admin",
-    "oracledevtools.bookmarkFileFolder": "C:\\Users\\ext-jlopdie\\Oracle\\oracle.oracledevtools",
-    "oracledevtools.download.otherFolder": "C:\\Users\\ext-jlopdie\\downloads",
+	"[oraclesql]": {
+		"editor.suggest.showSnippets": true,
+		"editor.quickSuggestions": {
+			"comments": "on",
+			"strings": "on",
+			"other": "on"
+		}
+	},
 
-    "xml.server.preferBinary": true,
-    "jdk.telemetry.enabled": false,
-    "glassit.step": 10,
-    "animations.Install-Method": "Apc Customize UI++",
-    "apc.imports": [
-        "file:///c:/Users/ext-jlopdie/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
-    ],
-    "java.debug.settings.enableRunDebugCodeLens": false,
-    "java.debug.settings.forceBuildBeforeLaunch": false,
-    "java.debug.settings.hotCodeReplace": "never",
-    "jdk.java.completion.commit.chars": [],
-    "java.debug.settings.debugSupportOnDecompiledSource": "off",
-    "java.dependency.enableDependencyCheckup": false,
-    "java.import.gradle.annotationProcessing.enabled": false,
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "sqldeveloper.sqlHistory.historyLimit": 500,
-    "sqldeveloper.telemetry.enabled": true,
-    "sqldeveloper.datagrid.fontFamily": "Consolas, 'Courier New', monospace",
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
-    },
-    "update.showReleaseNotes": false,
-    "chat.titleBar.openInAgentsWindow.enabled": false,
-    "chat.disableAIFeatures": true,
-    "hideVSCodeIcon.enabled": true,
-    "git.openRepositoryInParentFolders": "always"
+	"oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\ext-jlopdie\\Oracle\\network\\admin",
+	"oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\ext-jlopdie\\Oracle\\network\\admin",
+	"oracledevtools.bookmarkFileFolder": "C:\\Users\\ext-jlopdie\\Oracle\\oracle.oracledevtools",
+	"oracledevtools.download.otherFolder": "C:\\Users\\ext-jlopdie\\downloads",
+
+	"xml.server.preferBinary": true,
+	"jdk.telemetry.enabled": false,
+	"glassit.step": 10,
+	"animations.Install-Method": "Apc Customize UI++",
+	// "apc.imports": [
+	//     "file:///c:/Users/ext-jlopdie/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+	// ],
+	"java.debug.settings.enableRunDebugCodeLens": false,
+	"java.debug.settings.forceBuildBeforeLaunch": false,
+	"java.debug.settings.hotCodeReplace": "never",
+	"jdk.java.completion.commit.chars": [],
+	"java.debug.settings.debugSupportOnDecompiledSource": "off",
+	"java.dependency.enableDependencyCheckup": false,
+	"java.import.gradle.annotationProcessing.enabled": false,
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"sqldeveloper.sqlHistory.historyLimit": 500,
+	"sqldeveloper.telemetry.enabled": true,
+	"sqldeveloper.datagrid.fontFamily": "Consolas, 'Courier New', monospace",
+	"github.copilot.enable": {
+		"*": false,
+		"plaintext": false,
+		"markdown": false,
+		"scminput": false
+	},
+	"update.showReleaseNotes": false,
+	"chat.titleBar.openInAgentsWindow.enabled": false,
+	"chat.disableAIFeatures": true,
+	"hideVSCodeIcon.enabled": true,
+	"git.openRepositoryInParentFolders": "always",
+	"terminal.integrated.tabs.enabled": false,
+	"LineNumberDeco.enableRainbow": false,
+	"LineNumberDeco.enableRepeatingDigits": false
 }

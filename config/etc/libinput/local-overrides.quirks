@@ -1,0 +1,9 @@
+[Apple SPI Touchpad (applespi 06cb:0417)]
+AttrPalmSizeThreshold=1600
+MatchUdevType=touchpad
+MatchBus=spi
+MatchVendor=0x06CB
+MatchProduct=0x0417
+AttrSizeHint=104x75
+AttrTouchSizeRange=150:130
+ModelAppleTouchpad=1

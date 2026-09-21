@@ -57,18 +57,19 @@
       <property name="&lt;Shift&gt;&lt;Alt&gt;p" type="string" value="mywin.sh --top"/>
       <property name="&lt;Super&gt;m" type="string" value="mywin.sh --min"/>
       <property name="&lt;Super&gt;p" type="string" value="mydisplay.sh"/>
-      <property name="&lt;Super&gt;2" type="string" value="bash -i -c &quot;codes&quot;"/>
       <property name="&lt;Super&gt;l" type="string" value="mywin.sh --lua"/>
       <property name="&lt;Primary&gt;Alt_L" type="string" value="myhorizoncapture.sh"/>
-      <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Super&gt;f" type="string" value="mywin.sh --max"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;s" type="string" value="xfce4-screenshooter -f"/>
-      <property name="&lt;Super&gt;1" type="string" value="bash -i -c &quot;thorium&quot;"/>
       <property name="&lt;Super&gt;masculine" type="string" value="xfce4-terminal"/>
       <property name="&lt;Primary&gt;Escape" type="string" value="xfce4-terminal"/>
-      <property name="&lt;Super&gt;t" type="string" value="mycomp.sh"/>
-      <property name="&lt;Super&gt;d" type="string" value="mytoggledisplay.sh"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;space" type="string" value="mypanel.sh"/>
+      <property name="&lt;Alt&gt;space" type="string" value="xfce4-popup-whiskermenu"/>
+      <property name="&lt;Super&gt;2" type="string" value="bash -c &apos;shopt -s expand_aliases; source ~/.bash_aliases; eval codes&apos;"/>
+      <property name="&lt;Super&gt;1" type="string" value="bash -c &apos;shopt -s expand_aliases; source ~/.bash_aliases; eval thorium&apos;"/>
+      <property name="&lt;Alt&gt;ISO_Level3_Shift" type="string" value="hints"/>
+      <property name="&lt;Super&gt;z" type="string" value="mykeyboard.sh --togglePalm"/>
+      <property name="&lt;Super&gt;d" type="string" value="mykeyboard.sh --toggleTrackpad"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

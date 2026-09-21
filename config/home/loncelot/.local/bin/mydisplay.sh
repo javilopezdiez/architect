@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
+# laptop_display="eDP-1"
+# scale=0.8
+# width=1920
+# height=1080
+
 laptop_display="eDP-1"
-scale=0.8
-width=1920
-height=1080
+scale=1
+width=1650
+height=1050
 
 secondary_display="DP-1"
 secondary_display1="DP-1-8"
@@ -13,21 +18,22 @@ res_map=(
 	"HDMI-2:2560x1440"
 	"DVI-I-1-1:1920x1080"
 	"DP-1-8:3840x2160"
+	"DP-1-9:3840x2160"
 )
 
 crop_name="CROPPED"
 
 # 4k
-full_w=3840
-full_h=2160
-crop_h=1820
+# full_w=3840
+# full_h=2160
+# crop_h=1680
 
 # QHD
-# full_w=2560
-# full_h=1440
-# crop_h=1240
+full_w=2560
+full_h=1440
+crop_h=1130
 
-wallpaper='/home/loncelot/Pictures/wallpapers/ubuntu6_06.png'
+wallpaper='/home/loncelot/Pictures/wallpapers/wpp.png'
 
 active_display=""
 

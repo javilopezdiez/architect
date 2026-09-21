@@ -16,6 +16,8 @@ git_directory="$HOME/Workspace/architect/config"
 
 file_patterns=(
 	"$HOME/.bashrc"
+	"$HOME/.bash_profile"
+	"$HOME/.bash_aliases"
 	"$HOME/.local/bin/my*"
 	# "$HOME/.local/share/applications"
 	"$HOME/.local/share/xfce4/helpers/custom-WebBrowser.desktop"
@@ -59,6 +61,9 @@ file_patterns=(
 	# "/etc/grub.d/10_linux"
 	"/etc/lightdm/lightdm-gtk-greeter.conf"
 	"/etc/X11/xorg.conf.d/10-modesetting.conf"
+	"/etc/systemd/system/multi-user.target.wants/myfbset.service"
+	"/etc/keyd/default.conf"
+	"/etc/libinput/local-overrides.quirks"
 
 	# "/boot/grub/themes/Primitivistical"
 
@@ -66,6 +71,8 @@ file_patterns=(
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"
 	"/usr/share/backgrounds/xfce/xfce-x.svg"
 	"/usr/share/icons/loncelot/cursors/index.theme"
+	"/usr/share/X11/xorg.conf.d/40-libinput.conf"
+	"/usr/share/libinput/local-overrides.quirks"
 
 	"$HOME/.vmware/view-preferences"
 	# "$HOME/.local/share/lutris/games/turtle-wow-1172-1740406132.yml"

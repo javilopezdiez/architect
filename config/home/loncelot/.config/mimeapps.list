@@ -17,6 +17,7 @@ video/x-theora+ogg=vlc.desktop
 x-scheme-handler/http=xfce4-web-browser.desktop
 x-scheme-handler/https=xfce4-web-browser.desktop
 x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/tonsite=org.telegram.desktop.desktop
 
 [Added Associations]
 application/x-desktop=code.desktop;
@@ -31,3 +32,5 @@ application/octet-stream=code.desktop;
 text/html=code.desktop;thorium-browser.desktop;
 video/mp4=mpv.desktop;org.xfce.Parole.desktop;
 text/x-csrc=code.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop.desktop;
+image/jpeg=org.xfce.ristretto.desktop;

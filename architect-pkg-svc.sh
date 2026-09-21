@@ -18,7 +18,7 @@ source $HOME/architect/properties.conf
 # --- YAY (AUR Helper)
 	echo "Installing YAY (AUR helper)..."
 	mkdir /tmp/yay && cd /tmp/yay
-	curl -OJ 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay'  
+	curl -OJ 'https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=yay'
 	makepkg -si --noconfirm
 	rm -rf /tmp/yay
 	echo -e "Updating YAY..."
@@ -54,6 +54,12 @@ source $HOME/architect/properties.conf
 	#wget -O /home/$USERNAME/.local/bin/movescreen.py https://raw.githubusercontent.com/calandoa/movescreen/master/movescreen.py
 	#chmod +x /home/$USERNAME/.local/bin/movescreen.py
 
+	# echo "Installing audio kernel module..."
+	# mkdir /tmp/macbook12-audio-driver && cd /tmp/macbook12-audio-driver
+	# sudo pacman -S dkms linux-headers
+	# git clone https://github.com/juicecultus/macbook12-audio-driver.git
+	# sudo ./install.cirrus.driver.sh -i
+	
 # --- SERVICE ENABLING
 	for SVC in "${SERVICES[@]}"; do
 		if ! systemctl is-enabled --quiet "$SVC"; then

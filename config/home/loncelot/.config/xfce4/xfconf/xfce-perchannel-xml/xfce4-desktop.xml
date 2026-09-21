@@ -7,14 +7,14 @@
         <property name="color-style" type="int" value="0"/>
         <property name="image-style" type="int" value="5"/>
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="last-single-image" type="string" value="/home/loncelot/Pictures/wallpapers/art/bierstadt/Albert_Bierstadt_Among_the_Sierra_Nevada_California.jpg"/>
       </property>
       <property name="monitorLVDS-1" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.08666666666666667"/>
             <value type="double" value="0.08666666666666667"/>
@@ -25,24 +25,24 @@
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorHDMI-2" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.12666666666666668"/>
             <value type="double" value="0.12666666666666668"/>
@@ -53,46 +53,46 @@
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitor0" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
-        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/others/ubuntu6_06.png"/>
+        <property name="image-path" type="string" value="/home/loncelot/gits/wallpapers/0099.jpg"/>
         <property name="image-show" type="bool" value="true"/>
         <property name="image-style" type="int" value="5"/>
       </property>
@@ -100,120 +100,120 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace5" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorHDMI2" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDP2" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorHDMI1" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace4" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorHDMI-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
       </property>
       <property name="monitorDP-2" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
       </property>
       <property name="monitoreDP-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.30588235294117649"/>
@@ -226,32 +226,38 @@
           <property name="iconview-placement" type="int" value="2"/>
         </property>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
           <property name="iconview-placement" type="int" value="2"/>
+          <property name="rgba1" type="array">
+            <value type="double" value="0.25666666666666671"/>
+            <value type="double" value="0.25666666666666671"/>
+            <value type="double" value="0.25666666666666671"/>
+            <value type="double" value="1"/>
+          </property>
         </property>
-        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="workspace2" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="iconview-placement" type="int" value="2"/>
         </property>
         <property name="workspace3" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDVI-I-1-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDP-1" type="empty">
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
           <property name="rgba1" type="array">
             <value type="double" value="0.30588235294117649"/>
@@ -262,25 +268,25 @@
           <property name="backdrop-cycle-enable" type="bool" value="false"/>
           <property name="color-style" type="int" value="0"/>
         </property>
-        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/savana.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace3" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorCROPPED" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
           <property name="image-style" type="int" value="5"/>
         </property>
       </property>
@@ -290,61 +296,65 @@
             <property name="iconview-placement" type="int" value="2"/>
           </property>
         </property>
-        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/forest3.jpg"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDVI-I-2-2" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDVI-I-3-3" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDVI-I-4-4" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorsecondary_display1" type="empty">
         <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/savana.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDP-1-8" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
-        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/basque/basque-country.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
         <property name="workspace2" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
       <property name="monitorDP-1-9" type="empty">
         <property name="workspace1" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
+          <property name="image-style" type="int" value="5"/>
         </property>
-        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/savana.jpg"/>
-        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/portugal.png"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/ubuntu6_06.png"/>
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
       </property>
     </property>
@@ -364,30 +374,33 @@
         <value type="string" value="f86f0a3a66770a59c041351f105882254937d351"/>
         <value type="string" value="3d52eefe8ae5ee4dc99586eff79fdbfb350f2046"/>
         <value type="string" value="dbee131e9d8a80bf705c80c50657af9ce2eaac45"/>
+        <value type="string" value="7c54bb876c98ab2937745025618aba7dc12d9cdb"/>
+        <value type="string" value="152a49732d4cb24514a7c04b38eebbf01d5e33e2"/>
       </property>
+      <property name="show-trash" type="bool" value="false"/>
     </property>
-    <property name="icon-size" type="uint" value="26"/>
-    <property name="tooltip-size" type="double" value="164"/>
-    <property name="gravity" type="int" value="3"/>
+    <property name="icon-size" type="uint" value="50"/>
+    <property name="tooltip-size" type="double" value="216"/>
+    <property name="gravity" type="int" value="2"/>
     <property name="show-tooltips" type="bool" value="false"/>
     <property name="use-custom-font-size" type="bool" value="true"/>
-    <property name="font-size" type="double" value="8"/>
+    <property name="font-size" type="double" value="13"/>
     <property name="show-thumbnails" type="bool" value="false"/>
     <property name="show-hidden-files" type="bool" value="true"/>
-    <property name="primary" type="bool" value="true"/>
+    <property name="primary" type="bool" value="false"/>
     <property name="confirm-sorting" type="bool" value="false"/>
-    <property name="use-custom-label-background-color" type="bool" value="false"/>
+    <property name="use-custom-label-background-color" type="bool" value="true"/>
     <property name="use-custom-label-text-color" type="bool" value="false"/>
     <property name="label-background-color" type="array">
-      <value type="double" value="0.70270270270270263"/>
-      <value type="double" value="0.25"/>
-      <value type="double" value="0.75"/>
+      <value type="double" value="0.10196078431372549"/>
+      <value type="double" value="0.37254901960784315"/>
+      <value type="double" value="0.70588235294117652"/>
       <value type="double" value="1"/>
     </property>
   </property>
   <property name="last" type="empty">
-    <property name="window-width" type="int" value="1725"/>
-    <property name="window-height" type="int" value="880"/>
+    <property name="window-width" type="int" value="1250"/>
+    <property name="window-height" type="int" value="690"/>
   </property>
   <property name="last-settings-migration-version" type="uint" value="1"/>
 </channel>

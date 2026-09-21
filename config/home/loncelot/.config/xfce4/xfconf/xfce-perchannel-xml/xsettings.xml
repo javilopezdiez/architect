@@ -2,8 +2,8 @@
 
 <channel name="xsettings" version="1.0">
   <property name="Net" type="empty">
-    <property name="ThemeName" type="string" value="Adwaita-dark"/>
-    <property name="IconThemeName" type="string" value="elementary"/>
+    <property name="ThemeName" type="string" value="Matcha-dark-azul"/>
+    <property name="IconThemeName" type="string" value="BluecurveRH"/>
     <property name="DoubleClickTime" type="int" value="532"/>
     <property name="DoubleClickDistance" type="int" value="8"/>
     <property name="DndDragThreshold" type="int" value="8"/>
@@ -14,7 +14,7 @@
     <property name="EnableInputFeedbackSounds" type="bool" value="false"/>
   </property>
   <property name="Xft" type="empty">
-    <property name="DPI" type="int" value="96"/>
+    <property name="DPI" type="int" value="85"/>
     <property name="Antialias" type="int" value="1"/>
     <property name="Hinting" type="int" value="-1"/>
     <property name="HintStyle" type="string" value="hintfull"/>
@@ -23,8 +23,8 @@
   <property name="Gtk" type="empty">
     <property name="CanChangeAccels" type="bool" value="false"/>
     <property name="ColorPalette" type="string" value="black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90"/>
-    <property name="FontName" type="string" value="Monospace Bold 10"/>
-    <property name="MonospaceFontName" type="string" value="Monospace Bold 10"/>
+    <property name="FontName" type="string" value="JetBrainsMono Nerd Font Mono Ultra-Bold 16"/>
+    <property name="MonospaceFontName" type="string" value="Monospace Bold 16"/>
     <property name="IconSizes" type="string" value=""/>
     <property name="KeyThemeName" type="string" value=""/>
     <property name="MenuImages" type="bool" value="true"/>
@@ -45,6 +45,6 @@
     <property name="WindowScalingFactor" type="empty"/>
   </property>
   <property name="Xfce" type="empty">
-    <property name="LastCustomDPI" type="int" value="96"/>
+    <property name="LastCustomDPI" type="int" value="85"/>
   </property>
 </channel>
