@@ -1,17 +1,23 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="displays" version="1.0">
-  <property name="Notify" type="int" value="1"/>
-  <property name="AutoEnableProfiles" type="int" value="3"/>
   <property name="ActiveProfile" type="string" value="Default"/>
+  <property name="Notify" type="int" value="1"/>
+  <property name="AutoEnableProfiles" type="int" value="0"/>
+  <property name="IdentityPopups" type="bool" value="true"/>
   <property name="Default" type="empty">
     <property name="eDP-1" type="string" value="Laptop">
-      <property name="Active" type="bool" value="true"/>
+      <property name="Active" type="bool" value="false"/>
       <property name="EDID" type="string" value="fc0770f221e83cf2ce3778baf801092c74f2cf1e"/>
       <property name="DuplicateEDID" type="bool" value="false"/>
-      <property name="Resolution" type="string" value="1920x1200"/>
-      <property name="RefreshRate" type="double" value="59.884600128910705"/>
-      <property name="ModeFlags" type="uint64" value="6"/>
+    </property>
+    <property name="DP-1" type="string" value="Samsung Electric Company 28&quot;">
+      <property name="Active" type="bool" value="true"/>
+      <property name="EDID" type="string" value="490802c25c470ce245a9b9d66518dc941b9e4132"/>
+      <property name="DuplicateEDID" type="bool" value="false"/>
+      <property name="Resolution" type="string" value="2560x1440"/>
+      <property name="RefreshRate" type="double" value="59.950550105254798"/>
+      <property name="ModeFlags" type="uint64" value="9"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="true"/>

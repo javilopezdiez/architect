@@ -4,7 +4,8 @@ alias codes='sudo code --no-sandbox --user-data-dir ~/.config/Code '
 alias codessh='codes --folder-uri "vscode-remote://ssh-remote+root-ssh.loncelot/home/loncelot/Workspace"'
 alias hl='steam -silent -offline -applaunch 70 -windowed -w 2520 -h 1175'
 alias cs='steam -silent -offline -applaunch 10 -windowed -w 2520 -h 1175'
-alias wow='wine /home/loncelot/games/ChromieCraft_3.3.5a/Wow.exe 2>&1 &'
+alias wow='WINEPREFIX="/home/loncelot/games/ChromieCraft_3.3.5a/prefix" wine "/home/loncelot/games/ChromieCraft_3.3.5a/Wow.exe" >/dev/null 2>&1 &'
+alias geek='WINEPREFIX="/home/loncelot/games/GeekServers/prefix" wine "/home/loncelot/games/GeekServers/GeekServers.exe" >/dev/null 2>&1 &'
 
 function sshWeb {
 	ssh -p 2222 -L 8080:"$@":80 root@ssh.loncelot.com

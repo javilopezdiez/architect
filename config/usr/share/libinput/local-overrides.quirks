@@ -2,7 +2,6 @@
 MatchUdevType=keyboard
 MatchName=*keyd*keyboard
 AttrKeyboardIntegration=internal
-
 [Apple SPI Keyboard]
 MatchUdevType=keyboard
 MatchName=*Apple SPI Keyboard*

@@ -3,7 +3,7 @@
 setupLaout() {
     setxkbmap -layout es,gb
     # mac keyboard
-        setxkbmap -layout es,gb -variant mac
+        # setxkbmap -layout es,gb -variant mac
         # setxkbmap -option grp:win_space_toggle
     # japaneese keyboard
         xmodmap ~/.Xmodmap
@@ -153,9 +153,9 @@ case "$1" in
         toggleTrackpad
         ;;
     --setup)
-        setxkbmap -option
+        # setxkbmap -option
         setupLaout
-        setupKeys12
+        # setupKeys12
         ;;
     --toggleSound)
         toggleMechanicalSound

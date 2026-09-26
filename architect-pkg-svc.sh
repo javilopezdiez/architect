@@ -9,11 +9,6 @@ source $HOME/architect/properties.conf
 		echo "INSTALLING PACMAN PKG: ${PKG}..."
 		sudo pacman -S "$PKG" --noconfirm --needed
 	done
-	echo -e "Installing PACMAN Extra packages..."
-	for PKG in "${PACMAN_EXTRA_PKGS[@]}"; do
-		echo "INSTALLING PACMAN EXTRA PKG: ${PKG}..."
-		sudo yay -S "$PKG" --noconfirm --needed
-	done
 
 # --- YAY (AUR Helper)
 	echo "Installing YAY (AUR helper)..."
@@ -27,6 +22,12 @@ source $HOME/architect/properties.conf
 	for PKG in "${YAY_PKGS[@]}"; do
 		echo "INSTALLING YAY PKG: ${PKG}"
 		yay -S "$PKG" --noconfirm --needed
+	done
+
+	echo -e "Installing PACMAN Extra packages..."
+	for PKG in "${PACMAN_EXTRA_PKGS[@]}"; do
+		echo "INSTALLING PACMAN EXTRA PKG: ${PKG}..."
+		sudo yay -S "$PKG" --noconfirm --needed
 	done
 
 # --- PYTHON PACKAGES (Uncomment if needed)

@@ -92,9 +92,10 @@
           <property name="image-style" type="int" value="5"/>
           <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
-        <property name="image-path" type="string" value="/home/loncelot/gits/wallpapers/0099.jpg"/>
+        <property name="image-path" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         <property name="image-show" type="bool" value="true"/>
         <property name="image-style" type="int" value="5"/>
+        <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
       </property>
       <property name="monitorLVDS1" type="empty">
         <property name="workspace0" type="empty">

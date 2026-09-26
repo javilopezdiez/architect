@@ -15,6 +15,9 @@ backup_directory="/run/media/$username/nail/backup"
 git_directory="$HOME/Workspace/architect/config"
 
 file_patterns=(
+
+	"$HOME/.xinitrc"
+
 	"$HOME/.bashrc"
 	"$HOME/.bash_profile"
 	"$HOME/.bash_aliases"
@@ -48,7 +51,7 @@ file_patterns=(
 	"$HOME/.face"
 	"$HOME/.themes"
 	"$HOME/Pictures/ico"
-	"$HOME/Pictures/wallpapers/ubuntu6_06.png"
+	"$HOME/Pictures/wallpapers/wpp.png"
 	"$HOME/Pictures/wallpapers/mybackground.png"
 	# "$HOME/Pictures/wallpapers/art/bierstadt"
 	# "$HOME/Pictures/wallpapers/art/kasmeneo"
