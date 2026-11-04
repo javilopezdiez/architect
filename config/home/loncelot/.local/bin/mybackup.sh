@@ -65,7 +65,7 @@ file_patterns=(
 	"/etc/lightdm/lightdm-gtk-greeter.conf"
 	"/etc/X11/xorg.conf.d/10-modesetting.conf"
 	"/etc/systemd/system/multi-user.target.wants/myfbset.service"
-	"/etc/keyd/default.conf"
+	"/etc/keyd"
 	"/etc/libinput/local-overrides.quirks"
 
 	# "/boot/grub/themes/Primitivistical"

@@ -8,6 +8,7 @@ res_map=(
     "DVI-I-1-1:1920x1080"
     "DP-1:2560x1440"
     "DP-1-9:3840x2160"
+    "DP-1-8:1920x1080"
 )
 wallpaper='/home/loncelot/Pictures/wallpapers/wpp.png'
 active_display=""

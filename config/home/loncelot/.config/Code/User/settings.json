@@ -272,5 +272,6 @@
 	"git.openRepositoryInParentFolders": "always",
 	"terminal.integrated.tabs.enabled": false,
 	"LineNumberDeco.enableRainbow": false,
-	"LineNumberDeco.enableRepeatingDigits": false
+	"LineNumberDeco.enableRepeatingDigits": false,
+	"editor.largeFileOptimizations": false
 }

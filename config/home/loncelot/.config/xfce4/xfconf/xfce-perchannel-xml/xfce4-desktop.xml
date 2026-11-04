@@ -343,6 +343,9 @@
         <property name="workspace2" type="empty">
           <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
         </property>
+        <property name="workspace3" type="empty">
+          <property name="last-image" type="string" value="/home/loncelot/Pictures/wallpapers/wpp.png"/>
+        </property>
       </property>
       <property name="monitorDP-1-9" type="empty">
         <property name="workspace1" type="empty">

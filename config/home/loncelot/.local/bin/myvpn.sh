@@ -32,7 +32,8 @@ eval $(gp-saml-gui -P \
         --clientos=Windows \
         "$VPN_GATEWAY" \
         -- --script=/etc/vpnc/vpnc-script \
-        --servercert pin-sha256:1lNl1PeU1Re2/L7vCVfCpASkE1y4s848dhhmLfL0rmI=)
+        --servercert pin-sha256:9fIMqW7OAPNE3ZJFXGixzI7gOXKrWSj/OIejskD7eYk=)
+        # --servercert pin-sha256:1lNl1PeU1Re2/L7vCVfCpASkE1y4s848dhhmLfL0rmI=)
 
         # evpn.gobiernodecanarias.org \
         # --portal \

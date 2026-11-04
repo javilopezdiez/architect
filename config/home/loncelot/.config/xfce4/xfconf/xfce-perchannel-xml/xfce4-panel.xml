@@ -4,12 +4,12 @@
   <property name="panels" type="uint" value="1">
     <property name="panel-0" type="empty">
       <property name="position" type="string" value="p=6;x=720;y=19"/>
-      <property name="length" type="uint" value="100"/>
+      <property name="length" type="double" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="8"/>
         <value type="int" value="3"/>
-        <value type="int" value="7"/>
+        <value type="int" value="12"/>
         <value type="int" value="4"/>
         <value type="int" value="6"/>
         <value type="int" value="9"/>
@@ -23,7 +23,7 @@
       <property name="background-style" type="uint" value="0"/>
       <property name="size" type="uint" value="29"/>
       <property name="mode" type="uint" value="0"/>
-      <property name="autohide-behavior" type="uint" value="2"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
       <property name="icon-size" type="uint" value="23"/>
       <property name="enable-struts" type="bool" value="true"/>
     </property>
@@ -60,14 +60,10 @@
       <property name="show-tooltips" type="bool" value="true"/>
       <property name="include-all-monitors" type="bool" value="false"/>
     </property>
-    <property name="plugin-7" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="mpris-players" type="string" value="chromium.instance1769"/>
-      <property name="known-players" type="string" value="audacious;Chrome;cmus;mps-youtube;org.telegram.desktop;Spotify Player;Spotifyd;Thorium;vlc"/>
+      <property name="known-players" type="string" value=";audacious;Chrome;cmus;gp_saml_gui.py.Sandboxed.instance-591;mps-youtube;org.telegram.desktop;Spotify Player;Spotifyd;Thorium;vlc"/>
     </property>
     <property name="plugin-8" type="string" value="whiskermenu">
       <property name="button-icon" type="string" value="/home/loncelot/.config/xfce4/mybigicon.png"/>
@@ -85,16 +81,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="BambuStudio.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="xfce4-screenshooter.desktop"/>
+        <value type="string" value="com.microsoft.VSCode.desktop"/>
         <value type="string" value="xfce-mouse-settings.desktop"/>
-        <value type="string" value="xfce4-taskmanager.desktop"/>
-        <value type="string" value="thunar.desktop"/>
-        <value type="string" value="openscad.desktop"/>
-        <value type="string" value="transmission-gtk.desktop"/>
-        <value type="string" value="blueman-manager.desktop"/>
+        <value type="string" value="thorium-browser.desktop"/>
+        <value type="string" value="org.amule.aMule.desktop"/>
+        <value type="string" value="BambuStudio.desktop"/>
+        <value type="string" value="blender.desktop"/>
       </property>
       <property name="button-single-row" type="bool" value="true"/>
       <property name="profile-shape" type="int" value="2"/>
@@ -130,6 +126,29 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (59%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (57%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (61%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (58%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (87%)"/>
+        <value type="string" value="wi-fi network connection “zzz13” active: zzz13 (81%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (91%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (100%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (94%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (68%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (77%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (85%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (76%)"/>
+        <value type="string" value="user authentication required for wi-fi network “movistar-wifi6-b080”…"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (60%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (93%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (87%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (62%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (62%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (66%)"/>
+        <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (73%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (34%)"/>
+        <value type="string" value="wi-fi network connection “movistar-wifi6-0580” active: movistar-wifi6-0580 (33%)"/>
         <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (69%)"/>
         <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (63%)"/>
         <value type="string" value="wi-fi network connection “bt_mini_hub_9768_2.4ghz” active: bt_mini_hub_9768_2.4ghz (96%)"/>
@@ -356,6 +375,10 @@
       <property name="font" type="string" value="Monospace 10"/>
     </property>
     <property name="plugin-10" type="string" value="xkb"/>
+    <property name="plugin-12" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
   </property>
   <property name="configver" type="int" value="2"/>
 </channel>

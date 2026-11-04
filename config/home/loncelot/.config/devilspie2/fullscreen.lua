@@ -29,7 +29,9 @@ local avoid_names = {
 	'notify',
 	'Authenticate',
 	'xfce4-screenshooter',
-	'Bluetooth Devices'
+	'Bluetooth Devices',
+	'World of Warcraft',
+	'GTA: San Andreas'
 }
 local accepted_types = {
 	"WINDOW_TYPE_NORMAL",

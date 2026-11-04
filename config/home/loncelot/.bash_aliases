@@ -4,8 +4,16 @@ alias codes='sudo code --no-sandbox --user-data-dir ~/.config/Code '
 alias codessh='codes --folder-uri "vscode-remote://ssh-remote+root-ssh.loncelot/home/loncelot/Workspace"'
 alias hl='steam -silent -offline -applaunch 70 -windowed -w 2520 -h 1175'
 alias cs='steam -silent -offline -applaunch 10 -windowed -w 2520 -h 1175'
+
+alias forever='WINEPREFIX="/home/loncelot/games/blizzard/prefix" anv_emulate_read_without_format=true wine "/home/loncelot/games/blizzard/prefix/drive_c/Program Files (x86)/World of Warcraft/_forever_/Wow.exe" >/dev/null 2>&1 &'
+alias tbc='WINEPREFIX="/home/loncelot/games/blizzard/prefix" wine "/home/loncelot/games/blizzard/prefix/drive_c/Program Files (x86)/World of Warcraft/_anniversary_/WowClassic.exe" >/dev/null 2>&1 &'
+alias blizz='WINEPREFIX="/home/loncelot/games/blizzard/prefix" wine "/home/loncelot/games/blizzard/prefix/drive_c/Program Files (x86)/Battle.net/Battle.net.exe"  >/dev/null 2>&1 &'
+alias stopblizz='WINEPREFIX="/home/loncelot/games/blizzard/prefix" wineserver -k'
+
 alias wow='WINEPREFIX="/home/loncelot/games/ChromieCraft_3.3.5a/prefix" wine "/home/loncelot/games/ChromieCraft_3.3.5a/Wow.exe" >/dev/null 2>&1 &'
-alias geek='WINEPREFIX="/home/loncelot/games/GeekServers/prefix" wine "/home/loncelot/games/GeekServers/GeekServers.exe" >/dev/null 2>&1 &'
+alias classic='WINEPREFIX="/home/loncelot/games/WowEs/prefix" wine "/home/loncelot/games/WowEs/WoW.exe" >/dev/null 2>&1 &'
+
+alias gtasa='nohup env WINEESYNC=0 WINEFSYNC=0 WINEDEBUG=+ntsync WINEPREFIX="/home/loncelot/games/gtasa/prefix" wine start /unix "/home/loncelot/games/gtasa/gta_sa.exe" >/dev/null 2>&1 </dev/null &'
 
 function sshWeb {
 	ssh -p 2222 -L 8080:"$@":80 root@ssh.loncelot.com
