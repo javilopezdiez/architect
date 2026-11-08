@@ -22,6 +22,7 @@ file_patterns=(
 	"$HOME/.bash_profile"
 	"$HOME/.bash_aliases"
 	"$HOME/.local/bin/my*"
+	"$HOME/.local/share/icons"
 	# "$HOME/.local/share/applications"
 	"$HOME/.local/share/xfce4/helpers/custom-WebBrowser.desktop"
 
@@ -73,7 +74,6 @@ file_patterns=(
 	"/usr/share/backgrounds/my-*"
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"
 	"/usr/share/backgrounds/xfce/xfce-x.svg"
-	"/usr/share/icons/loncelot/cursors/index.theme"
 	"/usr/share/X11/xorg.conf.d/40-libinput.conf"
 	"/usr/share/libinput/local-overrides.quirks"
 
