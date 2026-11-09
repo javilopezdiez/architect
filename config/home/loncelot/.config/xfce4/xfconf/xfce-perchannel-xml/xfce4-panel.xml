@@ -81,16 +81,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce-mouse-settings.desktop"/>
+        <value type="string" value="BambuStudio.desktop"/>
+        <value type="string" value="xfce4-taskmanager.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
         <value type="string" value="com.microsoft.VSCode.desktop"/>
-        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="thorium-browser.desktop"/>
-        <value type="string" value="org.amule.aMule.desktop"/>
-        <value type="string" value="BambuStudio.desktop"/>
-        <value type="string" value="blender.desktop"/>
       </property>
       <property name="button-single-row" type="bool" value="true"/>
       <property name="profile-shape" type="int" value="2"/>

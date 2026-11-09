@@ -22,7 +22,6 @@ file_patterns=(
 	"$HOME/.bash_profile"
 	"$HOME/.bash_aliases"
 	"$HOME/.local/bin/my*"
-	"$HOME/.local/share/icons"
 	# "$HOME/.local/share/applications"
 	"$HOME/.local/share/xfce4/helpers/custom-WebBrowser.desktop"
 
@@ -71,6 +70,8 @@ file_patterns=(
 
 	# "/boot/grub/themes/Primitivistical"
 
+	"/usr/share/icons/loncelot"
+	"/usr/share/icons/BluecurveRH"
 	"/usr/share/backgrounds/my-*"
 	"/usr/share/backgrounds/xfce/xfce-shapes.svg"
 	"/usr/share/backgrounds/xfce/xfce-x.svg"

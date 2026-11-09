@@ -5,7 +5,6 @@ alias codessh='codes --folder-uri "vscode-remote://ssh-remote+root-ssh.loncelot/
 alias hl='steam -silent -offline -applaunch 70 -windowed -w 2520 -h 1175'
 alias cs='steam -silent -offline -applaunch 10 -windowed -w 2520 -h 1175'
 
-alias forever='WINEPREFIX="/home/loncelot/games/blizzard/prefix" anv_emulate_read_without_format=true wine "/home/loncelot/games/blizzard/prefix/drive_c/Program Files (x86)/World of Warcraft/_forever_/Wow.exe" >/dev/null 2>&1 &'
 alias tbc='WINEPREFIX="/home/loncelot/games/blizzard/prefix" wine "/home/loncelot/games/blizzard/prefix/drive_c/Program Files (x86)/World of Warcraft/_anniversary_/WowClassic.exe" >/dev/null 2>&1 &'
 alias blizz='WINEPREFIX="/home/loncelot/games/blizzard/prefix" wine "/home/loncelot/games/blizzard/prefix/drive_c/Program Files (x86)/Battle.net/Battle.net.exe"  >/dev/null 2>&1 &'
 alias stopblizz='WINEPREFIX="/home/loncelot/games/blizzard/prefix" wineserver -k'
